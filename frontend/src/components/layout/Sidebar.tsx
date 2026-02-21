@@ -5,13 +5,13 @@ import {
   ArrowRightLeft,
   ClipboardList,
   Wrench,
-  
+  Map,
 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 const MENU_ITEMS = [
   { name: "Command Center", icon: Command, href: "/" },
-  
+  { name: "Map", icon: Map, href: "/map" },
   { name: "Cars", icon: Car, href: "/vehicles" },
   { name: "Trips", icon: ClipboardList, href: "/trips" },
   { name: "Service", icon: Wrench, href: "/maintenance" },

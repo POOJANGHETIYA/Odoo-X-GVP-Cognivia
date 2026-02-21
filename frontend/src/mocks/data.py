@@ -19,10 +19,11 @@ FUEL_COST_PER_LITER = 95
 KM_PER_LITER = 5
 
 # India bounding box
-INDIA_LAT_MIN = 8.0
-INDIA_LAT_MAX = 37.0
-INDIA_LON_MIN = 68.0
-INDIA_LON_MAX = 97.0
+# Gujarat bounding box
+INDIA_LAT_MIN = 20.1
+INDIA_LAT_MAX = 24.7
+INDIA_LON_MIN = 68.2
+INDIA_LON_MAX = 74.5
 
 vehicle_categories = ['Bike', '3_Wheeler', 'Mini_Truck', 'Medium_Truck', 'Heavy_Truck']
 vehicle_capacity_map = {
