@@ -12,8 +12,12 @@ import { MaintenancePage } from '../features/maintenance/MaintenancePage';
 import { VehiclesPage } from '@/features/vehicles/VehiclesPage';
 import { TripsPage } from '../features/trips/TripsPage';
 import { DriversPage } from '../features/drivers/DriversPage';
+<<<<<<< HEAD
 import { FinancialsPage } from '../features/financials/FinancialsPage';
 import { ExpensesPage } from '../features/financials/ExpensesPage';
+=======
+import { MapPage } from '../features/map/MapPage';
+>>>>>>> 6ec89111d451919889d5322a9f0d1bc4f9f9b791
 
 interface RouterContext {
     auth: {
@@ -110,6 +114,12 @@ const maintenanceRoute = createRoute({
     component: MaintenancePage,
 });
 
+const mapRoute = createRoute({
+    getParentRoute: () => appRoute,
+    path: '/map',
+    component: MapPage,
+});
+
 const routeTree = rootRoute.addChildren([
     loginRoute,
     appRoute.addChildren([
@@ -122,6 +132,7 @@ const routeTree = rootRoute.addChildren([
             expensesRoute,
         ]),
         maintenanceRoute,
+        mapRoute,
     ]),
 ]);
 
