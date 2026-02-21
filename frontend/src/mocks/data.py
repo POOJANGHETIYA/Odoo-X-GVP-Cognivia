@@ -33,6 +33,22 @@ vehicle_capacity_map = {
     'Heavy_Truck': (4000, 10000),
 }
 
+# New vehicle attributes
+vehicle_brands = ['Tata', 'Mahindra', 'Ashok Leyland', 'Eicher', 'Force Motors', 'Bajaj', 'Toyota', 'Ford']
+
+def random_brand():
+    return random.choice(vehicle_brands)
+
+def random_manufacturing_year():
+    current_year = datetime.utcnow().year
+    return random.randint(1990, current_year)
+
+def random_registration_date():
+    # Random date within last 10 years
+    days = random.randint(0, 365 * 10)
+    return (datetime.utcnow() - timedelta(days=days)).date().isoformat()
+
+
 # ==============================
 # UTILITIES
 # ==============================
@@ -98,7 +114,10 @@ for _ in range(NUM_VEHICLES):
         "capacity_volume_cft": round(random.uniform(50, 1200), 2),
         "current_odometer": random.randint(10000, 80000),
         "acquisition_cost": random.randint(300000, 3000000),
-        "status": "Available"
+        "status": "Available",
+        "brand": random_brand(),
+        "manufacturing_year": random_manufacturing_year(),
+        "registration_date": random_registration_date()
     })
 
 # ==============================

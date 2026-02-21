@@ -1,0 +1,8579 @@
+export const mockUsers = [
+  {
+    "id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "email": "dispatcher@fleet.com",
+    "full_name": "Main Dispatcher",
+    "role": "Dispatcher",
+    "is_active": true
+  },
+  {
+    "id": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "email": "finance@fleet.com",
+    "full_name": "Finance Officer",
+    "role": "Finance",
+    "is_active": true
+  }
+];
+
+export const mockVehicles = [
+  {
+    "id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "license_plate": "IN-3141",
+    "category": "Medium_Truck",
+    "capacity_kg": 1734,
+    "capacity_volume_cft": 965.79,
+    "current_odometer": 69474,
+    "acquisition_cost": 891584,
+    "status": "Available",
+    "brand": "Eicher",
+    "manufacturing_year": 1996,
+    "registration_date": "2022-02-19"
+  },
+  {
+    "id": "e6f2d2c5-3f82-47ae-b9c3-4c8c13e5d62d",
+    "license_plate": "IN-2071",
+    "category": "Mini_Truck",
+    "capacity_kg": 1141,
+    "capacity_volume_cft": 205.19,
+    "current_odometer": 41001,
+    "acquisition_cost": 1723154,
+    "status": "Available",
+    "brand": "Ashok Leyland",
+    "manufacturing_year": 2005,
+    "registration_date": "2022-07-01"
+  },
+  {
+    "id": "886b211b-29a7-45e5-b16d-ecfdb182c778",
+    "license_plate": "IN-7457",
+    "category": "Bike",
+    "capacity_kg": 79,
+    "capacity_volume_cft": 885.17,
+    "current_odometer": 49663,
+    "acquisition_cost": 2177270,
+    "status": "Available",
+    "brand": "Toyota",
+    "manufacturing_year": 1991,
+    "registration_date": "2025-06-11"
+  },
+  {
+    "id": "c4f4ca6b-06a9-45e8-af7e-13fb0f7ee4b0",
+    "license_plate": "IN-9620",
+    "category": "3_Wheeler",
+    "capacity_kg": 506,
+    "capacity_volume_cft": 1189.33,
+    "current_odometer": 50866,
+    "acquisition_cost": 1816260,
+    "status": "Available",
+    "brand": "Toyota",
+    "manufacturing_year": 2005,
+    "registration_date": "2016-12-04"
+  },
+  {
+    "id": "e8a5ee62-8e0b-4679-9bef-7a356035481b",
+    "license_plate": "IN-9865",
+    "category": "Medium_Truck",
+    "capacity_kg": 1521,
+    "capacity_volume_cft": 1158.48,
+    "current_odometer": 36887,
+    "acquisition_cost": 2120849,
+    "status": "Available",
+    "brand": "Toyota",
+    "manufacturing_year": 2011,
+    "registration_date": "2018-02-12"
+  },
+  {
+    "id": "1d7ac6a5-87d6-497f-9ae7-36c5e334d777",
+    "license_plate": "IN-9976",
+    "category": "Medium_Truck",
+    "capacity_kg": 2042,
+    "capacity_volume_cft": 368.49,
+    "current_odometer": 66863,
+    "acquisition_cost": 1070169,
+    "status": "Available",
+    "brand": "Eicher",
+    "manufacturing_year": 2000,
+    "registration_date": "2023-07-20"
+  },
+  {
+    "id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "license_plate": "IN-3409",
+    "category": "3_Wheeler",
+    "capacity_kg": 375,
+    "capacity_volume_cft": 287.88,
+    "current_odometer": 47005,
+    "acquisition_cost": 559856,
+    "status": "Available",
+    "brand": "Toyota",
+    "manufacturing_year": 2023,
+    "registration_date": "2023-01-24"
+  },
+  {
+    "id": "af7f5064-cfcd-44ce-9f42-55f121f619ef",
+    "license_plate": "IN-8647",
+    "category": "Bike",
+    "capacity_kg": 41,
+    "capacity_volume_cft": 880.92,
+    "current_odometer": 44139,
+    "acquisition_cost": 360981,
+    "status": "Available",
+    "brand": "Eicher",
+    "manufacturing_year": 1998,
+    "registration_date": "2023-09-08"
+  },
+  {
+    "id": "6849cb4f-543c-4973-863c-23ab61853227",
+    "license_plate": "IN-1484",
+    "category": "Bike",
+    "capacity_kg": 78,
+    "capacity_volume_cft": 156.57,
+    "current_odometer": 80820,
+    "acquisition_cost": 568102,
+    "status": "Available",
+    "brand": "Eicher",
+    "manufacturing_year": 2005,
+    "registration_date": "2016-03-09"
+  },
+  {
+    "id": "cfe4d416-8f32-4c01-bd91-2d5dfbae129d",
+    "license_plate": "IN-3580",
+    "category": "Heavy_Truck",
+    "capacity_kg": 5319,
+    "capacity_volume_cft": 853.26,
+    "current_odometer": 77308,
+    "acquisition_cost": 869837,
+    "status": "Available",
+    "brand": "Bajaj",
+    "manufacturing_year": 1996,
+    "registration_date": "2021-08-14"
+  },
+  {
+    "id": "59fef87b-6cf3-42a8-90f7-ae8a249ff62e",
+    "license_plate": "IN-1801",
+    "category": "Mini_Truck",
+    "capacity_kg": 643,
+    "capacity_volume_cft": 596.25,
+    "current_odometer": 34773,
+    "acquisition_cost": 1790330,
+    "status": "Available",
+    "brand": "Ashok Leyland",
+    "manufacturing_year": 2004,
+    "registration_date": "2021-01-18"
+  },
+  {
+    "id": "723c9593-1d6c-498b-a246-09adc3974940",
+    "license_plate": "IN-4413",
+    "category": "Medium_Truck",
+    "capacity_kg": 1823,
+    "capacity_volume_cft": 427.29,
+    "current_odometer": 40538,
+    "acquisition_cost": 2508776,
+    "status": "Available",
+    "brand": "Bajaj",
+    "manufacturing_year": 2006,
+    "registration_date": "2024-01-29"
+  },
+  {
+    "id": "10bf6826-1c4b-404e-b0aa-dac2c4e4b3c6",
+    "license_plate": "IN-6744",
+    "category": "Bike",
+    "capacity_kg": 66,
+    "capacity_volume_cft": 1051.93,
+    "current_odometer": 70936,
+    "acquisition_cost": 2821851,
+    "status": "Available",
+    "brand": "Ashok Leyland",
+    "manufacturing_year": 2021,
+    "registration_date": "2017-04-14"
+  },
+  {
+    "id": "247eb157-beac-427f-a59b-5a6a6932705b",
+    "license_plate": "IN-7222",
+    "category": "Mini_Truck",
+    "capacity_kg": 964,
+    "capacity_volume_cft": 240.93,
+    "current_odometer": 32318,
+    "acquisition_cost": 1127066,
+    "status": "Available",
+    "brand": "Tata",
+    "manufacturing_year": 2024,
+    "registration_date": "2025-02-22"
+  },
+  {
+    "id": "3369ef50-21f0-423f-a845-ad2411a4d917",
+    "license_plate": "IN-5942",
+    "category": "Medium_Truck",
+    "capacity_kg": 2279,
+    "capacity_volume_cft": 660.09,
+    "current_odometer": 65276,
+    "acquisition_cost": 707613,
+    "status": "Available",
+    "brand": "Ashok Leyland",
+    "manufacturing_year": 2001,
+    "registration_date": "2023-11-14"
+  },
+  {
+    "id": "03b76a79-4daf-4880-a0c2-65602cf1d985",
+    "license_plate": "IN-2233",
+    "category": "Medium_Truck",
+    "capacity_kg": 2342,
+    "capacity_volume_cft": 376.14,
+    "current_odometer": 74518,
+    "acquisition_cost": 1622810,
+    "status": "Available",
+    "brand": "Mahindra",
+    "manufacturing_year": 1995,
+    "registration_date": "2016-04-29"
+  },
+  {
+    "id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "license_plate": "IN-5907",
+    "category": "Heavy_Truck",
+    "capacity_kg": 6433,
+    "capacity_volume_cft": 523.9,
+    "current_odometer": 28267,
+    "acquisition_cost": 721745,
+    "status": "Available",
+    "brand": "Force Motors",
+    "manufacturing_year": 2021,
+    "registration_date": "2024-01-09"
+  },
+  {
+    "id": "e7b69154-4779-4471-a9d0-0f6400983aa8",
+    "license_plate": "IN-6557",
+    "category": "Bike",
+    "capacity_kg": 30,
+    "capacity_volume_cft": 167.84,
+    "current_odometer": 32277,
+    "acquisition_cost": 933054,
+    "status": "Available",
+    "brand": "Mahindra",
+    "manufacturing_year": 2024,
+    "registration_date": "2016-04-20"
+  },
+  {
+    "id": "c2ded916-8e4a-49c2-9131-3211cc201041",
+    "license_plate": "IN-9247",
+    "category": "Mini_Truck",
+    "capacity_kg": 502,
+    "capacity_volume_cft": 579.76,
+    "current_odometer": 66123,
+    "acquisition_cost": 2768450,
+    "status": "Available",
+    "brand": "Eicher",
+    "manufacturing_year": 1997,
+    "registration_date": "2016-07-18"
+  },
+  {
+    "id": "730c097a-999e-48cc-8561-f3774acda619",
+    "license_plate": "IN-4458",
+    "category": "Bike",
+    "capacity_kg": 80,
+    "capacity_volume_cft": 271.59,
+    "current_odometer": 70947,
+    "acquisition_cost": 2703244,
+    "status": "Available",
+    "brand": "Force Motors",
+    "manufacturing_year": 1994,
+    "registration_date": "2026-01-04"
+  },
+  {
+    "id": "92c55979-6881-40b0-bb44-8bf2f110129c",
+    "license_plate": "IN-9315",
+    "category": "Heavy_Truck",
+    "capacity_kg": 9322,
+    "capacity_volume_cft": 277.48,
+    "current_odometer": 27509,
+    "acquisition_cost": 2416092,
+    "status": "Available",
+    "brand": "Ford",
+    "manufacturing_year": 2003,
+    "registration_date": "2025-05-21"
+  },
+  {
+    "id": "7a7cae2f-2b6d-4818-b697-bdf57ba2666d",
+    "license_plate": "IN-2561",
+    "category": "Heavy_Truck",
+    "capacity_kg": 6043,
+    "capacity_volume_cft": 477.3,
+    "current_odometer": 19692,
+    "acquisition_cost": 1418697,
+    "status": "Available",
+    "brand": "Bajaj",
+    "manufacturing_year": 2014,
+    "registration_date": "2018-08-18"
+  },
+  {
+    "id": "a57783f3-a723-49e5-95aa-0a1dd4d1221c",
+    "license_plate": "IN-3650",
+    "category": "Medium_Truck",
+    "capacity_kg": 1559,
+    "capacity_volume_cft": 674.12,
+    "current_odometer": 76218,
+    "acquisition_cost": 823995,
+    "status": "Available",
+    "brand": "Ford",
+    "manufacturing_year": 1996,
+    "registration_date": "2019-09-01"
+  },
+  {
+    "id": "2a3dd875-ad17-44b8-9ef3-bca4d0555cb3",
+    "license_plate": "IN-4280",
+    "category": "3_Wheeler",
+    "capacity_kg": 383,
+    "capacity_volume_cft": 365.75,
+    "current_odometer": 74740,
+    "acquisition_cost": 1838609,
+    "status": "Available",
+    "brand": "Ford",
+    "manufacturing_year": 2006,
+    "registration_date": "2024-08-18"
+  },
+  {
+    "id": "fb5745d6-2885-43ce-8ed1-b265e9e19678",
+    "license_plate": "IN-6169",
+    "category": "Mini_Truck",
+    "capacity_kg": 645,
+    "capacity_volume_cft": 822.65,
+    "current_odometer": 43189,
+    "acquisition_cost": 2989018,
+    "status": "Available",
+    "brand": "Mahindra",
+    "manufacturing_year": 2007,
+    "registration_date": "2025-10-10"
+  },
+  {
+    "id": "d0428304-078e-4bf6-934d-26f8a08180a5",
+    "license_plate": "IN-3956",
+    "category": "Heavy_Truck",
+    "capacity_kg": 7960,
+    "capacity_volume_cft": 406.77,
+    "current_odometer": 23128,
+    "acquisition_cost": 2658125,
+    "status": "Available",
+    "brand": "Mahindra",
+    "manufacturing_year": 2008,
+    "registration_date": "2017-10-04"
+  },
+  {
+    "id": "6d53a54d-69a2-427f-b615-2b025f0f9720",
+    "license_plate": "IN-7015",
+    "category": "Heavy_Truck",
+    "capacity_kg": 6667,
+    "capacity_volume_cft": 280.08,
+    "current_odometer": 70850,
+    "acquisition_cost": 2366529,
+    "status": "Available",
+    "brand": "Bajaj",
+    "manufacturing_year": 2011,
+    "registration_date": "2016-05-25"
+  },
+  {
+    "id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "license_plate": "IN-1981",
+    "category": "Heavy_Truck",
+    "capacity_kg": 8238,
+    "capacity_volume_cft": 455.35,
+    "current_odometer": 77268,
+    "acquisition_cost": 1079509,
+    "status": "Available",
+    "brand": "Bajaj",
+    "manufacturing_year": 2012,
+    "registration_date": "2019-04-25"
+  },
+  {
+    "id": "78c65f0a-e95d-450a-a284-e1149f625f57",
+    "license_plate": "IN-4614",
+    "category": "Bike",
+    "capacity_kg": 55,
+    "capacity_volume_cft": 938.38,
+    "current_odometer": 45136,
+    "acquisition_cost": 2693102,
+    "status": "Available",
+    "brand": "Mahindra",
+    "manufacturing_year": 2016,
+    "registration_date": "2025-11-26"
+  },
+  {
+    "id": "7564a67e-b7e5-47ae-aff5-f43c2b7dddaf",
+    "license_plate": "IN-3968",
+    "category": "Mini_Truck",
+    "capacity_kg": 936,
+    "capacity_volume_cft": 1188.91,
+    "current_odometer": 69160,
+    "acquisition_cost": 1276828,
+    "status": "Available",
+    "brand": "Bajaj",
+    "manufacturing_year": 2015,
+    "registration_date": "2021-07-03"
+  },
+  {
+    "id": "f1665bae-d484-4b50-a551-e08c2e9a8270",
+    "license_plate": "IN-9237",
+    "category": "3_Wheeler",
+    "capacity_kg": 253,
+    "capacity_volume_cft": 742.44,
+    "current_odometer": 18620,
+    "acquisition_cost": 1025009,
+    "status": "Available",
+    "brand": "Ford",
+    "manufacturing_year": 2019,
+    "registration_date": "2025-06-09"
+  },
+  {
+    "id": "5d3427e1-23ba-414c-98ea-2dae99054b49",
+    "license_plate": "IN-3994",
+    "category": "Mini_Truck",
+    "capacity_kg": 564,
+    "capacity_volume_cft": 120.3,
+    "current_odometer": 83799,
+    "acquisition_cost": 1173438,
+    "status": "Available",
+    "brand": "Toyota",
+    "manufacturing_year": 2025,
+    "registration_date": "2021-02-05"
+  },
+  {
+    "id": "d3dd1bda-cd6d-42bf-a1dc-cfa58c69501b",
+    "license_plate": "IN-1805",
+    "category": "Mini_Truck",
+    "capacity_kg": 798,
+    "capacity_volume_cft": 730.06,
+    "current_odometer": 63745,
+    "acquisition_cost": 1222283,
+    "status": "Available",
+    "brand": "Tata",
+    "manufacturing_year": 2012,
+    "registration_date": "2025-03-01"
+  },
+  {
+    "id": "40378422-a9b9-44c8-80f9-fa3be085ca0c",
+    "license_plate": "IN-1240",
+    "category": "Mini_Truck",
+    "capacity_kg": 696,
+    "capacity_volume_cft": 824.13,
+    "current_odometer": 14122,
+    "acquisition_cost": 1263094,
+    "status": "Available",
+    "brand": "Force Motors",
+    "manufacturing_year": 1995,
+    "registration_date": "2021-08-19"
+  },
+  {
+    "id": "242ba9c6-0141-4627-9dea-17968d968942",
+    "license_plate": "IN-3496",
+    "category": "Medium_Truck",
+    "capacity_kg": 2828,
+    "capacity_volume_cft": 625.55,
+    "current_odometer": 27824,
+    "acquisition_cost": 737954,
+    "status": "Available",
+    "brand": "Bajaj",
+    "manufacturing_year": 2002,
+    "registration_date": "2019-07-29"
+  },
+  {
+    "id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "license_plate": "IN-2204",
+    "category": "Bike",
+    "capacity_kg": 76,
+    "capacity_volume_cft": 664.46,
+    "current_odometer": 86956,
+    "acquisition_cost": 494100,
+    "status": "Available",
+    "brand": "Force Motors",
+    "manufacturing_year": 2011,
+    "registration_date": "2020-11-09"
+  },
+  {
+    "id": "d2bdf7d0-2eb0-4d71-8bda-253bede03fb9",
+    "license_plate": "IN-5979",
+    "category": "Bike",
+    "capacity_kg": 76,
+    "capacity_volume_cft": 239.06,
+    "current_odometer": 47345,
+    "acquisition_cost": 1218146,
+    "status": "Available",
+    "brand": "Toyota",
+    "manufacturing_year": 2020,
+    "registration_date": "2020-04-07"
+  },
+  {
+    "id": "2159866a-72b3-4c6c-a983-e5ca48e3db06",
+    "license_plate": "IN-2967",
+    "category": "Bike",
+    "capacity_kg": 66,
+    "capacity_volume_cft": 670.74,
+    "current_odometer": 55830,
+    "acquisition_cost": 782243,
+    "status": "Available",
+    "brand": "Ashok Leyland",
+    "manufacturing_year": 1995,
+    "registration_date": "2020-06-23"
+  },
+  {
+    "id": "01dc37d3-1524-4025-9889-db7648a43902",
+    "license_plate": "IN-7380",
+    "category": "3_Wheeler",
+    "capacity_kg": 571,
+    "capacity_volume_cft": 579.66,
+    "current_odometer": 33708,
+    "acquisition_cost": 1841059,
+    "status": "Available",
+    "brand": "Eicher",
+    "manufacturing_year": 2010,
+    "registration_date": "2019-07-16"
+  },
+  {
+    "id": "63663797-33c7-4147-a39d-ac67fc094622",
+    "license_plate": "IN-5111",
+    "category": "Bike",
+    "capacity_kg": 32,
+    "capacity_volume_cft": 882.14,
+    "current_odometer": 77480,
+    "acquisition_cost": 2485610,
+    "status": "Available",
+    "brand": "Mahindra",
+    "manufacturing_year": 2011,
+    "registration_date": "2017-10-14"
+  },
+  {
+    "id": "2050141e-e74e-49eb-bba9-6c9dc230ed04",
+    "license_plate": "IN-7297",
+    "category": "Mini_Truck",
+    "capacity_kg": 742,
+    "capacity_volume_cft": 1021.74,
+    "current_odometer": 71575,
+    "acquisition_cost": 2520899,
+    "status": "Available",
+    "brand": "Force Motors",
+    "manufacturing_year": 2004,
+    "registration_date": "2023-12-13"
+  },
+  {
+    "id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "license_plate": "IN-5448",
+    "category": "Bike",
+    "capacity_kg": 74,
+    "capacity_volume_cft": 251.1,
+    "current_odometer": 34476,
+    "acquisition_cost": 2332344,
+    "status": "Available",
+    "brand": "Tata",
+    "manufacturing_year": 2024,
+    "registration_date": "2017-07-07"
+  },
+  {
+    "id": "0017fc50-69f0-4371-a0b6-c428f8caa77c",
+    "license_plate": "IN-2053",
+    "category": "Medium_Truck",
+    "capacity_kg": 2900,
+    "capacity_volume_cft": 556.73,
+    "current_odometer": 24355,
+    "acquisition_cost": 656018,
+    "status": "Available",
+    "brand": "Eicher",
+    "manufacturing_year": 1990,
+    "registration_date": "2023-07-23"
+  },
+  {
+    "id": "816eb4e2-4cf4-4efc-ab2d-50c7774c5d60",
+    "license_plate": "IN-9273",
+    "category": "Mini_Truck",
+    "capacity_kg": 795,
+    "capacity_volume_cft": 179.68,
+    "current_odometer": 64243,
+    "acquisition_cost": 1346022,
+    "status": "Available",
+    "brand": "Toyota",
+    "manufacturing_year": 2007,
+    "registration_date": "2020-02-25"
+  },
+  {
+    "id": "7b7c28d6-caca-4411-a3c1-1532eb214a0e",
+    "license_plate": "IN-6202",
+    "category": "3_Wheeler",
+    "capacity_kg": 239,
+    "capacity_volume_cft": 361.97,
+    "current_odometer": 72769,
+    "acquisition_cost": 1351211,
+    "status": "Available",
+    "brand": "Tata",
+    "manufacturing_year": 2006,
+    "registration_date": "2024-02-22"
+  },
+  {
+    "id": "e8acc2c7-fbfb-42ce-b08a-cf0845ef9d72",
+    "license_plate": "IN-5441",
+    "category": "Mini_Truck",
+    "capacity_kg": 918,
+    "capacity_volume_cft": 596.9,
+    "current_odometer": 23847,
+    "acquisition_cost": 1170502,
+    "status": "Available",
+    "brand": "Toyota",
+    "manufacturing_year": 1995,
+    "registration_date": "2016-05-13"
+  },
+  {
+    "id": "f1e0e1de-132e-4a1f-a09a-ae8b35c39dad",
+    "license_plate": "IN-9144",
+    "category": "Mini_Truck",
+    "capacity_kg": 949,
+    "capacity_volume_cft": 1155.05,
+    "current_odometer": 59353,
+    "acquisition_cost": 1025712,
+    "status": "Available",
+    "brand": "Bajaj",
+    "manufacturing_year": 2023,
+    "registration_date": "2022-03-13"
+  },
+  {
+    "id": "b42cbd26-63fd-485e-b8f4-6ebd2cd1fd3f",
+    "license_plate": "IN-3846",
+    "category": "3_Wheeler",
+    "capacity_kg": 552,
+    "capacity_volume_cft": 585.76,
+    "current_odometer": 33693,
+    "acquisition_cost": 2355780,
+    "status": "Available",
+    "brand": "Ashok Leyland",
+    "manufacturing_year": 2004,
+    "registration_date": "2022-11-09"
+  },
+  {
+    "id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "license_plate": "IN-5827",
+    "category": "Medium_Truck",
+    "capacity_kg": 2065,
+    "capacity_volume_cft": 413.41,
+    "current_odometer": 29886,
+    "acquisition_cost": 2730916,
+    "status": "Available",
+    "brand": "Eicher",
+    "manufacturing_year": 2008,
+    "registration_date": "2016-05-13"
+  },
+  {
+    "id": "9746c7d8-1ce1-420e-a324-5eb0c4c26b1a",
+    "license_plate": "IN-7010",
+    "category": "Medium_Truck",
+    "capacity_kg": 2465,
+    "capacity_volume_cft": 243.97,
+    "current_odometer": 42391,
+    "acquisition_cost": 2721505,
+    "status": "Available",
+    "brand": "Bajaj",
+    "manufacturing_year": 1995,
+    "registration_date": "2016-08-13"
+  }
+];
+
+export const mockDrivers = [
+  {
+    "id": "500a7160-e631-467e-8528-5b8badff7968",
+    "full_name": "Driver 9415",
+    "phone_number": "+916977498247",
+    "license_number": "LIC-595607",
+    "license_class": "Medium_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 78,
+    "status": "Available"
+  },
+  {
+    "id": "2cbcd11e-8e8d-4fca-97cc-92732507ab45",
+    "full_name": "Driver 9038",
+    "phone_number": "+916743141942",
+    "license_number": "LIC-715789",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 72,
+    "status": "Available"
+  },
+  {
+    "id": "e071d96b-6135-4ea8-8e93-209f1655b3ee",
+    "full_name": "Driver 1519",
+    "phone_number": "+919990838106",
+    "license_number": "LIC-667121",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 92,
+    "status": "Available"
+  },
+  {
+    "id": "14aad693-3fed-45f2-8a70-06cb43e9425b",
+    "full_name": "Driver 7272",
+    "phone_number": "+917225828546",
+    "license_number": "LIC-745420",
+    "license_class": "Heavy_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 96,
+    "status": "Available"
+  },
+  {
+    "id": "1da1ed0b-049a-4422-91f7-f34205de30a1",
+    "full_name": "Driver 9449",
+    "phone_number": "+918576428933",
+    "license_number": "LIC-437749",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 100,
+    "status": "Available"
+  },
+  {
+    "id": "5dec7d29-5d75-43a2-bf13-fa49471b721e",
+    "full_name": "Driver 1476",
+    "phone_number": "+918532778769",
+    "license_number": "LIC-434360",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 75,
+    "status": "Available"
+  },
+  {
+    "id": "f096b1e2-994a-4d88-8674-66ce47fa0850",
+    "full_name": "Driver 1507",
+    "phone_number": "+916804654274",
+    "license_number": "LIC-841195",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 71,
+    "status": "Available"
+  },
+  {
+    "id": "2fa6a344-cfe5-4061-ba2f-8f1ecba85297",
+    "full_name": "Driver 9718",
+    "phone_number": "+916608943945",
+    "license_number": "LIC-228535",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 85,
+    "status": "Available"
+  },
+  {
+    "id": "a9727f25-172e-4180-b384-fb7302f8cdd9",
+    "full_name": "Driver 6222",
+    "phone_number": "+919640471541",
+    "license_number": "LIC-441189",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 86,
+    "status": "Available"
+  },
+  {
+    "id": "11728e28-d299-4b13-a0ac-a22d0c8bf9b3",
+    "full_name": "Driver 7445",
+    "phone_number": "+919942240865",
+    "license_number": "LIC-926694",
+    "license_class": "3_Wheeler",
+    "license_expiry": "2028-11-17",
+    "safety_score": 72,
+    "status": "Available"
+  },
+  {
+    "id": "f8a1b979-5398-42d6-9847-e2b0da3377f2",
+    "full_name": "Driver 9373",
+    "phone_number": "+919812070614",
+    "license_number": "LIC-149708",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 75,
+    "status": "Available"
+  },
+  {
+    "id": "6f0eb922-e15a-4221-949d-04998108cb3c",
+    "full_name": "Driver 4502",
+    "phone_number": "+916834014048",
+    "license_number": "LIC-200193",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 95,
+    "status": "Available"
+  },
+  {
+    "id": "499090a2-647e-4921-85b6-54775f966d6c",
+    "full_name": "Driver 3608",
+    "phone_number": "+917235508401",
+    "license_number": "LIC-986604",
+    "license_class": "Medium_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 85,
+    "status": "Available"
+  },
+  {
+    "id": "1ba94ff2-efdd-4afa-9d96-24c8611e9307",
+    "full_name": "Driver 4823",
+    "phone_number": "+919001599934",
+    "license_number": "LIC-511613",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 96,
+    "status": "Available"
+  },
+  {
+    "id": "c58c67d0-ea20-4011-bed1-cdb4996a14a3",
+    "full_name": "Driver 3548",
+    "phone_number": "+919333428675",
+    "license_number": "LIC-646894",
+    "license_class": "3_Wheeler",
+    "license_expiry": "2028-11-17",
+    "safety_score": 92,
+    "status": "Available"
+  },
+  {
+    "id": "b9e00c8f-512a-4c61-9f1e-a167e7af92aa",
+    "full_name": "Driver 6607",
+    "phone_number": "+918932940090",
+    "license_number": "LIC-789584",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 88,
+    "status": "Available"
+  },
+  {
+    "id": "52e9d343-b221-469f-bb5b-02ae682d8cd8",
+    "full_name": "Driver 4238",
+    "phone_number": "+918165325280",
+    "license_number": "LIC-104933",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 85,
+    "status": "Available"
+  },
+  {
+    "id": "6edb1636-8419-4316-a9d4-d6cf71b5f7c6",
+    "full_name": "Driver 8956",
+    "phone_number": "+919209265661",
+    "license_number": "LIC-135443",
+    "license_class": "3_Wheeler",
+    "license_expiry": "2028-11-17",
+    "safety_score": 77,
+    "status": "Available"
+  },
+  {
+    "id": "7ffc033b-ee7b-4b0a-9efb-06bb2326a855",
+    "full_name": "Driver 3291",
+    "phone_number": "+916662707269",
+    "license_number": "LIC-917127",
+    "license_class": "3_Wheeler",
+    "license_expiry": "2028-11-17",
+    "safety_score": 71,
+    "status": "Available"
+  },
+  {
+    "id": "758a7770-ebf3-440c-a5bd-cc1a3d12ae3e",
+    "full_name": "Driver 1080",
+    "phone_number": "+916841332593",
+    "license_number": "LIC-316550",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 70,
+    "status": "Available"
+  },
+  {
+    "id": "a4da994c-09da-4064-8385-f5d5d74c3fed",
+    "full_name": "Driver 1401",
+    "phone_number": "+919800723150",
+    "license_number": "LIC-943076",
+    "license_class": "3_Wheeler",
+    "license_expiry": "2028-11-17",
+    "safety_score": 94,
+    "status": "Available"
+  },
+  {
+    "id": "90a2b3ba-88e2-4b6a-971a-f52f715c319c",
+    "full_name": "Driver 6819",
+    "phone_number": "+918856486922",
+    "license_number": "LIC-814837",
+    "license_class": "3_Wheeler",
+    "license_expiry": "2028-11-17",
+    "safety_score": 97,
+    "status": "Available"
+  },
+  {
+    "id": "567fec7a-3134-4086-a68f-21d047720114",
+    "full_name": "Driver 9472",
+    "phone_number": "+919389051685",
+    "license_number": "LIC-951969",
+    "license_class": "Medium_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 98,
+    "status": "Available"
+  },
+  {
+    "id": "fd5c2ffe-191e-42b6-ab2f-56463b260257",
+    "full_name": "Driver 3468",
+    "phone_number": "+916834693598",
+    "license_number": "LIC-121338",
+    "license_class": "Medium_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 73,
+    "status": "Available"
+  },
+  {
+    "id": "15a5c12d-071b-42c6-a90f-9e00d9f6f1d4",
+    "full_name": "Driver 6920",
+    "phone_number": "+918315979190",
+    "license_number": "LIC-583335",
+    "license_class": "3_Wheeler",
+    "license_expiry": "2028-11-17",
+    "safety_score": 90,
+    "status": "Available"
+  },
+  {
+    "id": "201cb3f0-5f85-4b5c-8e2f-6c154423d4ff",
+    "full_name": "Driver 5032",
+    "phone_number": "+916070612905",
+    "license_number": "LIC-915703",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 94,
+    "status": "Available"
+  },
+  {
+    "id": "9df8e299-0b6d-40d9-8e9b-b2325c71026b",
+    "full_name": "Driver 7350",
+    "phone_number": "+917037507569",
+    "license_number": "LIC-835250",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 92,
+    "status": "Available"
+  },
+  {
+    "id": "6dbed3eb-751b-43b7-ae80-9faa1c5c8b21",
+    "full_name": "Driver 7734",
+    "phone_number": "+916106504872",
+    "license_number": "LIC-305547",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 71,
+    "status": "Available"
+  },
+  {
+    "id": "6a7a7197-4ff9-484d-b844-4b3a974c9c7b",
+    "full_name": "Driver 5173",
+    "phone_number": "+918157119264",
+    "license_number": "LIC-366435",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 94,
+    "status": "Available"
+  },
+  {
+    "id": "a099368d-1be0-46b6-a97a-ae87531486df",
+    "full_name": "Driver 2761",
+    "phone_number": "+916709722545",
+    "license_number": "LIC-229634",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 96,
+    "status": "Available"
+  },
+  {
+    "id": "76d0de2b-fd68-4cae-a54d-1b218d3e6979",
+    "full_name": "Driver 9101",
+    "phone_number": "+918251943864",
+    "license_number": "LIC-370575",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 82,
+    "status": "Available"
+  },
+  {
+    "id": "7cf2357d-d683-42d9-9c50-4d547fd4e83c",
+    "full_name": "Driver 9594",
+    "phone_number": "+916920244574",
+    "license_number": "LIC-361556",
+    "license_class": "Medium_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 70,
+    "status": "Available"
+  },
+  {
+    "id": "5d369fc9-71b7-4ba8-91dc-de4d61b96682",
+    "full_name": "Driver 4587",
+    "phone_number": "+919398671971",
+    "license_number": "LIC-928919",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 90,
+    "status": "Available"
+  },
+  {
+    "id": "1240fbb7-2dfc-498f-8ce9-c98e8ee75865",
+    "full_name": "Driver 2624",
+    "phone_number": "+916080321925",
+    "license_number": "LIC-924441",
+    "license_class": "Medium_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 88,
+    "status": "Available"
+  },
+  {
+    "id": "bad305a5-0aa3-43df-9d35-4e9c337883dd",
+    "full_name": "Driver 4572",
+    "phone_number": "+917170350399",
+    "license_number": "LIC-724626",
+    "license_class": "Medium_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 98,
+    "status": "Available"
+  },
+  {
+    "id": "180dc156-9cce-4a93-a960-cce325a72a90",
+    "full_name": "Driver 7640",
+    "phone_number": "+916276857590",
+    "license_number": "LIC-458194",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 97,
+    "status": "Available"
+  },
+  {
+    "id": "b23d9655-b8e6-4eef-94cf-88a2c25220c5",
+    "full_name": "Driver 6634",
+    "phone_number": "+918013172018",
+    "license_number": "LIC-351117",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 70,
+    "status": "Available"
+  },
+  {
+    "id": "b3140a5d-81d7-4b9a-8224-dcc8d3cfd1c7",
+    "full_name": "Driver 9235",
+    "phone_number": "+918857267487",
+    "license_number": "LIC-233078",
+    "license_class": "Medium_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 74,
+    "status": "Available"
+  },
+  {
+    "id": "26a384ee-53fa-4d86-a43e-4f95d893ff9b",
+    "full_name": "Driver 7150",
+    "phone_number": "+917071956468",
+    "license_number": "LIC-476729",
+    "license_class": "Medium_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 92,
+    "status": "Available"
+  },
+  {
+    "id": "751e5abd-7679-4ed1-914a-8608c12ad213",
+    "full_name": "Driver 3695",
+    "phone_number": "+916845654710",
+    "license_number": "LIC-547401",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 97,
+    "status": "Available"
+  },
+  {
+    "id": "46693d1d-5aee-4cfa-88fe-8fb0803d2c0d",
+    "full_name": "Driver 9381",
+    "phone_number": "+918747944240",
+    "license_number": "LIC-464906",
+    "license_class": "Medium_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 94,
+    "status": "Available"
+  },
+  {
+    "id": "d9e99f92-8c12-4258-b5c6-9b88319021e7",
+    "full_name": "Driver 8645",
+    "phone_number": "+917961922870",
+    "license_number": "LIC-320096",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 90,
+    "status": "Available"
+  },
+  {
+    "id": "87b7d634-91ab-44ac-aabe-6cf43ec0b6a6",
+    "full_name": "Driver 4263",
+    "phone_number": "+916891074262",
+    "license_number": "LIC-400700",
+    "license_class": "Heavy_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 74,
+    "status": "Available"
+  },
+  {
+    "id": "22881f31-7562-4cc4-9014-a19d357d3d6f",
+    "full_name": "Driver 3061",
+    "phone_number": "+919046167133",
+    "license_number": "LIC-641426",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 76,
+    "status": "Available"
+  },
+  {
+    "id": "f64aacf2-807a-4ec8-9365-2fdd847967da",
+    "full_name": "Driver 9648",
+    "phone_number": "+918976099129",
+    "license_number": "LIC-876540",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 94,
+    "status": "Available"
+  },
+  {
+    "id": "9507ed84-c163-442f-ba6e-d7f0ea96bd55",
+    "full_name": "Driver 1087",
+    "phone_number": "+916866156292",
+    "license_number": "LIC-912627",
+    "license_class": "Heavy_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 84,
+    "status": "Available"
+  },
+  {
+    "id": "ff442b7b-d413-4dc6-80a4-af95135dfd3a",
+    "full_name": "Driver 8523",
+    "phone_number": "+917344678514",
+    "license_number": "LIC-255166",
+    "license_class": "Heavy_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 99,
+    "status": "Available"
+  },
+  {
+    "id": "ca0927fa-2947-4bce-a97c-8c547783000f",
+    "full_name": "Driver 6134",
+    "phone_number": "+916730927673",
+    "license_number": "LIC-293661",
+    "license_class": "Medium_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 90,
+    "status": "Available"
+  },
+  {
+    "id": "29fa25eb-7818-4085-819e-537e5d8bf96a",
+    "full_name": "Driver 3518",
+    "phone_number": "+919642157439",
+    "license_number": "LIC-456710",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 78,
+    "status": "Available"
+  },
+  {
+    "id": "1e8db33c-e398-4d82-900f-4b7f2247c55e",
+    "full_name": "Driver 5072",
+    "phone_number": "+919815262717",
+    "license_number": "LIC-659223",
+    "license_class": "Medium_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 79,
+    "status": "Available"
+  },
+  {
+    "id": "31fb854a-c1a7-4ba6-afbc-0f26bf13e8db",
+    "full_name": "Driver 9154",
+    "phone_number": "+916045772693",
+    "license_number": "LIC-531011",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 95,
+    "status": "Available"
+  },
+  {
+    "id": "81291d9b-f1f4-431e-85e2-bdd871d4a1bb",
+    "full_name": "Driver 5201",
+    "phone_number": "+918033373818",
+    "license_number": "LIC-377759",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 72,
+    "status": "Available"
+  },
+  {
+    "id": "3ffbbab3-e604-478b-93b9-b764a5e0aa18",
+    "full_name": "Driver 1602",
+    "phone_number": "+917726746373",
+    "license_number": "LIC-177981",
+    "license_class": "3_Wheeler",
+    "license_expiry": "2028-11-17",
+    "safety_score": 78,
+    "status": "Available"
+  },
+  {
+    "id": "96364e94-97fc-4b10-a75b-fe5de40cad5d",
+    "full_name": "Driver 3375",
+    "phone_number": "+916772816014",
+    "license_number": "LIC-383126",
+    "license_class": "Heavy_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 89,
+    "status": "Available"
+  },
+  {
+    "id": "250ae2a9-2e63-456a-93c6-602801a90805",
+    "full_name": "Driver 4613",
+    "phone_number": "+916737590034",
+    "license_number": "LIC-317743",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 85,
+    "status": "Available"
+  },
+  {
+    "id": "659bd57d-88f3-4dbd-a248-25e0b58ce26f",
+    "full_name": "Driver 5085",
+    "phone_number": "+916647791046",
+    "license_number": "LIC-429343",
+    "license_class": "Heavy_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 85,
+    "status": "Available"
+  },
+  {
+    "id": "8df23c90-0321-4cd6-86c0-3306d5face1a",
+    "full_name": "Driver 6015",
+    "phone_number": "+919023531928",
+    "license_number": "LIC-159502",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 94,
+    "status": "Available"
+  },
+  {
+    "id": "27ae1ebc-edbe-4716-ad93-a3e2b523d12f",
+    "full_name": "Driver 6034",
+    "phone_number": "+919033575836",
+    "license_number": "LIC-829343",
+    "license_class": "Heavy_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 77,
+    "status": "Available"
+  },
+  {
+    "id": "f3650ce5-bcbb-48dd-b95c-b307f8083d53",
+    "full_name": "Driver 3693",
+    "phone_number": "+917473509625",
+    "license_number": "LIC-302988",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 72,
+    "status": "Available"
+  },
+  {
+    "id": "15cf773e-8bd8-4309-960a-968e0fdd296a",
+    "full_name": "Driver 7640",
+    "phone_number": "+918830704124",
+    "license_number": "LIC-143972",
+    "license_class": "Medium_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 82,
+    "status": "Available"
+  },
+  {
+    "id": "362c18bc-20d8-49cb-9e96-1d835891e581",
+    "full_name": "Driver 3766",
+    "phone_number": "+918220555652",
+    "license_number": "LIC-522118",
+    "license_class": "Heavy_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 75,
+    "status": "Available"
+  },
+  {
+    "id": "06ac01e0-ef8d-4768-b91c-13b3930868bd",
+    "full_name": "Driver 5801",
+    "phone_number": "+916175275472",
+    "license_number": "LIC-332262",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 71,
+    "status": "Available"
+  },
+  {
+    "id": "4498018a-6e56-47fa-a463-fce6bda35c72",
+    "full_name": "Driver 2796",
+    "phone_number": "+919764510947",
+    "license_number": "LIC-128722",
+    "license_class": "Medium_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 92,
+    "status": "Available"
+  },
+  {
+    "id": "b2029e0e-63d7-498c-bc9a-6857413276c1",
+    "full_name": "Driver 9129",
+    "phone_number": "+919386638015",
+    "license_number": "LIC-950545",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 89,
+    "status": "Available"
+  },
+  {
+    "id": "1bb4a394-46d2-4010-bb3e-d0382995e819",
+    "full_name": "Driver 4765",
+    "phone_number": "+919748934969",
+    "license_number": "LIC-266029",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 77,
+    "status": "Available"
+  },
+  {
+    "id": "d092b0cf-8985-4d0c-b338-a451772a7dd3",
+    "full_name": "Driver 9963",
+    "phone_number": "+916063504231",
+    "license_number": "LIC-296349",
+    "license_class": "3_Wheeler",
+    "license_expiry": "2028-11-17",
+    "safety_score": 74,
+    "status": "Available"
+  },
+  {
+    "id": "761d71a9-ded1-4679-8b48-c561d1392bd5",
+    "full_name": "Driver 5383",
+    "phone_number": "+919417640695",
+    "license_number": "LIC-114079",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 79,
+    "status": "Available"
+  },
+  {
+    "id": "91fdda76-19df-4ab2-952c-cc77bcf6ebaa",
+    "full_name": "Driver 3204",
+    "phone_number": "+919177115895",
+    "license_number": "LIC-404568",
+    "license_class": "Mini_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 79,
+    "status": "Available"
+  },
+  {
+    "id": "2cb81333-524f-4eca-a07f-8da9a7c9442f",
+    "full_name": "Driver 6044",
+    "phone_number": "+919398234389",
+    "license_number": "LIC-830960",
+    "license_class": "Bike",
+    "license_expiry": "2028-11-17",
+    "safety_score": 71,
+    "status": "Available"
+  },
+  {
+    "id": "3042f8ee-1e2d-4571-98fe-767d7097f192",
+    "full_name": "Driver 3790",
+    "phone_number": "+916582709797",
+    "license_number": "LIC-855554",
+    "license_class": "Heavy_Truck",
+    "license_expiry": "2028-11-17",
+    "safety_score": 98,
+    "status": "Available"
+  }
+];
+
+export const mockTrips = [
+  {
+    "id": "b21bc270-61a7-4274-be68-49c42c4a145d",
+    "tracking_number": "TRP-56115889",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "driver_id": "11728e28-d299-4b13-a0ac-a22d0c8bf9b3",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 16.092621313752744,
+      "lon": 92.85577554962714
+    },
+    "dropoff_location": {
+      "lat": 20.229389308056405,
+      "lon": 73.74797428996453
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 157,
+    "estimated_distance_km": 2069.13,
+    "expected_revenue": 52228.25,
+    "start_odometer": 35420,
+    "end_odometer": 37489,
+    "status": "Completed",
+    "receiver_otp": "896527",
+    "created_at": "2025-10-17T06:57:57.223301"
+  },
+  {
+    "id": "8ecf6d25-9947-41f5-8de5-1ce88e8b2a44",
+    "tracking_number": "TRP-27609847",
+    "vehicle_id": "d2bdf7d0-2eb0-4d71-8bda-253bede03fb9",
+    "driver_id": "81291d9b-f1f4-431e-85e2-bdd871d4a1bb",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 11.972148968793594,
+      "lon": 86.95361329218125
+    },
+    "dropoff_location": {
+      "lat": 31.309745058175647,
+      "lon": 79.45640028182947
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 29,
+    "estimated_distance_km": 2283.74,
+    "expected_revenue": 57593.5,
+    "start_odometer": 39790,
+    "end_odometer": 42073,
+    "status": "Completed",
+    "receiver_otp": "576307",
+    "created_at": "2025-11-16T06:57:57.223321"
+  },
+  {
+    "id": "039b250d-4528-4fb0-af2b-fe3e98acacaf",
+    "tracking_number": "TRP-76614423",
+    "vehicle_id": "40378422-a9b9-44c8-80f9-fa3be085ca0c",
+    "driver_id": "52e9d343-b221-469f-bb5b-02ae682d8cd8",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 19.05750121833977,
+      "lon": 82.94933154671692
+    },
+    "dropoff_location": {
+      "lat": 12.0878400129927,
+      "lon": 92.15991017865196
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 284,
+    "estimated_distance_km": 1253.92,
+    "expected_revenue": 31848.0,
+    "start_odometer": 11272,
+    "end_odometer": 12525,
+    "status": "Completed",
+    "receiver_otp": "210074",
+    "created_at": "2026-02-10T06:57:57.223338"
+  },
+  {
+    "id": "635bb8da-6c65-4bc2-9eb4-f743f97b4579",
+    "tracking_number": "TRP-96435531",
+    "vehicle_id": "af7f5064-cfcd-44ce-9f42-55f121f619ef",
+    "driver_id": "f64aacf2-807a-4ec8-9365-2fdd847967da",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 24.26034593790437,
+      "lon": 96.14111110213594
+    },
+    "dropoff_location": {
+      "lat": 22.1360956147566,
+      "lon": 79.05452482144021
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 39,
+    "estimated_distance_km": 1761.07,
+    "expected_revenue": 44526.75,
+    "start_odometer": 37501,
+    "end_odometer": 39262,
+    "status": "Completed",
+    "receiver_otp": "573027",
+    "created_at": "2025-10-25T06:57:57.223353"
+  },
+  {
+    "id": "f42a8942-c7c4-4939-a78c-96e5a480bf20",
+    "tracking_number": "TRP-17683062",
+    "vehicle_id": "2159866a-72b3-4c6c-a983-e5ca48e3db06",
+    "driver_id": "6f0eb922-e15a-4221-949d-04998108cb3c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 36.16485319602618,
+      "lon": 68.18627594017278
+    },
+    "dropoff_location": {
+      "lat": 8.673487054845888,
+      "lon": 71.22499237465112
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 32,
+    "estimated_distance_km": 3072.35,
+    "expected_revenue": 77308.75,
+    "start_odometer": 46574,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-09-25T06:57:57.223368"
+  },
+  {
+    "id": "cf9c8ded-3cbe-4cf5-9a35-8b739ace0ede",
+    "tracking_number": "TRP-33044477",
+    "vehicle_id": "242ba9c6-0141-4627-9dea-17968d968942",
+    "driver_id": "1240fbb7-2dfc-498f-8ce9-c98e8ee75865",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 11.412247747442107,
+      "lon": 75.79223810485526
+    },
+    "dropoff_location": {
+      "lat": 11.288809302107254,
+      "lon": 80.0372823540154
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2299,
+    "estimated_distance_km": 462.99,
+    "expected_revenue": 12074.75,
+    "start_odometer": 18856,
+    "end_odometer": 19318,
+    "status": "Completed",
+    "receiver_otp": "975038",
+    "created_at": "2025-12-22T06:57:57.223382"
+  },
+  {
+    "id": "20f84720-1f25-4215-958c-235be2ba15c7",
+    "tracking_number": "TRP-84033178",
+    "vehicle_id": "0017fc50-69f0-4371-a0b6-c428f8caa77c",
+    "driver_id": "fd5c2ffe-191e-42b6-ab2f-56463b260257",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 13.170490272280281,
+      "lon": 78.57388074211673
+    },
+    "dropoff_location": {
+      "lat": 26.03729507858754,
+      "lon": 77.54928828420046
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2484,
+    "estimated_distance_km": 1434.72,
+    "expected_revenue": 36368.0,
+    "start_odometer": 13858,
+    "end_odometer": 15292,
+    "status": "Completed",
+    "receiver_otp": "218320",
+    "created_at": "2025-12-19T06:57:57.223397"
+  },
+  {
+    "id": "17a7a012-cb99-42e9-887b-49ecec8c3b93",
+    "tracking_number": "TRP-78928405",
+    "vehicle_id": "59fef87b-6cf3-42a8-90f7-ae8a249ff62e",
+    "driver_id": "f8a1b979-5398-42d6-9847-e2b0da3377f2",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 11.229170799422393,
+      "lon": 85.20812853307274
+    },
+    "dropoff_location": {
+      "lat": 19.034598063967298,
+      "lon": 93.9328097168892
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 586,
+    "estimated_distance_km": 1276.15,
+    "expected_revenue": 32403.75,
+    "start_odometer": 30425,
+    "end_odometer": 31701,
+    "status": "Completed",
+    "receiver_otp": "423207",
+    "created_at": "2025-11-07T06:57:57.223411"
+  },
+  {
+    "id": "19b9a6ea-ff24-44dd-9685-6ddd5e880e03",
+    "tracking_number": "TRP-52691805",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "driver_id": "26a384ee-53fa-4d86-a43e-4f95d893ff9b",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 24.03021121921879,
+      "lon": 78.74506497810358
+    },
+    "dropoff_location": {
+      "lat": 13.527657465663612,
+      "lon": 92.25895232883691
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1573,
+    "estimated_distance_km": 1838.27,
+    "expected_revenue": 46456.75,
+    "start_odometer": 54915,
+    "end_odometer": 56753,
+    "status": "Completed",
+    "receiver_otp": "573202",
+    "created_at": "2026-02-15T06:57:57.223425"
+  },
+  {
+    "id": "f5c16e3e-16f0-4e0c-9879-f6380c067d40",
+    "tracking_number": "TRP-15974541",
+    "vehicle_id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "driver_id": "f64aacf2-807a-4ec8-9365-2fdd847967da",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 14.946653430462494,
+      "lon": 75.43885529345962
+    },
+    "dropoff_location": {
+      "lat": 26.040653535922054,
+      "lon": 74.97482543189602
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 56,
+    "estimated_distance_km": 1234.54,
+    "expected_revenue": 31363.5,
+    "start_odometer": 25378,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2026-01-24T06:57:57.223441"
+  },
+  {
+    "id": "25869f6a-f1db-4858-bcce-f388f5610453",
+    "tracking_number": "TRP-46258286",
+    "vehicle_id": "723c9593-1d6c-498b-a246-09adc3974940",
+    "driver_id": "ca0927fa-2947-4bce-a97c-8c547783000f",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 15.945510720656928,
+      "lon": 96.86804732075365
+    },
+    "dropoff_location": {
+      "lat": 14.883567316018002,
+      "lon": 93.04919983014021
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1809,
+    "estimated_distance_km": 426.04,
+    "expected_revenue": 11151.0,
+    "start_odometer": 30482,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-09-24T06:57:57.223456"
+  },
+  {
+    "id": "0614bcc5-5f97-46bd-92aa-2ecc99d05910",
+    "tracking_number": "TRP-66483794",
+    "vehicle_id": "0017fc50-69f0-4371-a0b6-c428f8caa77c",
+    "driver_id": "b3140a5d-81d7-4b9a-8224-dcc8d3cfd1c7",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 25.474555429201747,
+      "lon": 96.56281864898736
+    },
+    "dropoff_location": {
+      "lat": 9.078255070533158,
+      "lon": 69.6236822232283
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2323,
+    "estimated_distance_km": 3379.27,
+    "expected_revenue": 84981.75,
+    "start_odometer": 15292,
+    "end_odometer": 18671,
+    "status": "Completed",
+    "receiver_otp": "463105",
+    "created_at": "2025-09-20T06:57:57.223470"
+  },
+  {
+    "id": "0dda3beb-3abc-4a32-8f0b-303a0939d38a",
+    "tracking_number": "TRP-45381764",
+    "vehicle_id": "816eb4e2-4cf4-4efc-ab2d-50c7774c5d60",
+    "driver_id": "201cb3f0-5f85-4b5c-8e2f-6c154423d4ff",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 35.28013999462714,
+      "lon": 75.62894004066177
+    },
+    "dropoff_location": {
+      "lat": 24.49141817987705,
+      "lon": 80.11839557675293
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 441,
+    "estimated_distance_km": 1274.9,
+    "expected_revenue": 32372.5,
+    "start_odometer": 62229,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-11-03T06:57:57.223484"
+  },
+  {
+    "id": "8bd28478-8338-48eb-bb6b-627e9516e8e8",
+    "tracking_number": "TRP-88477898",
+    "vehicle_id": "af7f5064-cfcd-44ce-9f42-55f121f619ef",
+    "driver_id": "e071d96b-6135-4ea8-8e93-209f1655b3ee",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 35.63110715586696,
+      "lon": 94.3782068765518
+    },
+    "dropoff_location": {
+      "lat": 10.076682226521704,
+      "lon": 83.90756251061252
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 29,
+    "estimated_distance_km": 3032.38,
+    "expected_revenue": 76309.5,
+    "start_odometer": 39262,
+    "end_odometer": 42294,
+    "status": "Completed",
+    "receiver_otp": "244592",
+    "created_at": "2025-10-25T06:57:57.223498"
+  },
+  {
+    "id": "dcaa6ba8-8965-4bbb-8ca8-a21215aa3349",
+    "tracking_number": "TRP-70543225",
+    "vehicle_id": "e6f2d2c5-3f82-47ae-b9c3-4c8c13e5d62d",
+    "driver_id": "5dec7d29-5d75-43a2-bf13-fa49471b721e",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 15.72595159107258,
+      "lon": 77.19396118616197
+    },
+    "dropoff_location": {
+      "lat": 14.363657964289004,
+      "lon": 76.50647071696616
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1001,
+    "estimated_distance_km": 168.51,
+    "expected_revenue": 4712.75,
+    "start_odometer": 37882,
+    "end_odometer": 38050,
+    "status": "Completed",
+    "receiver_otp": "429992",
+    "created_at": "2026-02-05T06:57:57.223512"
+  },
+  {
+    "id": "0a639911-b9a9-42f5-b639-7556f5a55805",
+    "tracking_number": "TRP-75259695",
+    "vehicle_id": "5d3427e1-23ba-414c-98ea-2dae99054b49",
+    "driver_id": "91fdda76-19df-4ab2-952c-cc77bcf6ebaa",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 19.712868301606782,
+      "lon": 69.44763800817074
+    },
+    "dropoff_location": {
+      "lat": 36.550921023586575,
+      "lon": 86.08745448226219
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 408,
+    "estimated_distance_km": 2475.47,
+    "expected_revenue": 62386.75,
+    "start_odometer": 74417,
+    "end_odometer": 76892,
+    "status": "Completed",
+    "receiver_otp": "117268",
+    "created_at": "2025-11-15T06:57:57.223527"
+  },
+  {
+    "id": "86ec10d9-6e83-4f8f-97c3-2a87fe415766",
+    "tracking_number": "TRP-33857890",
+    "vehicle_id": "7564a67e-b7e5-47ae-aff5-f43c2b7dddaf",
+    "driver_id": "180dc156-9cce-4a93-a960-cce325a72a90",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 33.98048224010458,
+      "lon": 77.33842421342897
+    },
+    "dropoff_location": {
+      "lat": 21.67877021868273,
+      "lon": 95.77426989183691
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 879,
+    "estimated_distance_km": 2264.54,
+    "expected_revenue": 57113.5,
+    "start_odometer": 62586,
+    "end_odometer": 64850,
+    "status": "Completed",
+    "receiver_otp": "138094",
+    "created_at": "2026-01-28T06:57:57.223541"
+  },
+  {
+    "id": "3eee61a0-4bcc-4bf0-b3da-41b8da2c196c",
+    "tracking_number": "TRP-54439723",
+    "vehicle_id": "723c9593-1d6c-498b-a246-09adc3974940",
+    "driver_id": "500a7160-e631-467e-8528-5b8badff7968",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 15.439972238367815,
+      "lon": 93.959643776315
+    },
+    "dropoff_location": {
+      "lat": 10.2959830477958,
+      "lon": 81.8728945728387
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 924,
+    "estimated_distance_km": 1429.06,
+    "expected_revenue": 36226.5,
+    "start_odometer": 30908,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2026-01-31T06:57:57.223555"
+  },
+  {
+    "id": "f691c523-365c-4420-bb92-02b2fa9bc349",
+    "tracking_number": "TRP-47753962",
+    "vehicle_id": "d2bdf7d0-2eb0-4d71-8bda-253bede03fb9",
+    "driver_id": "d9e99f92-8c12-4258-b5c6-9b88319021e7",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 32.64639931270595,
+      "lon": 76.47814900915975
+    },
+    "dropoff_location": {
+      "lat": 22.31364328783136,
+      "lon": 80.83508859777056
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 61,
+    "estimated_distance_km": 1226.33,
+    "expected_revenue": 31158.25,
+    "start_odometer": 42073,
+    "end_odometer": 43299,
+    "status": "Completed",
+    "receiver_otp": "298767",
+    "created_at": "2025-11-27T06:57:57.223568"
+  },
+  {
+    "id": "95fa91b8-44fb-4964-bb0b-b7f4e7a34f11",
+    "tracking_number": "TRP-62966403",
+    "vehicle_id": "e8acc2c7-fbfb-42ce-b08a-cf0845ef9d72",
+    "driver_id": "06ac01e0-ef8d-4768-b91c-13b3930868bd",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 9.267044219048815,
+      "lon": 84.18759779286175
+    },
+    "dropoff_location": {
+      "lat": 28.745446958974732,
+      "lon": 76.96618859528927
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 867,
+    "estimated_distance_km": 2293.44,
+    "expected_revenue": 57836.0,
+    "start_odometer": 16590,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-12-26T06:57:57.223582"
+  },
+  {
+    "id": "9c008527-9655-42a4-8abb-fd5f9c203e02",
+    "tracking_number": "TRP-43877809",
+    "vehicle_id": "7564a67e-b7e5-47ae-aff5-f43c2b7dddaf",
+    "driver_id": "f3650ce5-bcbb-48dd-b95c-b307f8083d53",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 21.872008627536825,
+      "lon": 89.7683384559443
+    },
+    "dropoff_location": {
+      "lat": 17.122166657080218,
+      "lon": 83.64374854586126
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 879,
+    "estimated_distance_km": 831.09,
+    "expected_revenue": 21277.25,
+    "start_odometer": 64850,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-12-22T06:57:57.223596"
+  },
+  {
+    "id": "0d0acf09-fbbc-4138-9f8c-fc7e7aa08879",
+    "tracking_number": "TRP-71958970",
+    "vehicle_id": "3369ef50-21f0-423f-a845-ad2411a4d917",
+    "driver_id": "46693d1d-5aee-4cfa-88fe-8fb0803d2c0d",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 24.3872666965815,
+      "lon": 86.38739013673816
+    },
+    "dropoff_location": {
+      "lat": 29.51154977574099,
+      "lon": 84.42852023408658
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2253,
+    "estimated_distance_km": 601.93,
+    "expected_revenue": 15548.25,
+    "start_odometer": 58328,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2026-01-01T06:57:57.223612"
+  },
+  {
+    "id": "ff9427cd-79bb-4b74-bfbd-11cb63ac9b41",
+    "tracking_number": "TRP-58161179",
+    "vehicle_id": "242ba9c6-0141-4627-9dea-17968d968942",
+    "driver_id": "fd5c2ffe-191e-42b6-ab2f-56463b260257",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 32.03830322471785,
+      "lon": 84.97490741526424
+    },
+    "dropoff_location": {
+      "lat": 8.428189926630978,
+      "lon": 72.40233126860585
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1043,
+    "estimated_distance_km": 2928.76,
+    "expected_revenue": 73719.0,
+    "start_odometer": 19318,
+    "end_odometer": 22246,
+    "status": "Completed",
+    "receiver_otp": "593676",
+    "created_at": "2026-02-19T06:57:57.223626"
+  },
+  {
+    "id": "16c73ebe-f259-4dfe-94a2-edf2b3df4b10",
+    "tracking_number": "TRP-72103912",
+    "vehicle_id": "2159866a-72b3-4c6c-a983-e5ca48e3db06",
+    "driver_id": "6dbed3eb-751b-43b7-ae80-9faa1c5c8b21",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 9.420234676686052,
+      "lon": 84.13439584786178
+    },
+    "dropoff_location": {
+      "lat": 23.128551044213513,
+      "lon": 86.85868052896514
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 25,
+    "estimated_distance_km": 1551.62,
+    "expected_revenue": 39290.5,
+    "start_odometer": 49646,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-12-15T06:57:57.223640"
+  },
+  {
+    "id": "878dc8cc-5579-4238-bac7-2eecf7782fb0",
+    "tracking_number": "TRP-66134291",
+    "vehicle_id": "d2bdf7d0-2eb0-4d71-8bda-253bede03fb9",
+    "driver_id": "6dbed3eb-751b-43b7-ae80-9faa1c5c8b21",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 26.656133641852257,
+      "lon": 77.28557954586316
+    },
+    "dropoff_location": {
+      "lat": 27.990646433846255,
+      "lon": 87.42017667860955
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 74,
+    "estimated_distance_km": 1011.81,
+    "expected_revenue": 25795.25,
+    "start_odometer": 43299,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2026-01-04T06:57:57.223654"
+  },
+  {
+    "id": "4ffe01e7-8a20-4874-9915-4ef74b736a8f",
+    "tracking_number": "TRP-89421677",
+    "vehicle_id": "723c9593-1d6c-498b-a246-09adc3974940",
+    "driver_id": "500a7160-e631-467e-8528-5b8badff7968",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 34.10203783580344,
+      "lon": 95.50468761058109
+    },
+    "dropoff_location": {
+      "lat": 11.453537062100033,
+      "lon": 86.20494133953736
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 948,
+    "estimated_distance_km": 2689.4,
+    "expected_revenue": 67735.0,
+    "start_odometer": 32337,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2026-02-04T06:57:57.223667"
+  },
+  {
+    "id": "8fbcac0f-0cdf-4efe-8c70-9c24de01ba09",
+    "tracking_number": "TRP-46480242",
+    "vehicle_id": "d3dd1bda-cd6d-42bf-a1dc-cfa58c69501b",
+    "driver_id": "b23d9655-b8e6-4eef-94cf-88a2c25220c5",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 35.3861137955884,
+      "lon": 77.7764644062361
+    },
+    "dropoff_location": {
+      "lat": 28.047843904610612,
+      "lon": 77.0887986134275
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 243,
+    "estimated_distance_km": 818.56,
+    "expected_revenue": 20964.0,
+    "start_odometer": 62927,
+    "end_odometer": 63745,
+    "status": "Completed",
+    "receiver_otp": "667442",
+    "created_at": "2026-01-14T06:57:57.223680"
+  },
+  {
+    "id": "0f9498a3-7bac-4cb9-9290-a92aed9e2470",
+    "tracking_number": "TRP-38019733",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "driver_id": "15a5c12d-071b-42c6-a90f-9e00d9f6f1d4",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 19.879175687341817,
+      "lon": 79.33968365625489
+    },
+    "dropoff_location": {
+      "lat": 36.21967774138089,
+      "lon": 76.54115712377
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 271,
+    "estimated_distance_km": 1837.36,
+    "expected_revenue": 46434.0,
+    "start_odometer": 37489,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2026-01-16T06:57:57.223739"
+  },
+  {
+    "id": "8d29119f-8ac4-470e-90df-f1fb1be00950",
+    "tracking_number": "TRP-64403620",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "driver_id": "1e8db33c-e398-4d82-900f-4b7f2247c55e",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 19.934811250488785,
+      "lon": 87.8790386221952
+    },
+    "dropoff_location": {
+      "lat": 28.846529708149166,
+      "lon": 68.46929652064811
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1014,
+    "estimated_distance_km": 2196.98,
+    "expected_revenue": 55424.5,
+    "start_odometer": 18283,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2026-01-02T06:57:57.223752"
+  },
+  {
+    "id": "b1df134a-6067-4e97-af42-36b6792a57dc",
+    "tracking_number": "TRP-45456675",
+    "vehicle_id": "92c55979-6881-40b0-bb44-8bf2f110129c",
+    "driver_id": "14aad693-3fed-45f2-8a70-06cb43e9425b",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 27.56473713869749,
+      "lon": 71.33817455840821
+    },
+    "dropoff_location": {
+      "lat": 9.16507486457322,
+      "lon": 77.91224295475175
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 5466,
+    "estimated_distance_km": 2159.09,
+    "expected_revenue": 54477.25,
+    "start_odometer": 19028,
+    "end_odometer": 21187,
+    "status": "Completed",
+    "receiver_otp": "208287",
+    "created_at": "2025-10-26T06:57:57.223764"
+  },
+  {
+    "id": "15bff678-26fb-4584-b59a-d7f377308afe",
+    "tracking_number": "TRP-30410240",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "driver_id": "500a7160-e631-467e-8528-5b8badff7968",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 11.062308046672165,
+      "lon": 81.05384328026989
+    },
+    "dropoff_location": {
+      "lat": 9.760325673255881,
+      "lon": 78.25835283177591
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1709,
+    "estimated_distance_km": 338.26,
+    "expected_revenue": 8956.5,
+    "start_odometer": 56753,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-09-19T06:57:57.223777"
+  },
+  {
+    "id": "365fae5a-531e-491f-b28f-95a9f754e84e",
+    "tracking_number": "TRP-47801287",
+    "vehicle_id": "3369ef50-21f0-423f-a845-ad2411a4d917",
+    "driver_id": "46693d1d-5aee-4cfa-88fe-8fb0803d2c0d",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 18.570316403459195,
+      "lon": 89.48823936020331
+    },
+    "dropoff_location": {
+      "lat": 31.48871894938182,
+      "lon": 82.91432085452709
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1427,
+    "estimated_distance_km": 1580.81,
+    "expected_revenue": 40020.25,
+    "start_odometer": 58929,
+    "end_odometer": 60509,
+    "status": "Completed",
+    "receiver_otp": "644310",
+    "created_at": "2025-11-18T06:57:57.223789"
+  },
+  {
+    "id": "aa4dfa29-7ab8-4a67-8921-d7bfa2ca1d47",
+    "tracking_number": "TRP-51623877",
+    "vehicle_id": "c2ded916-8e4a-49c2-9131-3211cc201041",
+    "driver_id": "b9e00c8f-512a-4c61-9f1e-a167e7af92aa",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 24.184656025969243,
+      "lon": 72.93562845084048
+    },
+    "dropoff_location": {
+      "lat": 34.90892363258094,
+      "lon": 79.74254116365734
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 191,
+    "estimated_distance_km": 1361.24,
+    "expected_revenue": 34531.0,
+    "start_odometer": 64762,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-12-29T06:57:57.223801"
+  },
+  {
+    "id": "5058d4af-321f-463b-8fef-9675c5821d00",
+    "tracking_number": "TRP-58863175",
+    "vehicle_id": "92c55979-6881-40b0-bb44-8bf2f110129c",
+    "driver_id": "27ae1ebc-edbe-4716-ad93-a3e2b523d12f",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 16.20345977492378,
+      "lon": 69.7847582928867
+    },
+    "dropoff_location": {
+      "lat": 25.030352689248762,
+      "lon": 84.64868048948344
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 5149,
+    "estimated_distance_km": 1829.74,
+    "expected_revenue": 46243.5,
+    "start_odometer": 21187,
+    "end_odometer": 23016,
+    "status": "Completed",
+    "receiver_otp": "208807",
+    "created_at": "2025-08-31T06:57:57.223814"
+  },
+  {
+    "id": "6bcd8205-a4f8-4021-a97a-455e1b6771e8",
+    "tracking_number": "TRP-61477389",
+    "vehicle_id": "242ba9c6-0141-4627-9dea-17968d968942",
+    "driver_id": "bad305a5-0aa3-43df-9d35-4e9c337883dd",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 26.911739462925446,
+      "lon": 81.26509873716601
+    },
+    "dropoff_location": {
+      "lat": 36.09115891928906,
+      "lon": 89.87007951386511
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1287,
+    "estimated_distance_km": 1305.38,
+    "expected_revenue": 33134.5,
+    "start_odometer": 22246,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-12-06T06:57:57.223826"
+  },
+  {
+    "id": "fac0dddc-d1aa-4f0f-aa22-0745df4a92b1",
+    "tracking_number": "TRP-91916211",
+    "vehicle_id": "63663797-33c7-4147-a39d-ac67fc094622",
+    "driver_id": "e071d96b-6135-4ea8-8e93-209f1655b3ee",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 27.690521748585663,
+      "lon": 76.13075808914928
+    },
+    "dropoff_location": {
+      "lat": 18.976949776488084,
+      "lon": 81.83735520506764
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 9,
+    "estimated_distance_km": 1130.13,
+    "expected_revenue": 28753.25,
+    "start_odometer": 74433,
+    "end_odometer": 75563,
+    "status": "Completed",
+    "receiver_otp": "943114",
+    "created_at": "2025-12-28T06:57:57.223838"
+  },
+  {
+    "id": "a71339c7-2257-4621-93b9-0c60a0649501",
+    "tracking_number": "TRP-94319155",
+    "vehicle_id": "6d53a54d-69a2-427f-b615-2b025f0f9720",
+    "driver_id": "3042f8ee-1e2d-4571-98fe-767d7097f192",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 28.0795965614584,
+      "lon": 79.78603901930623
+    },
+    "dropoff_location": {
+      "lat": 28.12346561185196,
+      "lon": 68.82918189607356
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 3401,
+    "estimated_distance_km": 1074.37,
+    "expected_revenue": 27359.25,
+    "start_odometer": 60729,
+    "end_odometer": 61803,
+    "status": "Completed",
+    "receiver_otp": "200122",
+    "created_at": "2025-12-24T06:57:57.223850"
+  },
+  {
+    "id": "ec40e036-778e-4d02-875a-f8724d429bc4",
+    "tracking_number": "TRP-57478887",
+    "vehicle_id": "af7f5064-cfcd-44ce-9f42-55f121f619ef",
+    "driver_id": "6f0eb922-e15a-4221-949d-04998108cb3c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 18.484924442446136,
+      "lon": 86.697772852507
+    },
+    "dropoff_location": {
+      "lat": 18.857884638269553,
+      "lon": 82.70907158599886
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 17,
+    "estimated_distance_km": 422.21,
+    "expected_revenue": 11055.25,
+    "start_odometer": 42294,
+    "end_odometer": 42716,
+    "status": "Completed",
+    "receiver_otp": "548947",
+    "created_at": "2025-11-16T06:57:57.223863"
+  },
+  {
+    "id": "ff3feb20-9bea-4e35-b1d4-29be56c2b654",
+    "tracking_number": "TRP-48366377",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "driver_id": "6a7a7197-4ff9-484d-b844-4b3a974c9c7b",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 19.805562464112274,
+      "lon": 83.12125141806864
+    },
+    "dropoff_location": {
+      "lat": 29.17945156890354,
+      "lon": 87.16809785227314
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 76,
+    "estimated_distance_km": 1119.61,
+    "expected_revenue": 28490.25,
+    "start_odometer": 71864,
+    "end_odometer": 72983,
+    "status": "Completed",
+    "receiver_otp": "836986",
+    "created_at": "2025-12-14T06:57:57.223877"
+  },
+  {
+    "id": "0f4661f0-ce79-458b-9d05-8f38d7917db6",
+    "tracking_number": "TRP-19205255",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "driver_id": "3042f8ee-1e2d-4571-98fe-767d7097f192",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 35.93943933960939,
+      "lon": 94.68279660236202
+    },
+    "dropoff_location": {
+      "lat": 36.404085876969056,
+      "lon": 95.412534992961
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 5120,
+    "estimated_distance_km": 83.43,
+    "expected_revenue": 2585.75,
+    "start_odometer": 18842,
+    "end_odometer": 18925,
+    "status": "Completed",
+    "receiver_otp": "929741",
+    "created_at": "2026-02-10T06:57:57.223889"
+  },
+  {
+    "id": "183f1acd-ba02-45c9-a5eb-03d4aea1a4b1",
+    "tracking_number": "TRP-71979741",
+    "vehicle_id": "f1e0e1de-132e-4a1f-a09a-ae8b35c39dad",
+    "driver_id": "1da1ed0b-049a-4422-91f7-f34205de30a1",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 22.491399086050855,
+      "lon": 70.34756460470552
+    },
+    "dropoff_location": {
+      "lat": 8.822793928461287,
+      "lon": 84.68798985173227
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 478,
+    "estimated_distance_km": 2157.03,
+    "expected_revenue": 54425.75,
+    "start_odometer": 53647,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-12-01T06:57:57.223901"
+  },
+  {
+    "id": "9c4b6dc6-51a4-4b54-a1e5-caa33b56761d",
+    "tracking_number": "TRP-22269170",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "driver_id": "b2029e0e-63d7-498c-bc9a-6857413276c1",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 34.487133649571305,
+      "lon": 75.12584857926034
+    },
+    "dropoff_location": {
+      "lat": 36.73036861164011,
+      "lon": 77.29720037816581
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 61,
+    "estimated_distance_km": 317.39,
+    "expected_revenue": 8434.75,
+    "start_odometer": 72983,
+    "end_odometer": 73300,
+    "status": "Completed",
+    "receiver_otp": "264002",
+    "created_at": "2025-11-16T06:57:57.223913"
+  },
+  {
+    "id": "09aea735-9d96-4a47-a871-a24fefca8aa9",
+    "tracking_number": "TRP-77522679",
+    "vehicle_id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "driver_id": "d9e99f92-8c12-4258-b5c6-9b88319021e7",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 34.060881466644254,
+      "lon": 85.47750507735479
+    },
+    "dropoff_location": {
+      "lat": 33.19186987070832,
+      "lon": 76.41976913143502
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 27,
+    "estimated_distance_km": 843.9,
+    "expected_revenue": 21597.5,
+    "start_odometer": 26612,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-09-29T06:57:57.223925"
+  },
+  {
+    "id": "cf308b11-542f-445b-b943-0396844ed673",
+    "tracking_number": "TRP-98186119",
+    "vehicle_id": "9746c7d8-1ce1-420e-a324-5eb0c4c26b1a",
+    "driver_id": "7cf2357d-d683-42d9-9c50-4d547fd4e83c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 8.061454846459997,
+      "lon": 75.50341595381683
+    },
+    "dropoff_location": {
+      "lat": 26.669529133958623,
+      "lon": 84.2339681288822
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2316,
+    "estimated_distance_km": 2264.91,
+    "expected_revenue": 57122.75,
+    "start_odometer": 40127,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-10-10T06:57:57.223937"
+  },
+  {
+    "id": "0547f908-e918-462f-8137-2203bdfcc41d",
+    "tracking_number": "TRP-37741049",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "driver_id": "a9727f25-172e-4180-b384-fb7302f8cdd9",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 10.005990899152941,
+      "lon": 94.88178586519109
+    },
+    "dropoff_location": {
+      "lat": 20.560317138946136,
+      "lon": 73.56112667785723
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 46,
+    "estimated_distance_km": 2566.09,
+    "expected_revenue": 64652.25,
+    "start_odometer": 73300,
+    "end_odometer": 75866,
+    "status": "Completed",
+    "receiver_otp": "513642",
+    "created_at": "2025-09-11T06:57:57.223949"
+  },
+  {
+    "id": "e1dc75be-fc79-4439-8a86-601f03eaec1d",
+    "tracking_number": "TRP-70771435",
+    "vehicle_id": "92c55979-6881-40b0-bb44-8bf2f110129c",
+    "driver_id": "659bd57d-88f3-4dbd-a248-25e0b58ce26f",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 24.950876810536855,
+      "lon": 89.08133053052602
+    },
+    "dropoff_location": {
+      "lat": 20.812179817420954,
+      "lon": 75.47585624013146
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 7108,
+    "estimated_distance_km": 1466.91,
+    "expected_revenue": 37172.75,
+    "start_odometer": 23016,
+    "end_odometer": 24482,
+    "status": "Completed",
+    "receiver_otp": "929596",
+    "created_at": "2025-10-07T06:57:57.223962"
+  },
+  {
+    "id": "0d31509a-4e3e-447f-a624-6a3af286973f",
+    "tracking_number": "TRP-93441399",
+    "vehicle_id": "6849cb4f-543c-4973-863c-23ab61853227",
+    "driver_id": "761d71a9-ded1-4679-8b48-c561d1392bd5",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 34.91070254564004,
+      "lon": 79.28967524331301
+    },
+    "dropoff_location": {
+      "lat": 8.255660664536608,
+      "lon": 73.01929422342592
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 68,
+    "estimated_distance_km": 3032.13,
+    "expected_revenue": 76303.25,
+    "start_odometer": 69173,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2026-01-13T06:57:57.223974"
+  },
+  {
+    "id": "9900b9c9-93d0-4fe4-b652-77437d07736e",
+    "tracking_number": "TRP-92818379",
+    "vehicle_id": "40378422-a9b9-44c8-80f9-fa3be085ca0c",
+    "driver_id": "5dec7d29-5d75-43a2-bf13-fa49471b721e",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 30.129855571307505,
+      "lon": 79.50299547919417
+    },
+    "dropoff_location": {
+      "lat": 24.92009547514488,
+      "lon": 74.45567561855124
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 254,
+    "estimated_distance_km": 763.52,
+    "expected_revenue": 19588.0,
+    "start_odometer": 12525,
+    "end_odometer": 13288,
+    "status": "Completed",
+    "receiver_otp": "160833",
+    "created_at": "2026-01-21T06:57:57.223986"
+  },
+  {
+    "id": "04291283-81d5-4a3c-9d34-f6dd9f64ccf1",
+    "tracking_number": "TRP-94441922",
+    "vehicle_id": "01dc37d3-1524-4025-9889-db7648a43902",
+    "driver_id": "11728e28-d299-4b13-a0ac-a22d0c8bf9b3",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 15.869539642768286,
+      "lon": 71.89603811467768
+    },
+    "dropoff_location": {
+      "lat": 31.121477145091657,
+      "lon": 70.01799840152417
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 557,
+    "estimated_distance_km": 1706.62,
+    "expected_revenue": 43165.5,
+    "start_odometer": 29900,
+    "end_odometer": 31606,
+    "status": "Completed",
+    "receiver_otp": "176962",
+    "created_at": "2025-11-21T06:57:57.223998"
+  },
+  {
+    "id": "dfa9cb75-04b5-4e9f-a9d3-14edfe977d25",
+    "tracking_number": "TRP-73241143",
+    "vehicle_id": "10bf6826-1c4b-404e-b0aa-dac2c4e4b3c6",
+    "driver_id": "6a7a7197-4ff9-484d-b844-4b3a974c9c7b",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 30.423949743094063,
+      "lon": 76.64991636603142
+    },
+    "dropoff_location": {
+      "lat": 9.846867045412324,
+      "lon": 90.27054409238887
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 52,
+    "estimated_distance_km": 2688.02,
+    "expected_revenue": 67700.5,
+    "start_odometer": 68248,
+    "end_odometer": 70936,
+    "status": "Completed",
+    "receiver_otp": "146234",
+    "created_at": "2025-10-15T06:57:57.224011"
+  },
+  {
+    "id": "77a7a26d-93a4-4318-bcaf-c062d51120ac",
+    "tracking_number": "TRP-93694695",
+    "vehicle_id": "5d3427e1-23ba-414c-98ea-2dae99054b49",
+    "driver_id": "f8a1b979-5398-42d6-9847-e2b0da3377f2",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 27.329133016545853,
+      "lon": 68.8257432685469
+    },
+    "dropoff_location": {
+      "lat": 28.923526880064593,
+      "lon": 88.60523825478978
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 281,
+    "estimated_distance_km": 1945.47,
+    "expected_revenue": 49136.75,
+    "start_odometer": 76892,
+    "end_odometer": 78837,
+    "status": "Completed",
+    "receiver_otp": "659556",
+    "created_at": "2026-01-15T06:57:57.224023"
+  },
+  {
+    "id": "af4827d5-c715-44f6-b840-ff13e66b5de6",
+    "tracking_number": "TRP-80453008",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "driver_id": "7cf2357d-d683-42d9-9c50-4d547fd4e83c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 24.18421763942392,
+      "lon": 94.93292612316432
+    },
+    "dropoff_location": {
+      "lat": 15.130428321442082,
+      "lon": 76.02090352467098
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1302,
+    "estimated_distance_km": 2218.1,
+    "expected_revenue": 55952.5,
+    "start_odometer": 57091,
+    "end_odometer": 59309,
+    "status": "Completed",
+    "receiver_otp": "589940",
+    "created_at": "2025-10-25T06:57:57.224036"
+  },
+  {
+    "id": "8eb44adb-0411-4b23-bd30-e9b2132f445f",
+    "tracking_number": "TRP-63746112",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "driver_id": "15cf773e-8bd8-4309-960a-968e0fdd296a",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 24.134944050888713,
+      "lon": 91.97072258928033
+    },
+    "dropoff_location": {
+      "lat": 23.528795742221845,
+      "lon": 87.45355293992763
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1534,
+    "estimated_distance_km": 464.35,
+    "expected_revenue": 12108.75,
+    "start_odometer": 20479,
+    "end_odometer": 20943,
+    "status": "Completed",
+    "receiver_otp": "612692",
+    "created_at": "2025-12-11T06:57:57.224048"
+  },
+  {
+    "id": "d1a9458c-e752-4f4a-9e48-88477f8874db",
+    "tracking_number": "TRP-93832378",
+    "vehicle_id": "730c097a-999e-48cc-8561-f3774acda619",
+    "driver_id": "250ae2a9-2e63-456a-93c6-602801a90805",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 12.486463729468468,
+      "lon": 74.49541031164384
+    },
+    "dropoff_location": {
+      "lat": 9.123244936789169,
+      "lon": 90.19960520256245
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 24,
+    "estimated_distance_km": 1755.11,
+    "expected_revenue": 44377.75,
+    "start_odometer": 63498,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-10-24T06:57:57.224061"
+  },
+  {
+    "id": "d5b0751f-ba23-4ddd-a384-f8496f80ebe6",
+    "tracking_number": "TRP-35681215",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "driver_id": "7cf2357d-d683-42d9-9c50-4d547fd4e83c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 15.798302887064569,
+      "lon": 77.04459870978775
+    },
+    "dropoff_location": {
+      "lat": 8.613679751913091,
+      "lon": 70.41821252174833
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1398,
+    "estimated_distance_km": 1075.2,
+    "expected_revenue": 27380.0,
+    "start_odometer": 20943,
+    "end_odometer": 22018,
+    "status": "Completed",
+    "receiver_otp": "916573",
+    "created_at": "2025-09-14T06:57:57.224072"
+  },
+  {
+    "id": "0e7c681f-0817-4aa0-b108-b53fdc59567c",
+    "tracking_number": "TRP-71100036",
+    "vehicle_id": "01dc37d3-1524-4025-9889-db7648a43902",
+    "driver_id": "11728e28-d299-4b13-a0ac-a22d0c8bf9b3",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 19.785532019445924,
+      "lon": 82.28494582668424
+    },
+    "dropoff_location": {
+      "lat": 8.219294092175943,
+      "lon": 72.16187842112829
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 358,
+    "estimated_distance_km": 1685.81,
+    "expected_revenue": 42645.25,
+    "start_odometer": 31606,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-10-04T06:57:57.224086"
+  },
+  {
+    "id": "6b2e0651-d572-456f-9f88-7077e43ebd16",
+    "tracking_number": "TRP-33394753",
+    "vehicle_id": "7564a67e-b7e5-47ae-aff5-f43c2b7dddaf",
+    "driver_id": "f8a1b979-5398-42d6-9847-e2b0da3377f2",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 22.163003434161286,
+      "lon": 73.98381362320677
+    },
+    "dropoff_location": {
+      "lat": 27.439880370838953,
+      "lon": 87.53362249232639
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 519,
+    "estimated_distance_km": 1487.01,
+    "expected_revenue": 37675.25,
+    "start_odometer": 65681,
+    "end_odometer": 67168,
+    "status": "Completed",
+    "receiver_otp": "904830",
+    "created_at": "2025-09-15T06:57:57.224103"
+  },
+  {
+    "id": "a32cfb05-2bb4-43a2-ba1a-3e99f70785ea",
+    "tracking_number": "TRP-55254574",
+    "vehicle_id": "59fef87b-6cf3-42a8-90f7-ae8a249ff62e",
+    "driver_id": "29fa25eb-7818-4085-819e-537e5d8bf96a",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 19.764609396659477,
+      "lon": 79.5688981586947
+    },
+    "dropoff_location": {
+      "lat": 11.057630758339648,
+      "lon": 76.65268678055409
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 479,
+    "estimated_distance_km": 1017.27,
+    "expected_revenue": 25931.75,
+    "start_odometer": 31701,
+    "end_odometer": 32718,
+    "status": "Completed",
+    "receiver_otp": "193240",
+    "created_at": "2025-09-27T06:57:57.224118"
+  },
+  {
+    "id": "3bf96112-55d0-4a69-8da9-9c6a9f0ed384",
+    "tracking_number": "TRP-22217480",
+    "vehicle_id": "7a7cae2f-2b6d-4818-b697-bdf57ba2666d",
+    "driver_id": "659bd57d-88f3-4dbd-a248-25e0b58ce26f",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 31.602057294232964,
+      "lon": 89.78463519526302
+    },
+    "dropoff_location": {
+      "lat": 34.93160355120001,
+      "lon": 73.48002731571536
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 5048,
+    "estimated_distance_km": 1558.46,
+    "expected_revenue": 39461.5,
+    "start_odometer": 13457,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2026-02-10T06:57:57.224132"
+  },
+  {
+    "id": "eede96fc-4f20-4653-81e3-e7a0046afe00",
+    "tracking_number": "TRP-77120449",
+    "vehicle_id": "723c9593-1d6c-498b-a246-09adc3974940",
+    "driver_id": "bad305a5-0aa3-43df-9d35-4e9c337883dd",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 13.343318224034208,
+      "lon": 96.2294701279034
+    },
+    "dropoff_location": {
+      "lat": 26.174324292773985,
+      "lon": 69.56243204226854
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1305,
+    "estimated_distance_km": 3124.35,
+    "expected_revenue": 78608.75,
+    "start_odometer": 35026,
+    "end_odometer": 38150,
+    "status": "Completed",
+    "receiver_otp": "664010",
+    "created_at": "2026-01-14T06:57:57.224145"
+  },
+  {
+    "id": "b5f79435-2c13-4fe6-a068-8f476282304f",
+    "tracking_number": "TRP-70863974",
+    "vehicle_id": "2159866a-72b3-4c6c-a983-e5ca48e3db06",
+    "driver_id": "250ae2a9-2e63-456a-93c6-602801a90805",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 25.242107407791693,
+      "lon": 78.95332409291021
+    },
+    "dropoff_location": {
+      "lat": 9.244992739330485,
+      "lon": 83.44926431948039
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 52,
+    "estimated_distance_km": 1841.24,
+    "expected_revenue": 46531.0,
+    "start_odometer": 51197,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-12-12T06:57:57.224159"
+  },
+  {
+    "id": "e4d3c6b7-2c1a-4991-a3d4-d66309632d74",
+    "tracking_number": "TRP-29443835",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "driver_id": "bad305a5-0aa3-43df-9d35-4e9c337883dd",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 32.96994453025327,
+      "lon": 83.30559845686483
+    },
+    "dropoff_location": {
+      "lat": 9.841018595643076,
+      "lon": 83.30931719876398
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1684,
+    "estimated_distance_km": 2571.82,
+    "expected_revenue": 64795.5,
+    "start_odometer": 59309,
+    "end_odometer": 61880,
+    "status": "Completed",
+    "receiver_otp": "464702",
+    "created_at": "2025-10-30T06:57:57.224172"
+  },
+  {
+    "id": "7053b264-2abb-4014-8fa3-082a9997d257",
+    "tracking_number": "TRP-38691476",
+    "vehicle_id": "e7b69154-4779-4471-a9d0-0f6400983aa8",
+    "driver_id": "751e5abd-7679-4ed1-914a-8608c12ad213",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 34.9234385225123,
+      "lon": 95.581775831502
+    },
+    "dropoff_location": {
+      "lat": 22.560013744496604,
+      "lon": 80.15782857334983
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 24,
+    "estimated_distance_km": 2032.56,
+    "expected_revenue": 51314.0,
+    "start_odometer": 25326,
+    "end_odometer": 27358,
+    "status": "Completed",
+    "receiver_otp": "699636",
+    "created_at": "2026-02-11T06:57:57.224185"
+  },
+  {
+    "id": "0cd9241a-7442-46e8-9c96-a3d9fdbebadb",
+    "tracking_number": "TRP-33740510",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "driver_id": "90a2b3ba-88e2-4b6a-971a-f52f715c319c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 35.5290612021538,
+      "lon": 83.93816729436158
+    },
+    "dropoff_location": {
+      "lat": 26.772562920504654,
+      "lon": 74.14134760972001
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 365,
+    "estimated_distance_km": 1346.51,
+    "expected_revenue": 34162.75,
+    "start_odometer": 39326,
+    "end_odometer": 40672,
+    "status": "Completed",
+    "receiver_otp": "820641",
+    "created_at": "2026-01-16T06:57:57.224201"
+  },
+  {
+    "id": "d678bc8f-1bbd-45c4-88a8-bae9bc5a3adf",
+    "tracking_number": "TRP-25729983",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "driver_id": "2cb81333-524f-4eca-a07f-8da9a7c9442f",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 29.552771476219835,
+      "lon": 73.23759740825409
+    },
+    "dropoff_location": {
+      "lat": 15.63203576700138,
+      "lon": 83.4241327983314
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 54,
+    "estimated_distance_km": 1865.76,
+    "expected_revenue": 47144.0,
+    "start_odometer": 75866,
+    "end_odometer": 77731,
+    "status": "Completed",
+    "receiver_otp": "514509",
+    "created_at": "2026-01-21T06:57:57.224215"
+  },
+  {
+    "id": "d2bc435b-041f-4c72-bb4d-30483739bae1",
+    "tracking_number": "TRP-25231234",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "driver_id": "26a384ee-53fa-4d86-a43e-4f95d893ff9b",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 36.03777796562211,
+      "lon": 72.31862481250488
+    },
+    "dropoff_location": {
+      "lat": 26.31641352558008,
+      "lon": 92.83908077955331
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1776,
+    "estimated_distance_km": 2224.72,
+    "expected_revenue": 56118.0,
+    "start_odometer": 22018,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2026-02-20T06:57:57.224229"
+  },
+  {
+    "id": "22cb8c71-cf3e-47ff-843f-eee39b594a5d",
+    "tracking_number": "TRP-20198959",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "driver_id": "362c18bc-20d8-49cb-9e96-1d835891e581",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 8.878164503838327,
+      "lon": 85.31368807712566
+    },
+    "dropoff_location": {
+      "lat": 10.44276894532554,
+      "lon": 82.01150239688508
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2272,
+    "estimated_distance_km": 401.61,
+    "expected_revenue": 10540.25,
+    "start_odometer": 18925,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-11-11T06:57:57.224242"
+  },
+  {
+    "id": "40da8ba4-03c3-4db2-849f-33f140bdaee5",
+    "tracking_number": "TRP-72603514",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "driver_id": "f64aacf2-807a-4ec8-9365-2fdd847967da",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 27.33775831623932,
+      "lon": 85.04674202289202
+    },
+    "dropoff_location": {
+      "lat": 8.800491346611,
+      "lon": 92.94638058260082
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 73,
+    "estimated_distance_km": 2222.15,
+    "expected_revenue": 56053.75,
+    "start_odometer": 77731,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-11-09T06:57:57.224255"
+  },
+  {
+    "id": "ba341971-2fbf-4365-a408-e063567836a9",
+    "tracking_number": "TRP-67138372",
+    "vehicle_id": "a57783f3-a723-49e5-95aa-0a1dd4d1221c",
+    "driver_id": "4498018a-6e56-47fa-a463-fce6bda35c72",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 24.091562655668177,
+      "lon": 73.73079121359783
+    },
+    "dropoff_location": {
+      "lat": 30.467048250297218,
+      "lon": 91.34075895541731
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 812,
+    "estimated_distance_km": 1876.37,
+    "expected_revenue": 47409.25,
+    "start_odometer": 72904,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-10-05T06:57:57.224269"
+  },
+  {
+    "id": "a6884811-be95-4e9d-bbb0-8f54fbc1f9eb",
+    "tracking_number": "TRP-90787391",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "driver_id": "4498018a-6e56-47fa-a463-fce6bda35c72",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 29.024878522152484,
+      "lon": 80.77073501963935
+    },
+    "dropoff_location": {
+      "lat": 15.121510592753728,
+      "lon": 72.49470488457466
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1507,
+    "estimated_distance_km": 1764.03,
+    "expected_revenue": 44600.75,
+    "start_odometer": 24242,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2026-01-12T06:57:57.224282"
+  },
+  {
+    "id": "3a46bf4b-6ff4-4c38-91ef-9dd28f19ff8b",
+    "tracking_number": "TRP-57027390",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "driver_id": "9507ed84-c163-442f-ba6e-d7f0ea96bd55",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 33.8634156809008,
+      "lon": 92.8438462313988
+    },
+    "dropoff_location": {
+      "lat": 20.14831191844188,
+      "lon": 87.67898916026888
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 6431,
+    "estimated_distance_km": 1607.9,
+    "expected_revenue": 40697.5,
+    "start_odometer": 19326,
+    "end_odometer": 20933,
+    "status": "Completed",
+    "receiver_otp": "950666",
+    "created_at": "2025-11-10T06:57:57.224295"
+  },
+  {
+    "id": "f0d247a3-32b4-4ee5-9a7f-73c46f1fa1d6",
+    "tracking_number": "TRP-33216098",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "driver_id": "6f0eb922-e15a-4221-949d-04998108cb3c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 30.427925264484173,
+      "lon": 92.1220699575779
+    },
+    "dropoff_location": {
+      "lat": 31.59657187429014,
+      "lon": 70.04259019822874
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 67,
+    "estimated_distance_km": 2104.63,
+    "expected_revenue": 53115.75,
+    "start_odometer": 79953,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2026-01-12T06:57:57.224309"
+  },
+  {
+    "id": "0620deca-46fc-4068-b8ac-d374b4a739e5",
+    "tracking_number": "TRP-63250413",
+    "vehicle_id": "d2bdf7d0-2eb0-4d71-8bda-253bede03fb9",
+    "driver_id": "f64aacf2-807a-4ec8-9365-2fdd847967da",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 24.366100790306593,
+      "lon": 93.74654543645198
+    },
+    "dropoff_location": {
+      "lat": 30.495811287306527,
+      "lon": 80.8741872528126
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 71,
+    "estimated_distance_km": 1440.24,
+    "expected_revenue": 36506.0,
+    "start_odometer": 44310,
+    "end_odometer": 45750,
+    "status": "Completed",
+    "receiver_otp": "133630",
+    "created_at": "2025-10-06T06:57:57.224322"
+  },
+  {
+    "id": "25aeb103-1382-4334-a5cc-2b4d222e59a3",
+    "tracking_number": "TRP-52150958",
+    "vehicle_id": "2a3dd875-ad17-44b8-9ef3-bca4d0555cb3",
+    "driver_id": "15a5c12d-071b-42c6-a90f-9e00d9f6f1d4",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 35.18502049706814,
+      "lon": 74.00906444981611
+    },
+    "dropoff_location": {
+      "lat": 35.61718711367953,
+      "lon": 83.7910446943075
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 133,
+    "estimated_distance_km": 887.54,
+    "expected_revenue": 22688.5,
+    "start_odometer": 71135,
+    "end_odometer": 72022,
+    "status": "Completed",
+    "receiver_otp": "147477",
+    "created_at": "2025-08-25T06:57:57.224337"
+  },
+  {
+    "id": "3de13b85-f3a1-4bc6-9407-5114676c0f31",
+    "tracking_number": "TRP-26192838",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "driver_id": "90a2b3ba-88e2-4b6a-971a-f52f715c319c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 34.131219116149836,
+      "lon": 79.59707747091991
+    },
+    "dropoff_location": {
+      "lat": 18.52438285199593,
+      "lon": 88.32942728592685
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 304,
+    "estimated_distance_km": 1939.21,
+    "expected_revenue": 48980.25,
+    "start_odometer": 40672,
+    "end_odometer": 42611,
+    "status": "Completed",
+    "receiver_otp": "672941",
+    "created_at": "2026-01-25T06:57:57.224351"
+  },
+  {
+    "id": "f69141bf-19c8-4bbe-b828-add8d09b90d7",
+    "tracking_number": "TRP-84108596",
+    "vehicle_id": "7a7cae2f-2b6d-4818-b697-bdf57ba2666d",
+    "driver_id": "87b7d634-91ab-44ac-aabe-6cf43ec0b6a6",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 25.578443312631673,
+      "lon": 84.13272635688477
+    },
+    "dropoff_location": {
+      "lat": 19.31335354601654,
+      "lon": 90.6711172682965
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 3742,
+    "estimated_distance_km": 967.52,
+    "expected_revenue": 24688.0,
+    "start_odometer": 15015,
+    "end_odometer": 15982,
+    "status": "Completed",
+    "receiver_otp": "663868",
+    "created_at": "2025-11-22T06:57:57.224364"
+  },
+  {
+    "id": "81ca13ad-5f47-4f1a-9c21-dcd4780aee2a",
+    "tracking_number": "TRP-83920578",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "driver_id": "1e8db33c-e398-4d82-900f-4b7f2247c55e",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 27.543547581344576,
+      "lon": 93.22104382147819
+    },
+    "dropoff_location": {
+      "lat": 35.64788426921362,
+      "lon": 73.16168130898934
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 683,
+    "estimated_distance_km": 2097.26,
+    "expected_revenue": 52931.5,
+    "start_odometer": 61880,
+    "end_odometer": 63977,
+    "status": "Completed",
+    "receiver_otp": "332971",
+    "created_at": "2025-12-05T06:57:57.224378"
+  },
+  {
+    "id": "1ee67747-f12a-4a44-b271-02b76ee568c7",
+    "tracking_number": "TRP-43744750",
+    "vehicle_id": "fb5745d6-2885-43ce-8ed1-b265e9e19678",
+    "driver_id": "91fdda76-19df-4ab2-952c-cc77bcf6ebaa",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 10.677327671147545,
+      "lon": 73.00245631340601
+    },
+    "dropoff_location": {
+      "lat": 22.799940870846754,
+      "lon": 88.77652646855375
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 522,
+    "estimated_distance_km": 2150.22,
+    "expected_revenue": 54255.5,
+    "start_odometer": 33917,
+    "end_odometer": 36067,
+    "status": "Completed",
+    "receiver_otp": "881888",
+    "created_at": "2025-10-31T06:57:57.224392"
+  },
+  {
+    "id": "ee1f2182-61c8-419a-98b8-b782c7ebff99",
+    "tracking_number": "TRP-84079162",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "driver_id": "ff442b7b-d413-4dc6-80a4-af95135dfd3a",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 11.220156085189192,
+      "lon": 76.36655686259752
+    },
+    "dropoff_location": {
+      "lat": 26.371819152129437,
+      "lon": 96.67124984639023
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 4896,
+    "estimated_distance_km": 2714.0,
+    "expected_revenue": 68350.0,
+    "start_odometer": 61722,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-10-11T06:57:57.224406"
+  },
+  {
+    "id": "f5e91c5c-0ecf-4e47-b974-a5dc16a18b29",
+    "tracking_number": "TRP-87397519",
+    "vehicle_id": "f1665bae-d484-4b50-a551-e08c2e9a8270",
+    "driver_id": "d092b0cf-8985-4d0c-b338-a451772a7dd3",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 35.64006174855272,
+      "lon": 92.60731112480262
+    },
+    "dropoff_location": {
+      "lat": 18.75620656336207,
+      "lon": 81.40120095130875
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 124,
+    "estimated_distance_km": 2176.26,
+    "expected_revenue": 54906.5,
+    "start_odometer": 12759,
+    "end_odometer": 14935,
+    "status": "Completed",
+    "receiver_otp": "198396",
+    "created_at": "2026-01-17T06:57:57.224419"
+  },
+  {
+    "id": "ed9be67f-6e7a-4018-8000-afbd9c8fb411",
+    "tracking_number": "TRP-33837670",
+    "vehicle_id": "3369ef50-21f0-423f-a845-ad2411a4d917",
+    "driver_id": "567fec7a-3134-4086-a68f-21d047720114",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 32.83532667019942,
+      "lon": 91.91570883612047
+    },
+    "dropoff_location": {
+      "lat": 35.153885571541146,
+      "lon": 68.1469996345022
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1232,
+    "estimated_distance_km": 2201.08,
+    "expected_revenue": 55527.0,
+    "start_odometer": 60509,
+    "end_odometer": 62710,
+    "status": "Completed",
+    "receiver_otp": "346595",
+    "created_at": "2026-01-12T06:57:57.224433"
+  },
+  {
+    "id": "0a2abf87-6516-47e7-8a57-5be6be983244",
+    "tracking_number": "TRP-46893677",
+    "vehicle_id": "723c9593-1d6c-498b-a246-09adc3974940",
+    "driver_id": "499090a2-647e-4921-85b6-54775f966d6c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 27.914229307015017,
+      "lon": 86.10197030391843
+    },
+    "dropoff_location": {
+      "lat": 24.680361682802104,
+      "lon": 96.59520819893585
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1339,
+    "estimated_distance_km": 1105.62,
+    "expected_revenue": 28140.5,
+    "start_odometer": 38150,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2026-01-02T06:57:57.224447"
+  },
+  {
+    "id": "ece0a93d-015f-4bc0-a6b2-81fd86bab8a4",
+    "tracking_number": "TRP-61008921",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "driver_id": "9507ed84-c163-442f-ba6e-d7f0ea96bd55",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 9.095960518558455,
+      "lon": 72.13058857391741
+    },
+    "dropoff_location": {
+      "lat": 27.509698834163714,
+      "lon": 89.13597207370584
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 5664,
+    "estimated_distance_km": 2715.85,
+    "expected_revenue": 68396.25,
+    "start_odometer": 64436,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2026-01-20T06:57:57.224460"
+  },
+  {
+    "id": "a0db1f19-e359-433f-aeba-465964dfd132",
+    "tracking_number": "TRP-33416009",
+    "vehicle_id": "af7f5064-cfcd-44ce-9f42-55f121f619ef",
+    "driver_id": "6f0eb922-e15a-4221-949d-04998108cb3c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 13.050462004162524,
+      "lon": 80.53133857263877
+    },
+    "dropoff_location": {
+      "lat": 23.464471197758463,
+      "lon": 88.37865784975443
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 21,
+    "estimated_distance_km": 1423.02,
+    "expected_revenue": 36075.5,
+    "start_odometer": 42716,
+    "end_odometer": 44139,
+    "status": "Completed",
+    "receiver_otp": "343932",
+    "created_at": "2026-02-19T06:57:57.224473"
+  },
+  {
+    "id": "3951f1fd-65fb-4ee7-93aa-1e8dd14d6a8c",
+    "tracking_number": "TRP-74281627",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "driver_id": "27ae1ebc-edbe-4716-ad93-a3e2b523d12f",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 21.51839781872147,
+      "lon": 88.19403738590242
+    },
+    "dropoff_location": {
+      "lat": 23.465064739690156,
+      "lon": 75.06027611979789
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 5562,
+    "estimated_distance_km": 1366.05,
+    "expected_revenue": 34651.25,
+    "start_odometer": 67151,
+    "end_odometer": 68517,
+    "status": "Completed",
+    "receiver_otp": "653794",
+    "created_at": "2025-09-03T06:57:57.224487"
+  },
+  {
+    "id": "dc73e254-719e-404f-97f0-f26130dbb880",
+    "tracking_number": "TRP-20083469",
+    "vehicle_id": "1d7ac6a5-87d6-497f-9ae7-36c5e334d777",
+    "driver_id": "7cf2357d-d683-42d9-9c50-4d547fd4e83c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 11.998825577011976,
+      "lon": 86.84510625224127
+    },
+    "dropoff_location": {
+      "lat": 25.692848611768387,
+      "lon": 71.03973553318735
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1240,
+    "estimated_distance_km": 2250.64,
+    "expected_revenue": 56766.0,
+    "start_odometer": 63034,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-09-11T06:57:57.224501"
+  },
+  {
+    "id": "1a83f3dc-77c0-47ea-9510-c6d40ded8cfb",
+    "tracking_number": "TRP-64891305",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "driver_id": "ff442b7b-d413-4dc6-80a4-af95135dfd3a",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 25.793476881248395,
+      "lon": 81.68110644276247
+    },
+    "dropoff_location": {
+      "lat": 12.763002771333417,
+      "lon": 92.63227265347592
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 4732,
+    "estimated_distance_km": 1847.25,
+    "expected_revenue": 46681.25,
+    "start_odometer": 20933,
+    "end_odometer": 22780,
+    "status": "Completed",
+    "receiver_otp": "481066",
+    "created_at": "2025-11-04T06:57:57.224514"
+  },
+  {
+    "id": "bf7666aa-e856-42da-b587-70efe7079688",
+    "tracking_number": "TRP-97039843",
+    "vehicle_id": "723c9593-1d6c-498b-a246-09adc3974940",
+    "driver_id": "567fec7a-3134-4086-a68f-21d047720114",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 25.51928607269432,
+      "lon": 69.59662676327908
+    },
+    "dropoff_location": {
+      "lat": 17.8130231270914,
+      "lon": 78.8545633601675
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 790,
+    "estimated_distance_km": 1283.45,
+    "expected_revenue": 32586.25,
+    "start_odometer": 39255,
+    "end_odometer": 40538,
+    "status": "Completed",
+    "receiver_otp": "539897",
+    "created_at": "2025-11-30T06:57:57.224528"
+  },
+  {
+    "id": "8ce0779b-c745-4c0a-9c7d-aaa49f635d1b",
+    "tracking_number": "TRP-62758301",
+    "vehicle_id": "f1665bae-d484-4b50-a551-e08c2e9a8270",
+    "driver_id": "c58c67d0-ea20-4011-bed1-cdb4996a14a3",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 36.23462248421812,
+      "lon": 88.67137882481391
+    },
+    "dropoff_location": {
+      "lat": 29.805077621714428,
+      "lon": 89.48936417149156
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 87,
+    "estimated_distance_km": 718.98,
+    "expected_revenue": 18474.5,
+    "start_odometer": 14935,
+    "end_odometer": 15653,
+    "status": "Completed",
+    "receiver_otp": "465531",
+    "created_at": "2026-01-08T06:57:57.224543"
+  },
+  {
+    "id": "ee573576-31f0-43c0-b6ea-6d115cf33d71",
+    "tracking_number": "TRP-80499125",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "driver_id": "ca0927fa-2947-4bce-a97c-8c547783000f",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 29.2370302672931,
+      "lon": 81.65499757715246
+    },
+    "dropoff_location": {
+      "lat": 13.913207061896433,
+      "lon": 68.34065757883309
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 975,
+    "estimated_distance_km": 2186.56,
+    "expected_revenue": 55164.0,
+    "start_odometer": 63977,
+    "end_odometer": 66163,
+    "status": "Completed",
+    "receiver_otp": "537555",
+    "created_at": "2026-01-29T06:57:57.224559"
+  },
+  {
+    "id": "5ab4d4a7-7449-469a-8b08-76616bdd293c",
+    "tracking_number": "TRP-65519314",
+    "vehicle_id": "2050141e-e74e-49eb-bba9-6c9dc230ed04",
+    "driver_id": "91fdda76-19df-4ab2-952c-cc77bcf6ebaa",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 29.295363132376668,
+      "lon": 87.31914425346734
+    },
+    "dropoff_location": {
+      "lat": 20.81714253241916,
+      "lon": 95.86475683553768
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 716,
+    "estimated_distance_km": 1275.64,
+    "expected_revenue": 32391.0,
+    "start_odometer": 62378,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2026-01-24T06:57:57.224572"
+  },
+  {
+    "id": "c1cfcf7a-a21e-4bc2-97be-b4f8aa703bc7",
+    "tracking_number": "TRP-93583072",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "driver_id": "c58c67d0-ea20-4011-bed1-cdb4996a14a3",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 33.25734276032138,
+      "lon": 81.29260096226895
+    },
+    "dropoff_location": {
+      "lat": 17.048575342208444,
+      "lon": 77.45480539409816
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 316,
+    "estimated_distance_km": 1842.81,
+    "expected_revenue": 46570.25,
+    "start_odometer": 42611,
+    "end_odometer": 44453,
+    "status": "Completed",
+    "receiver_otp": "602622",
+    "created_at": "2025-09-20T06:57:57.224584"
+  },
+  {
+    "id": "03bbf51b-5250-4924-91a3-19ad738a0f49",
+    "tracking_number": "TRP-46583783",
+    "vehicle_id": "01dc37d3-1524-4025-9889-db7648a43902",
+    "driver_id": "11728e28-d299-4b13-a0ac-a22d0c8bf9b3",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 20.817531721853285,
+      "lon": 83.12919160889521
+    },
+    "dropoff_location": {
+      "lat": 21.787639023693863,
+      "lon": 79.23208365123565
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 399,
+    "estimated_distance_km": 417.88,
+    "expected_revenue": 10947.0,
+    "start_odometer": 33291,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-09-21T06:57:57.224596"
+  },
+  {
+    "id": "a50b58b2-e339-430c-bb94-e7623cb6a2c5",
+    "tracking_number": "TRP-78442719",
+    "vehicle_id": "b42cbd26-63fd-485e-b8f4-6ebd2cd1fd3f",
+    "driver_id": "a4da994c-09da-4064-8385-f5d5d74c3fed",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 28.90300775200478,
+      "lon": 73.92347960291563
+    },
+    "dropoff_location": {
+      "lat": 30.581545436381244,
+      "lon": 80.83298998605764
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 241,
+    "estimated_distance_km": 692.57,
+    "expected_revenue": 17814.25,
+    "start_odometer": 30402,
+    "end_odometer": 31094,
+    "status": "Completed",
+    "receiver_otp": "874682",
+    "created_at": "2025-11-26T06:57:57.224609"
+  },
+  {
+    "id": "080a964a-f0df-44e4-a1fe-08d263eda130",
+    "tracking_number": "TRP-51876962",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "driver_id": "c58c67d0-ea20-4011-bed1-cdb4996a14a3",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 29.40553748546749,
+      "lon": 90.29923702817382
+    },
+    "dropoff_location": {
+      "lat": 21.550146950326884,
+      "lon": 85.10761090647392
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 217,
+    "estimated_distance_km": 1016.76,
+    "expected_revenue": 25919.0,
+    "start_odometer": 44453,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-11-29T06:57:57.224623"
+  },
+  {
+    "id": "19ac1a46-ac3d-492e-bf7d-8f44c15e2495",
+    "tracking_number": "TRP-91647504",
+    "vehicle_id": "3369ef50-21f0-423f-a845-ad2411a4d917",
+    "driver_id": "567fec7a-3134-4086-a68f-21d047720114",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 14.859522846036558,
+      "lon": 93.06902633937803
+    },
+    "dropoff_location": {
+      "lat": 20.783146501515226,
+      "lon": 90.86049446152425
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2032,
+    "estimated_distance_km": 698.89,
+    "expected_revenue": 17972.25,
+    "start_odometer": 62710,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2026-02-21T06:57:57.224640"
+  },
+  {
+    "id": "f6e47b65-4072-4e15-988b-608724be02a1",
+    "tracking_number": "TRP-67295447",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "driver_id": "499090a2-647e-4921-85b6-54775f966d6c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 24.34959137261409,
+      "lon": 85.55607256739808
+    },
+    "dropoff_location": {
+      "lat": 12.073571592931561,
+      "lon": 69.79177473763681
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1528,
+    "estimated_distance_km": 2149.43,
+    "expected_revenue": 54235.75,
+    "start_odometer": 66163,
+    "end_odometer": 68312,
+    "status": "Completed",
+    "receiver_otp": "853852",
+    "created_at": "2025-09-20T06:57:57.224654"
+  },
+  {
+    "id": "3356c6e9-fa5d-4955-bb7d-689a00a7397b",
+    "tracking_number": "TRP-54204938",
+    "vehicle_id": "f1665bae-d484-4b50-a551-e08c2e9a8270",
+    "driver_id": "11728e28-d299-4b13-a0ac-a22d0c8bf9b3",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 14.784286442205264,
+      "lon": 89.21079936151078
+    },
+    "dropoff_location": {
+      "lat": 31.491687721232196,
+      "lon": 90.81123558150063
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 180,
+    "estimated_distance_km": 1864.89,
+    "expected_revenue": 47122.25,
+    "start_odometer": 15653,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-10-01T06:57:57.224670"
+  },
+  {
+    "id": "b7c26cdb-29f7-4cbe-aff1-c2b54111ee2d",
+    "tracking_number": "TRP-25975899",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "driver_id": "9507ed84-c163-442f-ba6e-d7f0ea96bd55",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 32.81927960196076,
+      "lon": 83.56241213389931
+    },
+    "dropoff_location": {
+      "lat": 36.381668457285485,
+      "lon": 69.63008754450576
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 3738,
+    "estimated_distance_km": 1333.86,
+    "expected_revenue": 33846.5,
+    "start_odometer": 22780,
+    "end_odometer": 24113,
+    "status": "Completed",
+    "receiver_otp": "497613",
+    "created_at": "2025-10-17T06:57:57.224683"
+  },
+  {
+    "id": "3d232ddd-f7aa-4399-b1fe-d99653c164f3",
+    "tracking_number": "TRP-68109932",
+    "vehicle_id": "6d53a54d-69a2-427f-b615-2b025f0f9720",
+    "driver_id": "96364e94-97fc-4b10-a75b-fe5de40cad5d",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 13.134920318227453,
+      "lon": 93.73524691541616
+    },
+    "dropoff_location": {
+      "lat": 11.280134430743436,
+      "lon": 70.04757444263676
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2823,
+    "estimated_distance_km": 2581.68,
+    "expected_revenue": 65042.0,
+    "start_odometer": 61803,
+    "end_odometer": 64384,
+    "status": "Completed",
+    "receiver_otp": "981934",
+    "created_at": "2025-10-12T06:57:57.224697"
+  },
+  {
+    "id": "9e8eb434-0c54-4ef3-a252-41099d16ed93",
+    "tracking_number": "TRP-96056758",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "driver_id": "27ae1ebc-edbe-4716-ad93-a3e2b523d12f",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 22.858926598005848,
+      "lon": 70.45579922456301
+    },
+    "dropoff_location": {
+      "lat": 20.096262656531994,
+      "lon": 77.06502838443885
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2626,
+    "estimated_distance_km": 749.57,
+    "expected_revenue": 19239.25,
+    "start_odometer": 68517,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-11-04T06:57:57.224710"
+  },
+  {
+    "id": "9da2078a-1536-458a-9ed7-a40295e9e36a",
+    "tracking_number": "TRP-13465466",
+    "vehicle_id": "242ba9c6-0141-4627-9dea-17968d968942",
+    "driver_id": "15cf773e-8bd8-4309-960a-968e0fdd296a",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 31.216063392603793,
+      "lon": 91.43799236774106
+    },
+    "dropoff_location": {
+      "lat": 35.863756742842256,
+      "lon": 89.07706551226886
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1070,
+    "estimated_distance_km": 561.16,
+    "expected_revenue": 14529.0,
+    "start_odometer": 23551,
+    "end_odometer": 24112,
+    "status": "Completed",
+    "receiver_otp": "597629",
+    "created_at": "2026-02-14T06:57:57.224724"
+  },
+  {
+    "id": "457c51d9-3770-4aa9-9e59-fa2f9c326dd3",
+    "tracking_number": "TRP-51630931",
+    "vehicle_id": "03b76a79-4daf-4880-a0c2-65602cf1d985",
+    "driver_id": "bad305a5-0aa3-43df-9d35-4e9c337883dd",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 22.434324459966,
+      "lon": 78.13483155971059
+    },
+    "dropoff_location": {
+      "lat": 8.153307691090422,
+      "lon": 89.46249265590703
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2232,
+    "estimated_distance_km": 1997.02,
+    "expected_revenue": 50425.5,
+    "start_odometer": 72521,
+    "end_odometer": 74518,
+    "status": "Completed",
+    "receiver_otp": "909897",
+    "created_at": "2025-09-23T06:57:57.224738"
+  },
+  {
+    "id": "e0773650-3dc9-4cdf-a825-4accd90f1c38",
+    "tracking_number": "TRP-57080636",
+    "vehicle_id": "e8acc2c7-fbfb-42ce-b08a-cf0845ef9d72",
+    "driver_id": "f3650ce5-bcbb-48dd-b95c-b307f8083d53",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 33.85188652220777,
+      "lon": 72.29461179891408
+    },
+    "dropoff_location": {
+      "lat": 17.669159285694587,
+      "lon": 75.49287019347672
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 733,
+    "estimated_distance_km": 1827.4,
+    "expected_revenue": 46185.0,
+    "start_odometer": 18883,
+    "end_odometer": 20710,
+    "status": "Completed",
+    "receiver_otp": "116075",
+    "created_at": "2025-11-16T06:57:57.224752"
+  },
+  {
+    "id": "8b2b4941-99cf-4913-8583-a7647688e20b",
+    "tracking_number": "TRP-99430510",
+    "vehicle_id": "a57783f3-a723-49e5-95aa-0a1dd4d1221c",
+    "driver_id": "7cf2357d-d683-42d9-9c50-4d547fd4e83c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 13.543037306266204,
+      "lon": 84.40996449346227
+    },
+    "dropoff_location": {
+      "lat": 17.875965810239244,
+      "lon": 79.75323260088491
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1435,
+    "estimated_distance_km": 693.14,
+    "expected_revenue": 17828.5,
+    "start_odometer": 74780,
+    "end_odometer": 75473,
+    "status": "Completed",
+    "receiver_otp": "553939",
+    "created_at": "2025-12-08T06:57:57.224765"
+  },
+  {
+    "id": "26fee406-1380-4132-871a-820c590fe983",
+    "tracking_number": "TRP-25711604",
+    "vehicle_id": "b42cbd26-63fd-485e-b8f4-6ebd2cd1fd3f",
+    "driver_id": "11728e28-d299-4b13-a0ac-a22d0c8bf9b3",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 12.632160546640677,
+      "lon": 79.74993457890871
+    },
+    "dropoff_location": {
+      "lat": 26.23835662560878,
+      "lon": 93.41560512435406
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 534,
+    "estimated_distance_km": 2080.38,
+    "expected_revenue": 52509.5,
+    "start_odometer": 31094,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-12-03T06:57:57.224779"
+  },
+  {
+    "id": "55587727-2d97-47f1-8860-1e0969ded1ca",
+    "tracking_number": "TRP-80234602",
+    "vehicle_id": "2159866a-72b3-4c6c-a983-e5ca48e3db06",
+    "driver_id": "e071d96b-6135-4ea8-8e93-209f1655b3ee",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 30.862391642150765,
+      "lon": 75.91468027093674
+    },
+    "dropoff_location": {
+      "lat": 17.19618772383815,
+      "lon": 72.67539443073315
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 21,
+    "estimated_distance_km": 1554.55,
+    "expected_revenue": 39363.75,
+    "start_odometer": 53038,
+    "end_odometer": 54592,
+    "status": "Completed",
+    "receiver_otp": "750302",
+    "created_at": "2025-09-15T06:57:57.224792"
+  },
+  {
+    "id": "e5f01ba3-6416-451c-9cfe-83fed4683da8",
+    "tracking_number": "TRP-13874213",
+    "vehicle_id": "6d53a54d-69a2-427f-b615-2b025f0f9720",
+    "driver_id": "362c18bc-20d8-49cb-9e96-1d835891e581",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 23.381277774224973,
+      "lon": 68.974986828031
+    },
+    "dropoff_location": {
+      "lat": 21.412528040151503,
+      "lon": 72.70517643078243
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2090,
+    "estimated_distance_km": 441.54,
+    "expected_revenue": 11538.5,
+    "start_odometer": 64384,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-08-29T06:57:57.224806"
+  },
+  {
+    "id": "3470d9c4-aac5-4095-b5e3-7c4bcf962724",
+    "tracking_number": "TRP-84350943",
+    "vehicle_id": "78c65f0a-e95d-450a-a284-e1149f625f57",
+    "driver_id": "2fa6a344-cfe5-4061-ba2f-8f1ecba85297",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 13.471271512979447,
+      "lon": 75.60858786836958
+    },
+    "dropoff_location": {
+      "lat": 30.464191583956314,
+      "lon": 79.38374415022244
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 31,
+    "estimated_distance_km": 1928.78,
+    "expected_revenue": 48719.5,
+    "start_odometer": 41792,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-09-20T06:57:57.224819"
+  },
+  {
+    "id": "efd43f46-5794-4cbb-b888-943c638d0e24",
+    "tracking_number": "TRP-63509215",
+    "vehicle_id": "7564a67e-b7e5-47ae-aff5-f43c2b7dddaf",
+    "driver_id": "f8a1b979-5398-42d6-9847-e2b0da3377f2",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 13.046217212826626,
+      "lon": 87.69010747000361
+    },
+    "dropoff_location": {
+      "lat": 14.695524679358961,
+      "lon": 74.25816292490886
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 623,
+    "estimated_distance_km": 1461.31,
+    "expected_revenue": 37032.75,
+    "start_odometer": 67168,
+    "end_odometer": 68629,
+    "status": "Completed",
+    "receiver_otp": "784820",
+    "created_at": "2025-12-29T06:57:57.224834"
+  },
+  {
+    "id": "3fd37e6e-e487-4cc7-a136-f6f99e72196e",
+    "tracking_number": "TRP-70096918",
+    "vehicle_id": "242ba9c6-0141-4627-9dea-17968d968942",
+    "driver_id": "1240fbb7-2dfc-498f-8ce9-c98e8ee75865",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 16.053556376942268,
+      "lon": 78.2060578401051
+    },
+    "dropoff_location": {
+      "lat": 33.707821306363854,
+      "lon": 77.79266449477625
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1637,
+    "estimated_distance_km": 1963.5,
+    "expected_revenue": 49587.5,
+    "start_odometer": 24112,
+    "end_odometer": 26075,
+    "status": "Completed",
+    "receiver_otp": "849531",
+    "created_at": "2025-12-15T06:57:57.224848"
+  },
+  {
+    "id": "2272f523-1515-49f3-92b6-0d1e7b6b8a80",
+    "tracking_number": "TRP-91614887",
+    "vehicle_id": "247eb157-beac-427f-a59b-5a6a6932705b",
+    "driver_id": "22881f31-7562-4cc4-9014-a19d357d3d6f",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 26.845037459505733,
+      "lon": 91.87438629223888
+    },
+    "dropoff_location": {
+      "lat": 16.68124358220438,
+      "lon": 82.30717074439899
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 536,
+    "estimated_distance_km": 1499.77,
+    "expected_revenue": 37994.25,
+    "start_odometer": 30317,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2026-01-12T06:57:57.224862"
+  },
+  {
+    "id": "c79aae91-72da-4dc0-bb90-6de766902a72",
+    "tracking_number": "TRP-63921198",
+    "vehicle_id": "6849cb4f-543c-4973-863c-23ab61853227",
+    "driver_id": "b2029e0e-63d7-498c-bc9a-6857413276c1",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 16.012215806030703,
+      "lon": 88.8471928032464
+    },
+    "dropoff_location": {
+      "lat": 22.287664541755433,
+      "lon": 81.15251565257319
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 58,
+    "estimated_distance_km": 1067.34,
+    "expected_revenue": 27183.5,
+    "start_odometer": 72205,
+    "end_odometer": 73272,
+    "status": "Completed",
+    "receiver_otp": "886587",
+    "created_at": "2025-11-03T06:57:57.224875"
+  },
+  {
+    "id": "ed8c5eee-c5d9-4442-9130-8a47cf304e1b",
+    "tracking_number": "TRP-70520452",
+    "vehicle_id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "driver_id": "2fa6a344-cfe5-4061-ba2f-8f1ecba85297",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 24.509634677255754,
+      "lon": 69.2787623911224
+    },
+    "dropoff_location": {
+      "lat": 13.092163748472652,
+      "lon": 71.13473332882268
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 33,
+    "estimated_distance_km": 1284.44,
+    "expected_revenue": 32611.0,
+    "start_odometer": 27455,
+    "end_odometer": 28739,
+    "status": "Completed",
+    "receiver_otp": "943276",
+    "created_at": "2026-02-14T06:57:57.224890"
+  },
+  {
+    "id": "749e3821-b747-44b7-8cc1-ba35d7949cf7",
+    "tracking_number": "TRP-26318755",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "driver_id": "9507ed84-c163-442f-ba6e-d7f0ea96bd55",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 30.743163733328565,
+      "lon": 83.12476092989436
+    },
+    "dropoff_location": {
+      "lat": 30.36289459645803,
+      "lon": 75.26228269049501
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2485,
+    "estimated_distance_km": 753.91,
+    "expected_revenue": 19347.75,
+    "start_odometer": 24113,
+    "end_odometer": 24866,
+    "status": "Completed",
+    "receiver_otp": "550714",
+    "created_at": "2025-11-26T06:57:57.224904"
+  },
+  {
+    "id": "0c517fa2-6a08-4336-924d-32129488ab10",
+    "tracking_number": "TRP-23980827",
+    "vehicle_id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "driver_id": "a9727f25-172e-4180-b384-fb7302f8cdd9",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 10.34963593871619,
+      "lon": 88.79664469603725
+    },
+    "dropoff_location": {
+      "lat": 19.7607231368192,
+      "lon": 73.61010425868126
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 32,
+    "estimated_distance_km": 1935.44,
+    "expected_revenue": 48886.0,
+    "start_odometer": 28739,
+    "end_odometer": 30674,
+    "status": "Completed",
+    "receiver_otp": "837910",
+    "created_at": "2025-10-27T06:57:57.224918"
+  },
+  {
+    "id": "8f0df0c0-d1ea-4b0f-aeae-ec176cb529f5",
+    "tracking_number": "TRP-29149507",
+    "vehicle_id": "816eb4e2-4cf4-4efc-ab2d-50c7774c5d60",
+    "driver_id": "201cb3f0-5f85-4b5c-8e2f-6c154423d4ff",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 20.81486096643635,
+      "lon": 70.942000150824
+    },
+    "dropoff_location": {
+      "lat": 27.35129362001087,
+      "lon": 72.3223351179811
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 696,
+    "estimated_distance_km": 740.18,
+    "expected_revenue": 19004.5,
+    "start_odometer": 63503,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-08-25T06:57:57.224931"
+  },
+  {
+    "id": "770cc603-128e-4f5b-9218-5d6d0310c9dc",
+    "tracking_number": "TRP-31943648",
+    "vehicle_id": "40378422-a9b9-44c8-80f9-fa3be085ca0c",
+    "driver_id": "b9e00c8f-512a-4c61-9f1e-a167e7af92aa",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 17.993992996159236,
+      "lon": 74.19106140928876
+    },
+    "dropoff_location": {
+      "lat": 25.235893587133322,
+      "lon": 76.32547023528481
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 584,
+    "estimated_distance_km": 834.89,
+    "expected_revenue": 21372.25,
+    "start_odometer": 13288,
+    "end_odometer": 14122,
+    "status": "Completed",
+    "receiver_otp": "682650",
+    "created_at": "2025-09-03T06:57:57.224944"
+  },
+  {
+    "id": "abd58eef-ac07-4810-bf44-fbf031265402",
+    "tracking_number": "TRP-96412432",
+    "vehicle_id": "0017fc50-69f0-4371-a0b6-c428f8caa77c",
+    "driver_id": "4498018a-6e56-47fa-a463-fce6bda35c72",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 13.777427070587748,
+      "lon": 95.78089799972011
+    },
+    "dropoff_location": {
+      "lat": 12.26055555178017,
+      "lon": 69.75041751411712
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1541,
+    "estimated_distance_km": 2823.75,
+    "expected_revenue": 71093.75,
+    "start_odometer": 18671,
+    "end_odometer": 21494,
+    "status": "Completed",
+    "receiver_otp": "582044",
+    "created_at": "2026-01-27T06:57:57.224956"
+  },
+  {
+    "id": "b8e942ef-e64a-4890-bc68-60878db50638",
+    "tracking_number": "TRP-42441291",
+    "vehicle_id": "247eb157-beac-427f-a59b-5a6a6932705b",
+    "driver_id": "1da1ed0b-049a-4422-91f7-f34205de30a1",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 22.96914840745218,
+      "lon": 91.57615144346377
+    },
+    "dropoff_location": {
+      "lat": 18.758942254530808,
+      "lon": 89.82645694331279
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 669,
+    "estimated_distance_km": 502.19,
+    "expected_revenue": 13054.75,
+    "start_odometer": 31816,
+    "end_odometer": 32318,
+    "status": "Completed",
+    "receiver_otp": "967208",
+    "created_at": "2025-12-06T06:57:57.224970"
+  },
+  {
+    "id": "e0b9c3dd-1ac6-4ca2-a0aa-35f34d41c987",
+    "tracking_number": "TRP-27778845",
+    "vehicle_id": "e7b69154-4779-4471-a9d0-0f6400983aa8",
+    "driver_id": "250ae2a9-2e63-456a-93c6-602801a90805",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 36.300069769956345,
+      "lon": 88.33383398824817
+    },
+    "dropoff_location": {
+      "lat": 31.67559313850096,
+      "lon": 85.49753358630963
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 22,
+    "estimated_distance_km": 576.81,
+    "expected_revenue": 14920.25,
+    "start_odometer": 27358,
+    "end_odometer": 27934,
+    "status": "Completed",
+    "receiver_otp": "442697",
+    "created_at": "2026-02-19T06:57:57.224982"
+  },
+  {
+    "id": "d9e41e89-53df-4539-9a20-8a0b518170ff",
+    "tracking_number": "TRP-70630472",
+    "vehicle_id": "e8acc2c7-fbfb-42ce-b08a-cf0845ef9d72",
+    "driver_id": "b9e00c8f-512a-4c61-9f1e-a167e7af92aa",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 26.162141605988968,
+      "lon": 81.92200418479892
+    },
+    "dropoff_location": {
+      "lat": 32.79448005266853,
+      "lon": 79.28694828025642
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 597,
+    "estimated_distance_km": 780.25,
+    "expected_revenue": 20006.25,
+    "start_odometer": 20710,
+    "end_odometer": 21490,
+    "status": "Completed",
+    "receiver_otp": "201053",
+    "created_at": "2026-01-17T06:57:57.224994"
+  },
+  {
+    "id": "574b7d06-7b52-49b6-8906-029f43b9f62c",
+    "tracking_number": "TRP-41259796",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "driver_id": "499090a2-647e-4921-85b6-54775f966d6c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 15.751059114784027,
+      "lon": 71.129797450081
+    },
+    "dropoff_location": {
+      "lat": 11.873839751368664,
+      "lon": 86.53619842995835
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1796,
+    "estimated_distance_km": 1717.89,
+    "expected_revenue": 43447.25,
+    "start_odometer": 26006,
+    "end_odometer": 27723,
+    "status": "Completed",
+    "receiver_otp": "874754",
+    "created_at": "2025-12-13T06:57:57.225007"
+  },
+  {
+    "id": "c8eea971-a017-40a7-b1bb-79d9f7406245",
+    "tracking_number": "TRP-35985443",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "driver_id": "81291d9b-f1f4-431e-85e2-bdd871d4a1bb",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 17.45614160715097,
+      "lon": 82.38403429483661
+    },
+    "dropoff_location": {
+      "lat": 36.99490784167014,
+      "lon": 85.52061769214473
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 40,
+    "estimated_distance_km": 2194.25,
+    "expected_revenue": 55356.25,
+    "start_odometer": 82057,
+    "end_odometer": 84251,
+    "status": "Completed",
+    "receiver_otp": "924542",
+    "created_at": "2026-01-30T06:57:57.225019"
+  },
+  {
+    "id": "a76b044c-d6d2-40d7-84ac-0fd38619320f",
+    "tracking_number": "TRP-32157289",
+    "vehicle_id": "7b7c28d6-caca-4411-a3c1-1532eb214a0e",
+    "driver_id": "3ffbbab3-e604-478b-93b9-b764a5e0aa18",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 9.843314104920935,
+      "lon": 93.12451848184756
+    },
+    "dropoff_location": {
+      "lat": 13.247018439022407,
+      "lon": 83.1353125111996
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 80,
+    "estimated_distance_km": 1151.99,
+    "expected_revenue": 29299.75,
+    "start_odometer": 64608,
+    "end_odometer": 65759,
+    "status": "Completed",
+    "receiver_otp": "984919",
+    "created_at": "2025-11-08T06:57:57.225031"
+  },
+  {
+    "id": "d3d0cf5c-c994-42ce-ad67-358bdb371767",
+    "tracking_number": "TRP-87129937",
+    "vehicle_id": "2159866a-72b3-4c6c-a983-e5ca48e3db06",
+    "driver_id": "6f0eb922-e15a-4221-949d-04998108cb3c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 9.78132715727139,
+      "lon": 83.84843193240124
+    },
+    "dropoff_location": {
+      "lat": 17.84924911434942,
+      "lon": 75.93711468369982
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 43,
+    "estimated_distance_km": 1238.17,
+    "expected_revenue": 31454.25,
+    "start_odometer": 54592,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-09-20T06:57:57.225044"
+  },
+  {
+    "id": "4e56a999-cd67-4835-a3eb-aa74bcc02d43",
+    "tracking_number": "TRP-67890035",
+    "vehicle_id": "2050141e-e74e-49eb-bba9-6c9dc230ed04",
+    "driver_id": "5dec7d29-5d75-43a2-bf13-fa49471b721e",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 12.5241040086507,
+      "lon": 73.3612579026499
+    },
+    "dropoff_location": {
+      "lat": 24.40073560063789,
+      "lon": 76.50616965865387
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 424,
+    "estimated_distance_km": 1361.45,
+    "expected_revenue": 34536.25,
+    "start_odometer": 63653,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2026-02-03T06:57:57.225055"
+  },
+  {
+    "id": "4b2cd714-7cbd-495f-8ca3-2ffae69ed9ff",
+    "tracking_number": "TRP-20893107",
+    "vehicle_id": "1d7ac6a5-87d6-497f-9ae7-36c5e334d777",
+    "driver_id": "1240fbb7-2dfc-498f-8ce9-c98e8ee75865",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 32.83583517464291,
+      "lon": 80.18052149061405
+    },
+    "dropoff_location": {
+      "lat": 24.461116842380406,
+      "lon": 79.6042196605335
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1500,
+    "estimated_distance_km": 932.92,
+    "expected_revenue": 23823.0,
+    "start_odometer": 65284,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-09-03T06:57:57.225067"
+  },
+  {
+    "id": "9cd9e0f1-17fa-40dd-8bd6-2df671adb5ab",
+    "tracking_number": "TRP-12705142",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "driver_id": "7cf2357d-d683-42d9-9c50-4d547fd4e83c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 8.362271323214719,
+      "lon": 88.08274555621867
+    },
+    "dropoff_location": {
+      "lat": 11.727709187181249,
+      "lon": 78.02599912678956
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1032,
+    "estimated_distance_km": 1162.77,
+    "expected_revenue": 29569.25,
+    "start_odometer": 68312,
+    "end_odometer": 69474,
+    "status": "Completed",
+    "receiver_otp": "548067",
+    "created_at": "2025-09-29T06:57:57.225079"
+  },
+  {
+    "id": "f0ea6d6e-7e44-43ca-a076-3a3de57c61fd",
+    "tracking_number": "TRP-85511494",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "driver_id": "6edb1636-8419-4316-a9d4-d6cf71b5f7c6",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 25.400756781531147,
+      "lon": 86.15717081288253
+    },
+    "dropoff_location": {
+      "lat": 32.99840610969345,
+      "lon": 77.52757422540054
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 190,
+    "estimated_distance_km": 1188.71,
+    "expected_revenue": 30217.75,
+    "start_odometer": 45469,
+    "end_odometer": 46657,
+    "status": "Completed",
+    "receiver_otp": "358186",
+    "created_at": "2025-09-02T06:57:57.225092"
+  },
+  {
+    "id": "2e1c33f5-f159-44c9-980c-4b814bc2ea47",
+    "tracking_number": "TRP-88180119",
+    "vehicle_id": "92c55979-6881-40b0-bb44-8bf2f110129c",
+    "driver_id": "96364e94-97fc-4b10-a75b-fe5de40cad5d",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 21.92913483578721,
+      "lon": 71.05174942602818
+    },
+    "dropoff_location": {
+      "lat": 26.18469000740809,
+      "lon": 72.29075716672432
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 6754,
+    "estimated_distance_km": 489.62,
+    "expected_revenue": 12740.5,
+    "start_odometer": 24482,
+    "end_odometer": 24971,
+    "status": "Completed",
+    "receiver_otp": "389796",
+    "created_at": "2025-09-29T06:57:57.225104"
+  },
+  {
+    "id": "5cd4ad30-7bf3-4637-9c4b-b66de4a91f34",
+    "tracking_number": "TRP-55289220",
+    "vehicle_id": "2050141e-e74e-49eb-bba9-6c9dc230ed04",
+    "driver_id": "201cb3f0-5f85-4b5c-8e2f-6c154423d4ff",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 27.94141604240522,
+      "lon": 87.01270031405801
+    },
+    "dropoff_location": {
+      "lat": 30.350111567368014,
+      "lon": 84.69170801407658
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 346,
+    "estimated_distance_km": 350.04,
+    "expected_revenue": 9251.0,
+    "start_odometer": 65014,
+    "end_odometer": 65364,
+    "status": "Completed",
+    "receiver_otp": "693781",
+    "created_at": "2026-02-03T06:57:57.225117"
+  },
+  {
+    "id": "42436c71-7491-4e2f-8825-8226cc03a0ce",
+    "tracking_number": "TRP-87235297",
+    "vehicle_id": "78c65f0a-e95d-450a-a284-e1149f625f57",
+    "driver_id": "6f0eb922-e15a-4221-949d-04998108cb3c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 20.86749017378158,
+      "lon": 85.75366062873789
+    },
+    "dropoff_location": {
+      "lat": 20.00405715651945,
+      "lon": 72.18474684343842
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 43,
+    "estimated_distance_km": 1416.67,
+    "expected_revenue": 35916.75,
+    "start_odometer": 43720,
+    "end_odometer": 45136,
+    "status": "Completed",
+    "receiver_otp": "823530",
+    "created_at": "2025-08-25T06:57:57.225130"
+  },
+  {
+    "id": "e7dc2d82-2d61-40b6-8db6-34044f9ece44",
+    "tracking_number": "TRP-32690465",
+    "vehicle_id": "e8acc2c7-fbfb-42ce-b08a-cf0845ef9d72",
+    "driver_id": "8df23c90-0321-4cd6-86c0-3306d5face1a",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 35.60494202831422,
+      "lon": 86.06750741207365
+    },
+    "dropoff_location": {
+      "lat": 21.24474052877232,
+      "lon": 89.89871966702403
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 405,
+    "estimated_distance_km": 1639.72,
+    "expected_revenue": 41493.0,
+    "start_odometer": 21490,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-10-24T06:57:57.225142"
+  },
+  {
+    "id": "a47b4bc2-057c-4cf4-80c1-cf85fd222585",
+    "tracking_number": "TRP-88591965",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "driver_id": "362c18bc-20d8-49cb-9e96-1d835891e581",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 23.96351675762993,
+      "lon": 88.96219951606079
+    },
+    "dropoff_location": {
+      "lat": 9.111862716983815,
+      "lon": 91.78097046316404
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 4401,
+    "estimated_distance_km": 1678.35,
+    "expected_revenue": 42458.75,
+    "start_odometer": 24866,
+    "end_odometer": 26544,
+    "status": "Completed",
+    "receiver_otp": "723357",
+    "created_at": "2026-01-13T06:57:57.225154"
+  },
+  {
+    "id": "a0d46c39-8247-4bb2-a187-9a43a55f2307",
+    "tracking_number": "TRP-97151816",
+    "vehicle_id": "7b7c28d6-caca-4411-a3c1-1532eb214a0e",
+    "driver_id": "15a5c12d-071b-42c6-a90f-9e00d9f6f1d4",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 33.799655157245155,
+      "lon": 83.9736843872321
+    },
+    "dropoff_location": {
+      "lat": 13.79152483390288,
+      "lon": 90.26932177788039
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 183,
+    "estimated_distance_km": 2313.73,
+    "expected_revenue": 58343.25,
+    "start_odometer": 65759,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2026-01-18T06:57:57.225166"
+  },
+  {
+    "id": "f321906a-567a-45a3-a1a0-950dfdecf255",
+    "tracking_number": "TRP-55332373",
+    "vehicle_id": "f1e0e1de-132e-4a1f-a09a-ae8b35c39dad",
+    "driver_id": "8df23c90-0321-4cd6-86c0-3306d5face1a",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 19.10453775237817,
+      "lon": 77.63164165000933
+    },
+    "dropoff_location": {
+      "lat": 19.26194440138145,
+      "lon": 93.83403534721396
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 494,
+    "estimated_distance_km": 1701.06,
+    "expected_revenue": 43026.5,
+    "start_odometer": 55804,
+    "end_odometer": 57505,
+    "status": "Completed",
+    "receiver_otp": "681820",
+    "created_at": "2025-12-02T06:57:57.225177"
+  },
+  {
+    "id": "0497831e-e115-4ac6-9356-cb9b0bd9d5b4",
+    "tracking_number": "TRP-88611732",
+    "vehicle_id": "fb5745d6-2885-43ce-8ed1-b265e9e19678",
+    "driver_id": "180dc156-9cce-4a93-a960-cce325a72a90",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 35.42537788716789,
+      "lon": 76.67727254577544
+    },
+    "dropoff_location": {
+      "lat": 14.784107540616482,
+      "lon": 86.57945368649126
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 304,
+    "estimated_distance_km": 2498.74,
+    "expected_revenue": 62968.5,
+    "start_odometer": 36067,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2026-02-06T06:57:57.225189"
+  },
+  {
+    "id": "8c9f1c75-3b99-490f-a115-524358e56528",
+    "tracking_number": "TRP-86819250",
+    "vehicle_id": "730c097a-999e-48cc-8561-f3774acda619",
+    "driver_id": "250ae2a9-2e63-456a-93c6-602801a90805",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 36.06699490696805,
+      "lon": 76.13686174332153
+    },
+    "dropoff_location": {
+      "lat": 15.62889136735388,
+      "lon": 84.58003605042663
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 69,
+    "estimated_distance_km": 2421.86,
+    "expected_revenue": 61046.5,
+    "start_odometer": 65253,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2026-02-10T06:57:57.225202"
+  },
+  {
+    "id": "9dd68d1a-9443-4c24-87b5-6c0a28202fb0",
+    "tracking_number": "TRP-64293644",
+    "vehicle_id": "2a3dd875-ad17-44b8-9ef3-bca4d0555cb3",
+    "driver_id": "90a2b3ba-88e2-4b6a-971a-f52f715c319c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 22.412173815905067,
+      "lon": 78.6706931371321
+    },
+    "dropoff_location": {
+      "lat": 13.12889805155925,
+      "lon": 75.62432296018763
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 355,
+    "estimated_distance_km": 1081.34,
+    "expected_revenue": 27533.5,
+    "start_odometer": 72022,
+    "end_odometer": 73103,
+    "status": "Completed",
+    "receiver_otp": "817898",
+    "created_at": "2025-10-11T06:57:57.225214"
+  },
+  {
+    "id": "617d1289-b8e7-4c89-afbc-2e8ccb7ac45d",
+    "tracking_number": "TRP-53500075",
+    "vehicle_id": "d2bdf7d0-2eb0-4d71-8bda-253bede03fb9",
+    "driver_id": "761d71a9-ded1-4679-8b48-c561d1392bd5",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 20.79807558077148,
+      "lon": 83.16066605466784
+    },
+    "dropoff_location": {
+      "lat": 11.698134856215782,
+      "lon": 94.72780750451074
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 44,
+    "estimated_distance_km": 1595.07,
+    "expected_revenue": 40376.75,
+    "start_odometer": 45750,
+    "end_odometer": 47345,
+    "status": "Completed",
+    "receiver_otp": "534142",
+    "created_at": "2025-12-09T06:57:57.225227"
+  },
+  {
+    "id": "566c7510-c6d0-4b9e-a6be-612f763aeaa0",
+    "tracking_number": "TRP-98301433",
+    "vehicle_id": "b42cbd26-63fd-485e-b8f4-6ebd2cd1fd3f",
+    "driver_id": "90a2b3ba-88e2-4b6a-971a-f52f715c319c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 22.927916187109247,
+      "lon": 78.38248380024966
+    },
+    "dropoff_location": {
+      "lat": 19.842559397868136,
+      "lon": 82.15403904355061
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 186,
+    "estimated_distance_km": 519.74,
+    "expected_revenue": 13493.5,
+    "start_odometer": 33174,
+    "end_odometer": 33693,
+    "status": "Completed",
+    "receiver_otp": "361732",
+    "created_at": "2025-11-29T06:57:57.225240"
+  },
+  {
+    "id": "a0cb79f4-ba1e-4377-85ee-2c2be63f0c01",
+    "tracking_number": "TRP-57764606",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "driver_id": "87b7d634-91ab-44ac-aabe-6cf43ec0b6a6",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 16.978285351912604,
+      "lon": 82.42243976866693
+    },
+    "dropoff_location": {
+      "lat": 32.517168640880264,
+      "lon": 69.73549560361825
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 7546,
+    "estimated_distance_km": 2146.88,
+    "expected_revenue": 54172.0,
+    "start_odometer": 69266,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-10-31T06:57:57.225253"
+  },
+  {
+    "id": "81de2945-9eb0-4948-94cf-636ec35c0d5a",
+    "tracking_number": "TRP-55118928",
+    "vehicle_id": "6d53a54d-69a2-427f-b615-2b025f0f9720",
+    "driver_id": "ff442b7b-d413-4dc6-80a4-af95135dfd3a",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 10.372467480651197,
+      "lon": 72.902678514686
+    },
+    "dropoff_location": {
+      "lat": 25.795561883043746,
+      "lon": 86.48517111541187
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 4806,
+    "estimated_distance_km": 2232.7,
+    "expected_revenue": 56317.5,
+    "start_odometer": 64825,
+    "end_odometer": 67057,
+    "status": "Completed",
+    "receiver_otp": "480825",
+    "created_at": "2025-09-28T06:57:57.225265"
+  },
+  {
+    "id": "b3f64cf3-2f43-4867-add0-0fd033745d87",
+    "tracking_number": "TRP-29752464",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "driver_id": "7ffc033b-ee7b-4b0a-9efb-06bb2326a855",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 21.94468629271253,
+      "lon": 85.29170756157228
+    },
+    "dropoff_location": {
+      "lat": 24.115874613529066,
+      "lon": 87.74417989614861
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 258,
+    "estimated_distance_km": 348.22,
+    "expected_revenue": 9205.5,
+    "start_odometer": 46657,
+    "end_odometer": 47005,
+    "status": "Completed",
+    "receiver_otp": "316281",
+    "created_at": "2026-02-13T06:57:57.225277"
+  },
+  {
+    "id": "9b7ab429-eb60-432d-a9cb-6dc2dd854712",
+    "tracking_number": "TRP-69399911",
+    "vehicle_id": "1d7ac6a5-87d6-497f-9ae7-36c5e334d777",
+    "driver_id": "7cf2357d-d683-42d9-9c50-4d547fd4e83c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 17.514697001182665,
+      "lon": 74.52052231889297
+    },
+    "dropoff_location": {
+      "lat": 23.238063600197385,
+      "lon": 73.36833855355817
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1979,
+    "estimated_distance_km": 647.63,
+    "expected_revenue": 16690.75,
+    "start_odometer": 66216,
+    "end_odometer": 66863,
+    "status": "Completed",
+    "receiver_otp": "810395",
+    "created_at": "2025-11-09T06:57:57.225289"
+  },
+  {
+    "id": "f6a4a29d-711c-4bc6-848d-1ed3a92c62e6",
+    "tracking_number": "TRP-10673532",
+    "vehicle_id": "e8acc2c7-fbfb-42ce-b08a-cf0845ef9d72",
+    "driver_id": "a099368d-1be0-46b6-a97a-ae87531486df",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 15.271179755574927,
+      "lon": 92.25077039568487
+    },
+    "dropoff_location": {
+      "lat": 13.772020511923692,
+      "lon": 85.75465658865926
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 843,
+    "estimated_distance_km": 718.81,
+    "expected_revenue": 18470.25,
+    "start_odometer": 23129,
+    "end_odometer": 23847,
+    "status": "Completed",
+    "receiver_otp": "510864",
+    "created_at": "2026-01-06T06:57:57.225301"
+  },
+  {
+    "id": "41c8645f-6e97-44dd-8c32-a74c54bd3683",
+    "tracking_number": "TRP-25736232",
+    "vehicle_id": "2a3dd875-ad17-44b8-9ef3-bca4d0555cb3",
+    "driver_id": "90a2b3ba-88e2-4b6a-971a-f52f715c319c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 19.301232103288612,
+      "lon": 87.44822938895278
+    },
+    "dropoff_location": {
+      "lat": 20.68359275863962,
+      "lon": 71.84119420816451
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 175,
+    "estimated_distance_km": 1637.43,
+    "expected_revenue": 41435.75,
+    "start_odometer": 73103,
+    "end_odometer": 74740,
+    "status": "Completed",
+    "receiver_otp": "408263",
+    "created_at": "2025-12-17T06:57:57.225313"
+  },
+  {
+    "id": "27ad982e-72b6-4cab-9173-da5f8be46086",
+    "tracking_number": "TRP-98439397",
+    "vehicle_id": "0017fc50-69f0-4371-a0b6-c428f8caa77c",
+    "driver_id": "ca0927fa-2947-4bce-a97c-8c547783000f",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 26.403388539677774,
+      "lon": 71.76586507561147
+    },
+    "dropoff_location": {
+      "lat": 35.84848422917106,
+      "lon": 70.75656949960906
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2187,
+    "estimated_distance_km": 1054.61,
+    "expected_revenue": 26865.25,
+    "start_odometer": 21494,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-09-26T06:57:57.225325"
+  },
+  {
+    "id": "32684064-c733-4739-b3d4-1d15d7f7dcbf",
+    "tracking_number": "TRP-34389252",
+    "vehicle_id": "c4f4ca6b-06a9-45e8-af7e-13fb0f7ee4b0",
+    "driver_id": "a4da994c-09da-4064-8385-f5d5d74c3fed",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 19.867822291249496,
+      "lon": 71.19950796974729
+    },
+    "dropoff_location": {
+      "lat": 13.712192716323544,
+      "lon": 75.4598767983828
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 504,
+    "estimated_distance_km": 820.94,
+    "expected_revenue": 21023.5,
+    "start_odometer": 48805,
+    "end_odometer": 49625,
+    "status": "Completed",
+    "receiver_otp": "435202",
+    "created_at": "2026-02-06T06:57:57.225338"
+  },
+  {
+    "id": "466f2bf4-590b-4f07-8d30-196967b572c0",
+    "tracking_number": "TRP-39681575",
+    "vehicle_id": "7b7c28d6-caca-4411-a3c1-1532eb214a0e",
+    "driver_id": "11728e28-d299-4b13-a0ac-a22d0c8bf9b3",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 31.068960397704977,
+      "lon": 90.9498358063971
+    },
+    "dropoff_location": {
+      "lat": 22.98887999097416,
+      "lon": 70.42244598598383
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 183,
+    "estimated_distance_km": 2218.07,
+    "expected_revenue": 55951.75,
+    "start_odometer": 68072,
+    "end_odometer": 70290,
+    "status": "Completed",
+    "receiver_otp": "508392",
+    "created_at": "2025-09-16T06:57:57.225350"
+  },
+  {
+    "id": "67beb87a-61fc-40b4-9ede-2e5c5ca19f92",
+    "tracking_number": "TRP-63420285",
+    "vehicle_id": "730c097a-999e-48cc-8561-f3774acda619",
+    "driver_id": "250ae2a9-2e63-456a-93c6-602801a90805",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 18.514857700376567,
+      "lon": 72.99862965375037
+    },
+    "dropoff_location": {
+      "lat": 34.26642087562655,
+      "lon": 80.1774866430959
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 74,
+    "estimated_distance_km": 1890.32,
+    "expected_revenue": 47758.0,
+    "start_odometer": 67674,
+    "end_odometer": 69564,
+    "status": "Completed",
+    "receiver_otp": "421262",
+    "created_at": "2025-12-01T06:57:57.225363"
+  },
+  {
+    "id": "e29f0019-23f6-4191-a54e-0f7f9b2186a0",
+    "tracking_number": "TRP-25756262",
+    "vehicle_id": "6d53a54d-69a2-427f-b615-2b025f0f9720",
+    "driver_id": "87b7d634-91ab-44ac-aabe-6cf43ec0b6a6",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 24.511475066915622,
+      "lon": 71.51515961955054
+    },
+    "dropoff_location": {
+      "lat": 18.81748133041569,
+      "lon": 78.89588546659547
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 6191,
+    "estimated_distance_km": 990.86,
+    "expected_revenue": 25271.5,
+    "start_odometer": 67057,
+    "end_odometer": 68047,
+    "status": "Completed",
+    "receiver_otp": "684496",
+    "created_at": "2025-08-29T06:57:57.225375"
+  },
+  {
+    "id": "b4c54716-41b0-40b5-af47-3e7d9c31aecd",
+    "tracking_number": "TRP-74256827",
+    "vehicle_id": "7a7cae2f-2b6d-4818-b697-bdf57ba2666d",
+    "driver_id": "3042f8ee-1e2d-4571-98fe-767d7097f192",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 31.583959102014088,
+      "lon": 96.89153146249477
+    },
+    "dropoff_location": {
+      "lat": 30.655768350596052,
+      "lon": 93.7538738410207
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 3365,
+    "estimated_distance_km": 316.0,
+    "expected_revenue": 8400.0,
+    "start_odometer": 15982,
+    "end_odometer": 16298,
+    "status": "Completed",
+    "receiver_otp": "281819",
+    "created_at": "2026-01-31T06:57:57.225389"
+  },
+  {
+    "id": "f951465a-39ed-4296-b402-2525b7f8a185",
+    "tracking_number": "TRP-23252485",
+    "vehicle_id": "0017fc50-69f0-4371-a0b6-c428f8caa77c",
+    "driver_id": "1e8db33c-e398-4d82-900f-4b7f2247c55e",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 24.21265432496839,
+      "lon": 88.32683214303665
+    },
+    "dropoff_location": {
+      "lat": 24.82366151155175,
+      "lon": 70.457565142903
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1013,
+    "estimated_distance_km": 1807.8,
+    "expected_revenue": 45695.0,
+    "start_odometer": 22548,
+    "end_odometer": 24355,
+    "status": "Completed",
+    "receiver_otp": "556735",
+    "created_at": "2026-02-21T06:57:57.225402"
+  },
+  {
+    "id": "432dc86c-1852-4cd9-9f8c-f47445d085c2",
+    "tracking_number": "TRP-71533371",
+    "vehicle_id": "d0428304-078e-4bf6-934d-26f8a08180a5",
+    "driver_id": "659bd57d-88f3-4dbd-a248-25e0b58ce26f",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 8.387526425743957,
+      "lon": 93.24409686261912
+    },
+    "dropoff_location": {
+      "lat": 32.83888907608569,
+      "lon": 89.45231331397967
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 4724,
+    "estimated_distance_km": 2746.74,
+    "expected_revenue": 69168.5,
+    "start_odometer": 18436,
+    "end_odometer": 21182,
+    "status": "Completed",
+    "receiver_otp": "489520",
+    "created_at": "2025-10-13T06:57:57.225414"
+  },
+  {
+    "id": "ec87c272-f23a-4f97-bf27-45fcf0c93491",
+    "tracking_number": "TRP-47109984",
+    "vehicle_id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "driver_id": "2fa6a344-cfe5-4061-ba2f-8f1ecba85297",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 23.133532846245547,
+      "lon": 79.45623486786647
+    },
+    "dropoff_location": {
+      "lat": 31.107300837474913,
+      "lon": 81.9836954502023
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 26,
+    "estimated_distance_km": 921.15,
+    "expected_revenue": 23528.75,
+    "start_odometer": 30674,
+    "end_odometer": 31595,
+    "status": "Completed",
+    "receiver_otp": "863826",
+    "created_at": "2026-01-29T06:57:57.225427"
+  },
+  {
+    "id": "bba9fdbf-fe6a-4a35-bd23-a85c8ce98ac0",
+    "tracking_number": "TRP-31699082",
+    "vehicle_id": "3369ef50-21f0-423f-a845-ad2411a4d917",
+    "driver_id": "b3140a5d-81d7-4b9a-8224-dcc8d3cfd1c7",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 27.1882942828152,
+      "lon": 72.04623538091347
+    },
+    "dropoff_location": {
+      "lat": 10.616059833453239,
+      "lon": 74.99972059554833
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1759,
+    "estimated_distance_km": 1868.51,
+    "expected_revenue": 47212.75,
+    "start_odometer": 63408,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-10-26T06:57:57.225439"
+  },
+  {
+    "id": "905906c7-fc19-4158-9b0c-4dd1d9f44f09",
+    "tracking_number": "TRP-34894236",
+    "vehicle_id": "e7b69154-4779-4471-a9d0-0f6400983aa8",
+    "driver_id": "6f0eb922-e15a-4221-949d-04998108cb3c",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 27.154758301797195,
+      "lon": 72.89557707434415
+    },
+    "dropoff_location": {
+      "lat": 27.41452796697384,
+      "lon": 95.32809483855159
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 23,
+    "estimated_distance_km": 2214.03,
+    "expected_revenue": 55850.75,
+    "start_odometer": 27934,
+    "end_odometer": 30148,
+    "status": "Completed",
+    "receiver_otp": "103204",
+    "created_at": "2026-02-10T06:57:57.225450"
+  },
+  {
+    "id": "6fbbe964-a3eb-4d5b-ba2e-60a3b2f28ba9",
+    "tracking_number": "TRP-75313344",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "driver_id": "96364e94-97fc-4b10-a75b-fe5de40cad5d",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 30.020905197309308,
+      "lon": 72.56888011019258
+    },
+    "dropoff_location": {
+      "lat": 14.625335541394309,
+      "lon": 70.65880701082257
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 6174,
+    "estimated_distance_km": 1723.04,
+    "expected_revenue": 43576.0,
+    "start_odometer": 26544,
+    "end_odometer": 28267,
+    "status": "Completed",
+    "receiver_otp": "213256",
+    "created_at": "2025-10-31T06:57:57.225463"
+  },
+  {
+    "id": "ba8f901b-c2d6-4edb-8ebb-44f8cc5dd708",
+    "tracking_number": "TRP-95827224",
+    "vehicle_id": "886b211b-29a7-45e5-b16d-ecfdb182c778",
+    "driver_id": "6dbed3eb-751b-43b7-ae80-9faa1c5c8b21",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 33.467651117801196,
+      "lon": 74.48363358518935
+    },
+    "dropoff_location": {
+      "lat": 24.861161436395353,
+      "lon": 88.42483877778454
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 74,
+    "estimated_distance_km": 1655.12,
+    "expected_revenue": 41878.0,
+    "start_odometer": 48008,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-10-18T06:57:57.225475"
+  },
+  {
+    "id": "c92b52fe-0239-4a68-833c-7ca11d053682",
+    "tracking_number": "TRP-52697305",
+    "vehicle_id": "7a7cae2f-2b6d-4818-b697-bdf57ba2666d",
+    "driver_id": "362c18bc-20d8-49cb-9e96-1d835891e581",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 18.31664110148146,
+      "lon": 75.95814774563323
+    },
+    "dropoff_location": {
+      "lat": 26.028054599141942,
+      "lon": 75.80498935951269
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2701,
+    "estimated_distance_km": 857.61,
+    "expected_revenue": 21940.25,
+    "start_odometer": 16298,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-12-30T06:57:57.225486"
+  },
+  {
+    "id": "97890abf-3de7-4191-9f9e-4c44d254233b",
+    "tracking_number": "TRP-74740125",
+    "vehicle_id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "driver_id": "761d71a9-ded1-4679-8b48-c561d1392bd5",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 33.015240473744626,
+      "lon": 74.41282948705435
+    },
+    "dropoff_location": {
+      "lat": 25.630540178148394,
+      "lon": 91.12037524020188
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 74,
+    "estimated_distance_km": 1812.82,
+    "expected_revenue": 45820.5,
+    "start_odometer": 31595,
+    "end_odometer": 33407,
+    "status": "Completed",
+    "receiver_otp": "564495",
+    "created_at": "2025-11-01T06:57:57.225502"
+  },
+  {
+    "id": "4ed10b9c-bb65-4c5f-99d8-cdb287b561b2",
+    "tracking_number": "TRP-22678022",
+    "vehicle_id": "fb5745d6-2885-43ce-8ed1-b265e9e19678",
+    "driver_id": "2cbcd11e-8e8d-4fca-97cc-92732507ab45",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 22.55600511609338,
+      "lon": 90.85173685501911
+    },
+    "dropoff_location": {
+      "lat": 17.746779912552398,
+      "lon": 70.0761140182968
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 497,
+    "estimated_distance_km": 2231.43,
+    "expected_revenue": 56285.75,
+    "start_odometer": 38565,
+    "end_odometer": 40796,
+    "status": "Completed",
+    "receiver_otp": "264126",
+    "created_at": "2026-01-19T06:57:57.225519"
+  },
+  {
+    "id": "532d13d4-68e5-491d-98de-8783260374ef",
+    "tracking_number": "TRP-85282836",
+    "vehicle_id": "730c097a-999e-48cc-8561-f3774acda619",
+    "driver_id": "d9e99f92-8c12-4258-b5c6-9b88319021e7",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 13.486760180539914,
+      "lon": 94.709848587565
+    },
+    "dropoff_location": {
+      "lat": 16.191710963058902,
+      "lon": 82.14560461401628
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 79,
+    "estimated_distance_km": 1383.25,
+    "expected_revenue": 35081.25,
+    "start_odometer": 69564,
+    "end_odometer": 70947,
+    "status": "Completed",
+    "receiver_otp": "540753",
+    "created_at": "2025-11-26T06:57:57.225533"
+  },
+  {
+    "id": "cf0483d6-58ff-4cf0-a415-1aea6070747c",
+    "tracking_number": "TRP-89820039",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "driver_id": "14aad693-3fed-45f2-8a70-06cb43e9425b",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 11.608010546771315,
+      "lon": 89.37757831995573
+    },
+    "dropoff_location": {
+      "lat": 33.200046104641174,
+      "lon": 94.09213025697584
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 3161,
+    "estimated_distance_km": 2448.49,
+    "expected_revenue": 61712.25,
+    "start_odometer": 71412,
+    "end_odometer": 73860,
+    "status": "Completed",
+    "receiver_otp": "465616",
+    "created_at": "2026-02-08T06:57:57.225547"
+  },
+  {
+    "id": "306006e7-1abe-499c-92bb-3c735cd228f5",
+    "tracking_number": "TRP-93709015",
+    "vehicle_id": "e6f2d2c5-3f82-47ae-b9c3-4c8c13e5d62d",
+    "driver_id": "2cbcd11e-8e8d-4fca-97cc-92732507ab45",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 35.62288456066324,
+      "lon": 76.94347263409641
+    },
+    "dropoff_location": {
+      "lat": 27.017403762216567,
+      "lon": 82.67943586746284
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 641,
+    "estimated_distance_km": 1100.57,
+    "expected_revenue": 28014.25,
+    "start_odometer": 38050,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-10-13T06:57:57.225560"
+  },
+  {
+    "id": "60c1d3ad-0839-49ef-bc21-ac7241e2d35f",
+    "tracking_number": "TRP-97994754",
+    "vehicle_id": "5d3427e1-23ba-414c-98ea-2dae99054b49",
+    "driver_id": "b9e00c8f-512a-4c61-9f1e-a167e7af92aa",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 18.986264372044257,
+      "lon": 75.71065797135329
+    },
+    "dropoff_location": {
+      "lat": 8.746028811865807,
+      "lon": 81.03714114921148
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 466,
+    "estimated_distance_km": 1275.2,
+    "expected_revenue": 32380.0,
+    "start_odometer": 78837,
+    "end_odometer": 80112,
+    "status": "Completed",
+    "receiver_otp": "843064",
+    "created_at": "2026-02-15T06:57:57.225575"
+  },
+  {
+    "id": "87ae9be3-0149-4fcb-b0cd-ccf3f1ac0416",
+    "tracking_number": "TRP-73967149",
+    "vehicle_id": "7564a67e-b7e5-47ae-aff5-f43c2b7dddaf",
+    "driver_id": "52e9d343-b221-469f-bb5b-02ae682d8cd8",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 34.5103342661431,
+      "lon": 70.23679596117397
+    },
+    "dropoff_location": {
+      "lat": 30.197981545533302,
+      "lon": 72.69073091449741
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 351,
+    "estimated_distance_km": 531.98,
+    "expected_revenue": 13799.5,
+    "start_odometer": 68629,
+    "end_odometer": 69160,
+    "status": "Completed",
+    "receiver_otp": "322932",
+    "created_at": "2026-01-03T06:57:57.225589"
+  },
+  {
+    "id": "bd8d52ac-390d-4a08-a49e-bcac15e55df5",
+    "tracking_number": "TRP-88492719",
+    "vehicle_id": "6849cb4f-543c-4973-863c-23ab61853227",
+    "driver_id": "e071d96b-6135-4ea8-8e93-209f1655b3ee",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 25.065263743450977,
+      "lon": 70.84508046610735
+    },
+    "dropoff_location": {
+      "lat": 35.05613955277355,
+      "lon": 73.88170946158523
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 66,
+    "estimated_distance_km": 1148.54,
+    "expected_revenue": 29213.5,
+    "start_odometer": 73272,
+    "end_odometer": 74420,
+    "status": "Completed",
+    "receiver_otp": "271103",
+    "created_at": "2025-12-07T06:57:57.225602"
+  },
+  {
+    "id": "d59b7d61-5183-4190-843a-f22d3f7c0e9c",
+    "tracking_number": "TRP-23176541",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "driver_id": "ff442b7b-d413-4dc6-80a4-af95135dfd3a",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 21.693472958153933,
+      "lon": 94.21853050295294
+    },
+    "dropoff_location": {
+      "lat": 9.30282226750256,
+      "lon": 77.00176845353931
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 4919,
+    "estimated_distance_km": 2298.56,
+    "expected_revenue": 57964.0,
+    "start_odometer": 73860,
+    "end_odometer": 76158,
+    "status": "Completed",
+    "receiver_otp": "141226",
+    "created_at": "2026-02-12T06:57:57.225616"
+  },
+  {
+    "id": "2ddfd16f-1eff-447e-a784-9c74dca1d25c",
+    "tracking_number": "TRP-20718233",
+    "vehicle_id": "fb5745d6-2885-43ce-8ed1-b265e9e19678",
+    "driver_id": "8df23c90-0321-4cd6-86c0-3306d5face1a",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 24.373375792474917,
+      "lon": 70.53130757881164
+    },
+    "dropoff_location": {
+      "lat": 9.609691328816252,
+      "lon": 86.97068334705631
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 257,
+    "estimated_distance_km": 2393.24,
+    "expected_revenue": 60331.0,
+    "start_odometer": 40796,
+    "end_odometer": 43189,
+    "status": "Completed",
+    "receiver_otp": "884126",
+    "created_at": "2025-09-29T06:57:57.225629"
+  },
+  {
+    "id": "9dde6c9b-2271-44ae-b327-88d854d25020",
+    "tracking_number": "TRP-18968807",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "driver_id": "f64aacf2-807a-4ec8-9365-2fdd847967da",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 25.236990078228647,
+      "lon": 72.33751619553252
+    },
+    "dropoff_location": {
+      "lat": 17.630621386735523,
+      "lon": 79.9650256153185
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 48,
+    "estimated_distance_km": 1156.37,
+    "expected_revenue": 29409.25,
+    "start_odometer": 84251,
+    "end_odometer": 85407,
+    "status": "Completed",
+    "receiver_otp": "474638",
+    "created_at": "2026-01-13T06:57:57.225643"
+  },
+  {
+    "id": "5c01b485-fdff-44c3-84e8-7738e04e08ba",
+    "tracking_number": "TRP-47841364",
+    "vehicle_id": "6849cb4f-543c-4973-863c-23ab61853227",
+    "driver_id": "6dbed3eb-751b-43b7-ae80-9faa1c5c8b21",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 16.219373211711265,
+      "lon": 68.73313086686176
+    },
+    "dropoff_location": {
+      "lat": 33.984328915871345,
+      "lon": 89.66036772702185
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 57,
+    "estimated_distance_km": 2876.48,
+    "expected_revenue": 72412.0,
+    "start_odometer": 74420,
+    "end_odometer": 77296,
+    "status": "Completed",
+    "receiver_otp": "805315",
+    "created_at": "2025-09-11T06:57:57.225658"
+  },
+  {
+    "id": "c70fd434-61f9-4f52-8fff-ec55c8f61e75",
+    "tracking_number": "TRP-78232392",
+    "vehicle_id": "c4f4ca6b-06a9-45e8-af7e-13fb0f7ee4b0",
+    "driver_id": "d092b0cf-8985-4d0c-b338-a451772a7dd3",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 23.477138024953597,
+      "lon": 85.75736199353231
+    },
+    "dropoff_location": {
+      "lat": 20.662737200838414,
+      "lon": 74.09377880987732
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 242,
+    "estimated_distance_km": 1241.51,
+    "expected_revenue": 31537.75,
+    "start_odometer": 49625,
+    "end_odometer": 50866,
+    "status": "Completed",
+    "receiver_otp": "207560",
+    "created_at": "2025-10-16T06:57:57.225672"
+  },
+  {
+    "id": "a879abff-3bcf-4d86-aa4d-366eb7e03704",
+    "tracking_number": "TRP-37239098",
+    "vehicle_id": "f1665bae-d484-4b50-a551-e08c2e9a8270",
+    "driver_id": "7ffc033b-ee7b-4b0a-9efb-06bb2326a855",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 21.947095050961046,
+      "lon": 82.22961771148866
+    },
+    "dropoff_location": {
+      "lat": 13.814162341753892,
+      "lon": 76.25202325090835
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 201,
+    "estimated_distance_km": 1103.21,
+    "expected_revenue": 28080.25,
+    "start_odometer": 17517,
+    "end_odometer": 18620,
+    "status": "Completed",
+    "receiver_otp": "386279",
+    "created_at": "2025-09-20T06:57:57.225685"
+  },
+  {
+    "id": "de0f7b3b-ccd0-447d-bb3d-fd34137e1c3b",
+    "tracking_number": "TRP-63944819",
+    "vehicle_id": "6d53a54d-69a2-427f-b615-2b025f0f9720",
+    "driver_id": "3042f8ee-1e2d-4571-98fe-767d7097f192",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 34.13984286204024,
+      "lon": 69.56479115927792
+    },
+    "dropoff_location": {
+      "lat": 15.177746130327657,
+      "lon": 88.00849936445903
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2499,
+    "estimated_distance_km": 2803.96,
+    "expected_revenue": 70599.0,
+    "start_odometer": 68047,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-11-30T06:57:57.225699"
+  },
+  {
+    "id": "62c9a423-5be2-43e7-8acc-1d52fc4cf69b",
+    "tracking_number": "TRP-15121150",
+    "vehicle_id": "cfe4d416-8f32-4c01-bd91-2d5dfbae129d",
+    "driver_id": "96364e94-97fc-4b10-a75b-fe5de40cad5d",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 22.509352462470826,
+      "lon": 88.23868138375585
+    },
+    "dropoff_location": {
+      "lat": 11.369731843489213,
+      "lon": 70.56723670347489
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2986,
+    "estimated_distance_km": 2247.44,
+    "expected_revenue": 56686.0,
+    "start_odometer": 75061,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2025-10-11T06:57:57.225713"
+  },
+  {
+    "id": "b8795ff3-4675-48f0-9260-736136b0b249",
+    "tracking_number": "TRP-33582970",
+    "vehicle_id": "7b7c28d6-caca-4411-a3c1-1532eb214a0e",
+    "driver_id": "15a5c12d-071b-42c6-a90f-9e00d9f6f1d4",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 26.964478529629176,
+      "lon": 74.70105564181159
+    },
+    "dropoff_location": {
+      "lat": 9.418253395651872,
+      "lon": 89.27184582762784
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 149,
+    "estimated_distance_km": 2479.9,
+    "expected_revenue": 62497.5,
+    "start_odometer": 70290,
+    "end_odometer": 72769,
+    "status": "Completed",
+    "receiver_otp": "872830",
+    "created_at": "2026-01-30T06:57:57.225727"
+  },
+  {
+    "id": "b007511b-5b72-47ac-b397-51df2d57649d",
+    "tracking_number": "TRP-81581318",
+    "vehicle_id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "driver_id": "31fb854a-c1a7-4ba6-afbc-0f26bf13e8db",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 15.785983833202314,
+      "lon": 84.49320633584333
+    },
+    "dropoff_location": {
+      "lat": 18.230606209930823,
+      "lon": 94.22776387957094
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 26,
+    "estimated_distance_km": 1069.99,
+    "expected_revenue": 27249.75,
+    "start_odometer": 33407,
+    "end_odometer": 34476,
+    "status": "Completed",
+    "receiver_otp": "214218",
+    "created_at": "2025-12-26T06:57:57.225740"
+  },
+  {
+    "id": "737cb04b-f366-4061-8bd9-cb628c2ae695",
+    "tracking_number": "TRP-67060415",
+    "vehicle_id": "e7b69154-4779-4471-a9d0-0f6400983aa8",
+    "driver_id": "f64aacf2-807a-4ec8-9365-2fdd847967da",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 32.24438724529344,
+      "lon": 72.50175833406755
+    },
+    "dropoff_location": {
+      "lat": 13.703244061133706,
+      "lon": 77.75505322174516
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 13,
+    "estimated_distance_km": 2129.75,
+    "expected_revenue": 53743.75,
+    "start_odometer": 30148,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-11-18T06:57:57.225754"
+  },
+  {
+    "id": "8cd9e380-2ecb-4b1b-8bb8-30f43b9215b9",
+    "tracking_number": "TRP-44751801",
+    "vehicle_id": "63663797-33c7-4147-a39d-ac67fc094622",
+    "driver_id": "1ba94ff2-efdd-4afa-9d96-24c8611e9307",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 8.81164201275076,
+      "lon": 75.5684890389566
+    },
+    "dropoff_location": {
+      "lat": 24.56539213211434,
+      "lon": 82.91629036713553
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 13,
+    "estimated_distance_km": 1917.32,
+    "expected_revenue": 48433.0,
+    "start_odometer": 75563,
+    "end_odometer": 77480,
+    "status": "Completed",
+    "receiver_otp": "831174",
+    "created_at": "2026-01-19T06:57:57.225767"
+  },
+  {
+    "id": "4a43fcdf-3cf9-4681-8334-50d2165c444e",
+    "tracking_number": "TRP-67733668",
+    "vehicle_id": "d0428304-078e-4bf6-934d-26f8a08180a5",
+    "driver_id": "3042f8ee-1e2d-4571-98fe-767d7097f192",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 19.27960837760491,
+      "lon": 93.95258874659942
+    },
+    "dropoff_location": {
+      "lat": 11.848402053585772,
+      "lon": 77.48415350921432
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2668,
+    "estimated_distance_km": 1946.21,
+    "expected_revenue": 49155.25,
+    "start_odometer": 21182,
+    "end_odometer": 23128,
+    "status": "Completed",
+    "receiver_otp": "401428",
+    "created_at": "2025-11-12T06:57:57.225781"
+  },
+  {
+    "id": "058bdd26-6f70-4d96-9f3b-3aad9561b13e",
+    "tracking_number": "TRP-31000381",
+    "vehicle_id": "6849cb4f-543c-4973-863c-23ab61853227",
+    "driver_id": "6a7a7197-4ff9-484d-b844-4b3a974c9c7b",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 33.666864288875544,
+      "lon": 94.60554483888988
+    },
+    "dropoff_location": {
+      "lat": 8.684104581428935,
+      "lon": 73.41458219945191
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 74,
+    "estimated_distance_km": 3524.99,
+    "expected_revenue": 88624.75,
+    "start_odometer": 77296,
+    "end_odometer": 80820,
+    "status": "Completed",
+    "receiver_otp": "303953",
+    "created_at": "2025-11-05T06:57:57.225794"
+  },
+  {
+    "id": "e7f92995-b8a9-413d-87a4-f31c88664966",
+    "tracking_number": "TRP-41598724",
+    "vehicle_id": "7a7cae2f-2b6d-4818-b697-bdf57ba2666d",
+    "driver_id": "14aad693-3fed-45f2-8a70-06cb43e9425b",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 23.631465230176147,
+      "lon": 72.32628915672437
+    },
+    "dropoff_location": {
+      "lat": 11.523352813853858,
+      "lon": 92.68173639740401
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 3293,
+    "estimated_distance_km": 2537.99,
+    "expected_revenue": 63949.75,
+    "start_odometer": 17155,
+    "end_odometer": 19692,
+    "status": "Completed",
+    "receiver_otp": "127401",
+    "created_at": "2026-02-06T06:57:57.225808"
+  },
+  {
+    "id": "68805c6b-0307-4f0d-890c-e36737259ae4",
+    "tracking_number": "TRP-36509311",
+    "vehicle_id": "242ba9c6-0141-4627-9dea-17968d968942",
+    "driver_id": "bad305a5-0aa3-43df-9d35-4e9c337883dd",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 26.448798329877405,
+      "lon": 79.16430402461913
+    },
+    "dropoff_location": {
+      "lat": 25.48662857765452,
+      "lon": 96.64914946193952
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 2441,
+    "estimated_distance_km": 1749.87,
+    "expected_revenue": 44246.75,
+    "start_odometer": 26075,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2026-02-17T06:57:57.225821"
+  },
+  {
+    "id": "1ded184a-aeb1-4c2b-99ad-3b4a399bc6bf",
+    "tracking_number": "TRP-66822061",
+    "vehicle_id": "e6f2d2c5-3f82-47ae-b9c3-4c8c13e5d62d",
+    "driver_id": "52e9d343-b221-469f-bb5b-02ae682d8cd8",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 22.98846249217655,
+      "lon": 73.18419841607647
+    },
+    "dropoff_location": {
+      "lat": 10.202927987285957,
+      "lon": 84.35057809627119
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 951,
+    "estimated_distance_km": 1851.83,
+    "expected_revenue": 46795.75,
+    "start_odometer": 39150,
+    "end_odometer": 41001,
+    "status": "Completed",
+    "receiver_otp": "210395",
+    "created_at": "2026-02-05T06:57:57.225833"
+  },
+  {
+    "id": "1d21ee76-0812-41b4-a1b5-14a7b4056b84",
+    "tracking_number": "TRP-93621812",
+    "vehicle_id": "f1e0e1de-132e-4a1f-a09a-ae8b35c39dad",
+    "driver_id": "f8a1b979-5398-42d6-9847-e2b0da3377f2",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 18.903657966356057,
+      "lon": 93.85572524233315
+    },
+    "dropoff_location": {
+      "lat": 32.33329059622554,
+      "lon": 82.94565841748074
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 729,
+    "estimated_distance_km": 1848.4,
+    "expected_revenue": 46710.0,
+    "start_odometer": 57505,
+    "end_odometer": 59353,
+    "status": "Completed",
+    "receiver_otp": "268889",
+    "created_at": "2025-09-16T06:57:57.225845"
+  },
+  {
+    "id": "2da1853d-260d-4faa-85c3-c83015a0377e",
+    "tracking_number": "TRP-23691415",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "driver_id": "3042f8ee-1e2d-4571-98fe-767d7097f192",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 26.32577614448027,
+      "lon": 85.30105979653857
+    },
+    "dropoff_location": {
+      "lat": 24.679845934419617,
+      "lon": 74.38737608918157
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 3740,
+    "estimated_distance_km": 1110.12,
+    "expected_revenue": 28253.0,
+    "start_odometer": 76158,
+    "end_odometer": 77268,
+    "status": "Completed",
+    "receiver_otp": "309347",
+    "created_at": "2025-10-19T06:57:57.225860"
+  },
+  {
+    "id": "1dcfc6fc-7109-4143-af8a-82230be96663",
+    "tracking_number": "TRP-21535677",
+    "vehicle_id": "92c55979-6881-40b0-bb44-8bf2f110129c",
+    "driver_id": "14aad693-3fed-45f2-8a70-06cb43e9425b",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 33.28926582341853,
+      "lon": 86.99654216444767
+    },
+    "dropoff_location": {
+      "lat": 11.191392390502013,
+      "lon": 93.24446362747696
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 8921,
+    "estimated_distance_km": 2538.39,
+    "expected_revenue": 63959.75,
+    "start_odometer": 24971,
+    "end_odometer": 27509,
+    "status": "Completed",
+    "receiver_otp": "853196",
+    "created_at": "2025-10-15T06:57:57.225872"
+  },
+  {
+    "id": "509a8f24-1882-4c57-b189-11ed5882fc76",
+    "tracking_number": "TRP-98528713",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "driver_id": "31fb854a-c1a7-4ba6-afbc-0f26bf13e8db",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 29.837448528142595,
+      "lon": 86.44484756850531
+    },
+    "dropoff_location": {
+      "lat": 16.2709920606313,
+      "lon": 89.90436303511711
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 49,
+    "estimated_distance_km": 1549.2,
+    "expected_revenue": 39230.0,
+    "start_odometer": 85407,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2025-12-16T06:57:57.225885"
+  },
+  {
+    "id": "2acc0edc-ec1e-47dc-b910-be692c224cce",
+    "tracking_number": "TRP-92294671",
+    "vehicle_id": "5d3427e1-23ba-414c-98ea-2dae99054b49",
+    "driver_id": "52e9d343-b221-469f-bb5b-02ae682d8cd8",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 36.69095617840418,
+      "lon": 79.95491946608858
+    },
+    "dropoff_location": {
+      "lat": 34.972015942284855,
+      "lon": 76.53185552152594
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 190,
+    "estimated_distance_km": 362.95,
+    "expected_revenue": 9573.75,
+    "start_odometer": 80112,
+    "end_odometer": null,
+    "status": "In_Transit",
+    "receiver_otp": null,
+    "created_at": "2026-01-17T06:57:57.225896"
+  },
+  {
+    "id": "a9d3f5e8-94f9-4524-b431-62baf43c2890",
+    "tracking_number": "TRP-98833420",
+    "vehicle_id": "2050141e-e74e-49eb-bba9-6c9dc230ed04",
+    "driver_id": "9df8e299-0b6d-40d9-8e9b-b2325c71026b",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 34.60410004501021,
+      "lon": 89.64761126284633
+    },
+    "dropoff_location": {
+      "lat": 21.688139894405094,
+      "lon": 88.33793282716837
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 331,
+    "estimated_distance_km": 1441.87,
+    "expected_revenue": 36546.75,
+    "start_odometer": 65364,
+    "end_odometer": 66805,
+    "status": "Completed",
+    "receiver_otp": "713633",
+    "created_at": "2025-10-18T06:57:57.225908"
+  },
+  {
+    "id": "57946197-5f8b-4958-9414-fa28b4a6a7a3",
+    "tracking_number": "TRP-48058551",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "driver_id": "15cf773e-8bd8-4309-960a-968e0fdd296a",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 20.188859197939905,
+      "lon": 72.86764140969686
+    },
+    "dropoff_location": {
+      "lat": 11.393041901101167,
+      "lon": 90.92818212760659
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 1033,
+    "estimated_distance_km": 2163.22,
+    "expected_revenue": 54580.5,
+    "start_odometer": 27723,
+    "end_odometer": 29886,
+    "status": "Completed",
+    "receiver_otp": "270201",
+    "created_at": "2025-12-01T06:57:57.225920"
+  },
+  {
+    "id": "21b2b8fd-b842-42a8-9d8f-44f84b874ee2",
+    "tracking_number": "TRP-73338316",
+    "vehicle_id": "5d3427e1-23ba-414c-98ea-2dae99054b49",
+    "driver_id": "2cbcd11e-8e8d-4fca-97cc-92732507ab45",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 14.978778848830867,
+      "lon": 75.6780487452163
+    },
+    "dropoff_location": {
+      "lat": 14.718856425743972,
+      "lon": 91.71217072118748
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 379,
+    "estimated_distance_km": 1723.24,
+    "expected_revenue": 43581.0,
+    "start_odometer": 80474,
+    "end_odometer": 82197,
+    "status": "Completed",
+    "receiver_otp": "791422",
+    "created_at": "2025-10-27T06:57:57.225941"
+  },
+  {
+    "id": "dd8759eb-fa27-489a-9e04-f73828752088",
+    "tracking_number": "TRP-98811341",
+    "vehicle_id": "a57783f3-a723-49e5-95aa-0a1dd4d1221c",
+    "driver_id": "fd5c2ffe-191e-42b6-ab2f-56463b260257",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 31.30805243039645,
+      "lon": 86.80658068449145
+    },
+    "dropoff_location": {
+      "lat": 25.80340635574335,
+      "lon": 91.17152647363412
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 677,
+    "estimated_distance_km": 745.73,
+    "expected_revenue": 19143.25,
+    "start_odometer": 75473,
+    "end_odometer": 76218,
+    "status": "Completed",
+    "receiver_otp": "262210",
+    "created_at": "2025-11-27T06:57:57.225954"
+  },
+  {
+    "id": "ee7a6d98-9462-4896-84d4-e0ce5c96bfff",
+    "tracking_number": "TRP-83952508",
+    "vehicle_id": "2050141e-e74e-49eb-bba9-6c9dc230ed04",
+    "driver_id": "1da1ed0b-049a-4422-91f7-f34205de30a1",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 22.58904972074897,
+      "lon": 95.14588094303858
+    },
+    "dropoff_location": {
+      "lat": 34.09598297618284,
+      "lon": 71.58556755971661
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 360,
+    "estimated_distance_km": 2627.33,
+    "expected_revenue": 66183.25,
+    "start_odometer": 66805,
+    "end_odometer": 69432,
+    "status": "Completed",
+    "receiver_otp": "156215",
+    "created_at": "2026-01-10T06:57:57.225967"
+  },
+  {
+    "id": "bd6eaf32-014d-486e-a94b-1b445ebc1c5c",
+    "tracking_number": "TRP-24737194",
+    "vehicle_id": "2050141e-e74e-49eb-bba9-6c9dc230ed04",
+    "driver_id": "29fa25eb-7818-4085-819e-537e5d8bf96a",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 10.787208623950413,
+      "lon": 95.06349428294678
+    },
+    "dropoff_location": {
+      "lat": 22.877632201546653,
+      "lon": 79.34045899745443
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 277,
+    "estimated_distance_km": 2143.12,
+    "expected_revenue": 54078.0,
+    "start_odometer": 69432,
+    "end_odometer": 71575,
+    "status": "Completed",
+    "receiver_otp": "992404",
+    "created_at": "2025-09-30T06:57:57.225979"
+  },
+  {
+    "id": "8c1ac918-7d1f-4d6f-ac88-759fb5411146",
+    "tracking_number": "TRP-56000930",
+    "vehicle_id": "5d3427e1-23ba-414c-98ea-2dae99054b49",
+    "driver_id": "201cb3f0-5f85-4b5c-8e2f-6c154423d4ff",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 28.83652990330029,
+      "lon": 95.4187188334889
+    },
+    "dropoff_location": {
+      "lat": 27.382641362014184,
+      "lon": 79.15219707925723
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 217,
+    "estimated_distance_km": 1602.31,
+    "expected_revenue": 40557.75,
+    "start_odometer": 82197,
+    "end_odometer": 83799,
+    "status": "Completed",
+    "receiver_otp": "951662",
+    "created_at": "2026-02-02T06:57:57.225991"
+  },
+  {
+    "id": "6def086b-76df-434f-968c-c7560f08b009",
+    "tracking_number": "TRP-33432722",
+    "vehicle_id": "59fef87b-6cf3-42a8-90f7-ae8a249ff62e",
+    "driver_id": "758a7770-ebf3-440c-a5bd-cc1a3d12ae3e",
+    "dispatcher_id": "bc11c6ff-7122-4997-9cb1-50606cf77bac",
+    "pickup_location": {
+      "lat": 33.90323578310462,
+      "lon": 87.94125607769695
+    },
+    "dropoff_location": {
+      "lat": 25.31403199740707,
+      "lon": 69.05481361433739
+    },
+    "pickup_address": "Random Pickup Location",
+    "dropoff_address": "Random Drop Location",
+    "cargo_weight_kg": 224,
+    "estimated_distance_km": 2055.76,
+    "expected_revenue": 51894.0,
+    "start_odometer": 32718,
+    "end_odometer": null,
+    "status": "Cancelled",
+    "receiver_otp": null,
+    "created_at": "2026-01-23T06:57:57.226003"
+  }
+];
+
+export const mockExpenses = [
+  {
+    "id": "3bd90a80-6353-4c37-a8c1-4fb9eb8e77b0",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "trip_id": "b21bc270-61a7-4274-be68-49c42c4a145d",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 39313.47,
+    "volume_liters": 413.83,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-17T06:57:57.223301"
+  },
+  {
+    "id": "2a07348f-07b1-4671-8456-aaf0901bb88a",
+    "vehicle_id": "d2bdf7d0-2eb0-4d71-8bda-253bede03fb9",
+    "trip_id": "8ecf6d25-9947-41f5-8de5-1ce88e8b2a44",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 43391.06,
+    "volume_liters": 456.75,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-16T06:57:57.223321"
+  },
+  {
+    "id": "8cfc3e0a-3b52-4347-8ce9-0854ea82276b",
+    "vehicle_id": "40378422-a9b9-44c8-80f9-fa3be085ca0c",
+    "trip_id": "039b250d-4528-4fb0-af2b-fe3e98acacaf",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 23824.48,
+    "volume_liters": 250.78,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-10T06:57:57.223338"
+  },
+  {
+    "id": "d8baa783-830e-4f50-9ead-da3fcb3820b2",
+    "vehicle_id": "af7f5064-cfcd-44ce-9f42-55f121f619ef",
+    "trip_id": "635bb8da-6c65-4bc2-9eb4-f743f97b4579",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 33460.33,
+    "volume_liters": 352.21,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-25T06:57:57.223353"
+  },
+  {
+    "id": "2a43c016-5646-498d-b34c-ba36135a31d8",
+    "vehicle_id": "2159866a-72b3-4c6c-a983-e5ca48e3db06",
+    "trip_id": "f42a8942-c7c4-4939-a78c-96e5a480bf20",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 58374.65,
+    "volume_liters": 614.47,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-25T06:57:57.223368"
+  },
+  {
+    "id": "d6a5bc55-a7ab-42c0-afbb-590653ec6afe",
+    "vehicle_id": "242ba9c6-0141-4627-9dea-17968d968942",
+    "trip_id": "cf9c8ded-3cbe-4cf5-9a35-8b739ace0ede",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 8796.81,
+    "volume_liters": 92.6,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-22T06:57:57.223382"
+  },
+  {
+    "id": "48058282-e326-44bc-8c86-8e0a0cb1531e",
+    "vehicle_id": "0017fc50-69f0-4371-a0b6-c428f8caa77c",
+    "trip_id": "20f84720-1f25-4215-958c-235be2ba15c7",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 27259.68,
+    "volume_liters": 286.94,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-19T06:57:57.223397"
+  },
+  {
+    "id": "eb0878fa-989c-4bdd-874e-c2938f0048a0",
+    "vehicle_id": "59fef87b-6cf3-42a8-90f7-ae8a249ff62e",
+    "trip_id": "17a7a012-cb99-42e9-887b-49ecec8c3b93",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 24246.85,
+    "volume_liters": 255.23,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-07T06:57:57.223411"
+  },
+  {
+    "id": "27b1e2d1-67f6-401c-b95b-9e32234a92f0",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "trip_id": "19b9a6ea-ff24-44dd-9685-6ddd5e880e03",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 34927.13,
+    "volume_liters": 367.65,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-15T06:57:57.223425"
+  },
+  {
+    "id": "a7e10e87-3f73-41e9-994b-90b657f8c894",
+    "vehicle_id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "trip_id": "f5c16e3e-16f0-4e0c-9879-f6380c067d40",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 23456.26,
+    "volume_liters": 246.91,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-24T06:57:57.223441"
+  },
+  {
+    "id": "58a6b077-0c93-4dd4-b5a8-8fdaa15840e0",
+    "vehicle_id": "723c9593-1d6c-498b-a246-09adc3974940",
+    "trip_id": "25869f6a-f1db-4858-bcce-f388f5610453",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 8094.76,
+    "volume_liters": 85.21,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-24T06:57:57.223456"
+  },
+  {
+    "id": "30edc0fb-090a-4ef1-bf24-30b6da2858f2",
+    "vehicle_id": "0017fc50-69f0-4371-a0b6-c428f8caa77c",
+    "trip_id": "0614bcc5-5f97-46bd-92aa-2ecc99d05910",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 64206.13,
+    "volume_liters": 675.85,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-20T06:57:57.223470"
+  },
+  {
+    "id": "270dd30a-3ae7-4f07-886f-4f3151623f6a",
+    "vehicle_id": "816eb4e2-4cf4-4efc-ab2d-50c7774c5d60",
+    "trip_id": "0dda3beb-3abc-4a32-8f0b-303a0939d38a",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 24223.1,
+    "volume_liters": 254.98,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-03T06:57:57.223484"
+  },
+  {
+    "id": "8d6ed909-a32f-449a-ace7-76c50a8a70c7",
+    "vehicle_id": "af7f5064-cfcd-44ce-9f42-55f121f619ef",
+    "trip_id": "8bd28478-8338-48eb-bb6b-627e9516e8e8",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 57615.22,
+    "volume_liters": 606.48,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-25T06:57:57.223498"
+  },
+  {
+    "id": "c13274c9-ff77-414f-a830-f08f067f4626",
+    "vehicle_id": "e6f2d2c5-3f82-47ae-b9c3-4c8c13e5d62d",
+    "trip_id": "dcaa6ba8-8965-4bbb-8ca8-a21215aa3349",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 3201.69,
+    "volume_liters": 33.7,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-05T06:57:57.223512"
+  },
+  {
+    "id": "5a361a7f-6908-4895-8e22-340d1874bc64",
+    "vehicle_id": "5d3427e1-23ba-414c-98ea-2dae99054b49",
+    "trip_id": "0a639911-b9a9-42f5-b639-7556f5a55805",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 47033.93,
+    "volume_liters": 495.09,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-15T06:57:57.223527"
+  },
+  {
+    "id": "8891df08-dbb6-4495-89b4-82b8d8173b47",
+    "vehicle_id": "7564a67e-b7e5-47ae-aff5-f43c2b7dddaf",
+    "trip_id": "86ec10d9-6e83-4f8f-97c3-2a87fe415766",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 43026.26,
+    "volume_liters": 452.91,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-28T06:57:57.223541"
+  },
+  {
+    "id": "93d5315a-989e-4084-b50c-4afd44de912d",
+    "vehicle_id": "723c9593-1d6c-498b-a246-09adc3974940",
+    "trip_id": "3eee61a0-4bcc-4bf0-b3da-41b8da2c196c",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 27152.14,
+    "volume_liters": 285.81,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-31T06:57:57.223555"
+  },
+  {
+    "id": "b2e64299-7e67-4572-a2e7-1ce257f2db24",
+    "vehicle_id": "d2bdf7d0-2eb0-4d71-8bda-253bede03fb9",
+    "trip_id": "f691c523-365c-4420-bb92-02b2fa9bc349",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 23300.27,
+    "volume_liters": 245.27,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-27T06:57:57.223568"
+  },
+  {
+    "id": "a90da7f4-a8df-4ffc-8936-e20a2c20ebae",
+    "vehicle_id": "e8acc2c7-fbfb-42ce-b08a-cf0845ef9d72",
+    "trip_id": "95fa91b8-44fb-4964-bb0b-b7f4e7a34f11",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 43575.36,
+    "volume_liters": 458.69,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-26T06:57:57.223582"
+  },
+  {
+    "id": "7630fd17-26ae-4336-a034-7d8bc87b3221",
+    "vehicle_id": "7564a67e-b7e5-47ae-aff5-f43c2b7dddaf",
+    "trip_id": "9c008527-9655-42a4-8abb-fd5f9c203e02",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 15790.71,
+    "volume_liters": 166.22,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-22T06:57:57.223596"
+  },
+  {
+    "id": "a85d0733-19d3-4ed8-a436-0ed8e0e53f53",
+    "vehicle_id": "3369ef50-21f0-423f-a845-ad2411a4d917",
+    "trip_id": "0d0acf09-fbbc-4138-9f8c-fc7e7aa08879",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 11436.67,
+    "volume_liters": 120.39,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-01T06:57:57.223612"
+  },
+  {
+    "id": "1472b836-9af4-46b2-9871-711970ef21b3",
+    "vehicle_id": "242ba9c6-0141-4627-9dea-17968d968942",
+    "trip_id": "ff9427cd-79bb-4b74-bfbd-11cb63ac9b41",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 55646.44,
+    "volume_liters": 585.75,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-19T06:57:57.223626"
+  },
+  {
+    "id": "5597ca9e-4374-48b5-bd91-2ac5340b7228",
+    "vehicle_id": "2159866a-72b3-4c6c-a983-e5ca48e3db06",
+    "trip_id": "16c73ebe-f259-4dfe-94a2-edf2b3df4b10",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 29480.78,
+    "volume_liters": 310.32,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-15T06:57:57.223640"
+  },
+  {
+    "id": "c3c7fe12-c71e-4832-a7a2-84f7f455c5cd",
+    "vehicle_id": "d2bdf7d0-2eb0-4d71-8bda-253bede03fb9",
+    "trip_id": "878dc8cc-5579-4238-bac7-2eecf7782fb0",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 19224.39,
+    "volume_liters": 202.36,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-04T06:57:57.223654"
+  },
+  {
+    "id": "88f38f89-735c-416b-a21e-6797c437d606",
+    "vehicle_id": "723c9593-1d6c-498b-a246-09adc3974940",
+    "trip_id": "4ffe01e7-8a20-4874-9915-4ef74b736a8f",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 51098.6,
+    "volume_liters": 537.88,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-04T06:57:57.223667"
+  },
+  {
+    "id": "422aef8c-6ea3-4cc1-b6a5-670554cb05ea",
+    "vehicle_id": "d3dd1bda-cd6d-42bf-a1dc-cfa58c69501b",
+    "trip_id": "8fbcac0f-0cdf-4efe-8c70-9c24de01ba09",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 15552.64,
+    "volume_liters": 163.71,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-14T06:57:57.223680"
+  },
+  {
+    "id": "d09d44b3-4306-43a0-9e40-5a522f1ce897",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "trip_id": "0f9498a3-7bac-4cb9-9290-a92aed9e2470",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 34909.84,
+    "volume_liters": 367.47,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-16T06:57:57.223739"
+  },
+  {
+    "id": "11c4efb9-646e-4252-9ddf-7205b5451bfe",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "trip_id": "8d29119f-8ac4-470e-90df-f1fb1be00950",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 41742.62,
+    "volume_liters": 439.4,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-02T06:57:57.223752"
+  },
+  {
+    "id": "79e26fea-5132-447b-a083-48b134b0fd6c",
+    "vehicle_id": "92c55979-6881-40b0-bb44-8bf2f110129c",
+    "trip_id": "b1df134a-6067-4e97-af42-36b6792a57dc",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 41022.71,
+    "volume_liters": 431.82,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-26T06:57:57.223764"
+  },
+  {
+    "id": "a6880902-8b14-4bae-bcd2-0979b44f1f3a",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "trip_id": "15bff678-26fb-4584-b59a-d7f377308afe",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 6426.94,
+    "volume_liters": 67.65,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-19T06:57:57.223777"
+  },
+  {
+    "id": "f0322fb6-bf19-4bc5-8f75-b3771adb71f4",
+    "vehicle_id": "3369ef50-21f0-423f-a845-ad2411a4d917",
+    "trip_id": "365fae5a-531e-491f-b28f-95a9f754e84e",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 30035.39,
+    "volume_liters": 316.16,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-18T06:57:57.223789"
+  },
+  {
+    "id": "22f060fd-953d-4b55-9470-cd9e99c9aaf3",
+    "vehicle_id": "c2ded916-8e4a-49c2-9131-3211cc201041",
+    "trip_id": "aa4dfa29-7ab8-4a67-8921-d7bfa2ca1d47",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 25863.56,
+    "volume_liters": 272.25,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-29T06:57:57.223801"
+  },
+  {
+    "id": "c4cfd006-fcd2-4465-b1d9-2e321bb56dd3",
+    "vehicle_id": "92c55979-6881-40b0-bb44-8bf2f110129c",
+    "trip_id": "5058d4af-321f-463b-8fef-9675c5821d00",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 34765.06,
+    "volume_liters": 365.95,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-08-31T06:57:57.223814"
+  },
+  {
+    "id": "2dc20684-b2f5-4a8b-a053-6d13faae81e2",
+    "vehicle_id": "242ba9c6-0141-4627-9dea-17968d968942",
+    "trip_id": "6bcd8205-a4f8-4021-a97a-455e1b6771e8",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 24802.22,
+    "volume_liters": 261.08,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-06T06:57:57.223826"
+  },
+  {
+    "id": "551b2523-ab32-4537-b37c-0cc275560f4b",
+    "vehicle_id": "63663797-33c7-4147-a39d-ac67fc094622",
+    "trip_id": "fac0dddc-d1aa-4f0f-aa22-0745df4a92b1",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 21472.47,
+    "volume_liters": 226.03,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-28T06:57:57.223838"
+  },
+  {
+    "id": "7f5d9a9a-54e3-4152-82c7-1dd136d070a0",
+    "vehicle_id": "6d53a54d-69a2-427f-b615-2b025f0f9720",
+    "trip_id": "a71339c7-2257-4621-93b9-0c60a0649501",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 20413.03,
+    "volume_liters": 214.87,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-24T06:57:57.223850"
+  },
+  {
+    "id": "254081a4-3643-4adb-939f-7c8db87bd54a",
+    "vehicle_id": "af7f5064-cfcd-44ce-9f42-55f121f619ef",
+    "trip_id": "ec40e036-778e-4d02-875a-f8724d429bc4",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 8021.99,
+    "volume_liters": 84.44,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-16T06:57:57.223863"
+  },
+  {
+    "id": "dd397a51-d8a8-4cf0-adb9-2bfabc03f214",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "trip_id": "ff3feb20-9bea-4e35-b1d4-29be56c2b654",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 21272.59,
+    "volume_liters": 223.92,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-14T06:57:57.223877"
+  },
+  {
+    "id": "b2b54189-cd2d-45cf-9d85-d103d1293bbf",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "trip_id": "0f4661f0-ce79-458b-9d05-8f38d7917db6",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 1585.17,
+    "volume_liters": 16.69,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-10T06:57:57.223889"
+  },
+  {
+    "id": "ec994f56-3c7c-4bc0-846a-6d38a7c3e305",
+    "vehicle_id": "f1e0e1de-132e-4a1f-a09a-ae8b35c39dad",
+    "trip_id": "183f1acd-ba02-45c9-a5eb-03d4aea1a4b1",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 40983.57,
+    "volume_liters": 431.41,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-01T06:57:57.223901"
+  },
+  {
+    "id": "4ae9aa6a-a10a-4bca-a025-67db6588cea6",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "trip_id": "9c4b6dc6-51a4-4b54-a1e5-caa33b56761d",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 6030.41,
+    "volume_liters": 63.48,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-16T06:57:57.223913"
+  },
+  {
+    "id": "dae6d711-1fbd-43d0-babb-c85184b532cd",
+    "vehicle_id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "trip_id": "09aea735-9d96-4a47-a871-a24fefca8aa9",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 16034.1,
+    "volume_liters": 168.78,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-29T06:57:57.223925"
+  },
+  {
+    "id": "a33587e9-86eb-4ca1-88aa-97baea2e6133",
+    "vehicle_id": "9746c7d8-1ce1-420e-a324-5eb0c4c26b1a",
+    "trip_id": "cf308b11-542f-445b-b943-0396844ed673",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 43033.29,
+    "volume_liters": 452.98,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-10T06:57:57.223937"
+  },
+  {
+    "id": "7fc84416-5ed9-4c0b-b5aa-21d0423b6dda",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "trip_id": "0547f908-e918-462f-8137-2203bdfcc41d",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 48755.71,
+    "volume_liters": 513.22,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-11T06:57:57.223949"
+  },
+  {
+    "id": "43891c82-85db-4877-81ac-51f0644048cb",
+    "vehicle_id": "92c55979-6881-40b0-bb44-8bf2f110129c",
+    "trip_id": "e1dc75be-fc79-4439-8a86-601f03eaec1d",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 27871.29,
+    "volume_liters": 293.38,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-07T06:57:57.223962"
+  },
+  {
+    "id": "0a63abbe-0cbe-42fc-acfb-a067887e509d",
+    "vehicle_id": "6849cb4f-543c-4973-863c-23ab61853227",
+    "trip_id": "0d31509a-4e3e-447f-a624-6a3af286973f",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 57610.47,
+    "volume_liters": 606.43,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-13T06:57:57.223974"
+  },
+  {
+    "id": "b9039850-8cfb-45e2-86d4-a86082dd63f9",
+    "vehicle_id": "40378422-a9b9-44c8-80f9-fa3be085ca0c",
+    "trip_id": "9900b9c9-93d0-4fe4-b652-77437d07736e",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 14506.88,
+    "volume_liters": 152.7,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-21T06:57:57.223986"
+  },
+  {
+    "id": "d2e89546-472a-4d44-be83-b7b86a1c8656",
+    "vehicle_id": "01dc37d3-1524-4025-9889-db7648a43902",
+    "trip_id": "04291283-81d5-4a3c-9d34-f6dd9f64ccf1",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 32425.78,
+    "volume_liters": 341.32,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-21T06:57:57.223998"
+  },
+  {
+    "id": "8b9c195e-2d6e-4180-b4f0-82dba021edc7",
+    "vehicle_id": "10bf6826-1c4b-404e-b0aa-dac2c4e4b3c6",
+    "trip_id": "dfa9cb75-04b5-4e9f-a9d3-14edfe977d25",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 51072.38,
+    "volume_liters": 537.6,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-15T06:57:57.224011"
+  },
+  {
+    "id": "0002240b-20e2-4811-b486-ad735ea29987",
+    "vehicle_id": "5d3427e1-23ba-414c-98ea-2dae99054b49",
+    "trip_id": "77a7a26d-93a4-4318-bcaf-c062d51120ac",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 36963.93,
+    "volume_liters": 389.09,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-15T06:57:57.224023"
+  },
+  {
+    "id": "018e9cdd-602d-4bae-a29e-5ac479a1a903",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "trip_id": "af4827d5-c715-44f6-b840-ff13e66b5de6",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 42143.9,
+    "volume_liters": 443.62,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-25T06:57:57.224036"
+  },
+  {
+    "id": "036d0c7b-647d-47cc-85e3-be828f5e9f3b",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "trip_id": "8eb44adb-0411-4b23-bd30-e9b2132f445f",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 8822.65,
+    "volume_liters": 92.87,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-11T06:57:57.224048"
+  },
+  {
+    "id": "faef60b0-e666-48c4-ae6c-cb420b416919",
+    "vehicle_id": "730c097a-999e-48cc-8561-f3774acda619",
+    "trip_id": "d1a9458c-e752-4f4a-9e48-88477f8874db",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 33347.09,
+    "volume_liters": 351.02,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-24T06:57:57.224061"
+  },
+  {
+    "id": "4c9def66-a64e-44ad-8ced-0c177d837198",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "trip_id": "d5b0751f-ba23-4ddd-a384-f8496f80ebe6",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 20428.8,
+    "volume_liters": 215.04,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-14T06:57:57.224072"
+  },
+  {
+    "id": "e3cefacb-e36e-46b7-aa65-28cc3fcead02",
+    "vehicle_id": "01dc37d3-1524-4025-9889-db7648a43902",
+    "trip_id": "0e7c681f-0817-4aa0-b108-b53fdc59567c",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 32030.39,
+    "volume_liters": 337.16,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-04T06:57:57.224086"
+  },
+  {
+    "id": "975b9dfe-9936-4123-bda3-c9d2d54817b6",
+    "vehicle_id": "7564a67e-b7e5-47ae-aff5-f43c2b7dddaf",
+    "trip_id": "6b2e0651-d572-456f-9f88-7077e43ebd16",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 28253.19,
+    "volume_liters": 297.4,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-15T06:57:57.224103"
+  },
+  {
+    "id": "3e10a972-97c7-496a-bc24-5f7e99186e46",
+    "vehicle_id": "59fef87b-6cf3-42a8-90f7-ae8a249ff62e",
+    "trip_id": "a32cfb05-2bb4-43a2-ba1a-3e99f70785ea",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 19328.13,
+    "volume_liters": 203.45,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-27T06:57:57.224118"
+  },
+  {
+    "id": "7f1cf78c-ff79-45bb-9dfa-14eac223bcb1",
+    "vehicle_id": "7a7cae2f-2b6d-4818-b697-bdf57ba2666d",
+    "trip_id": "3bf96112-55d0-4a69-8da9-9c6a9f0ed384",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 29610.74,
+    "volume_liters": 311.69,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-10T06:57:57.224132"
+  },
+  {
+    "id": "52bebbff-055a-4be9-a0d7-db41125b6942",
+    "vehicle_id": "723c9593-1d6c-498b-a246-09adc3974940",
+    "trip_id": "eede96fc-4f20-4653-81e3-e7a0046afe00",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 59362.65,
+    "volume_liters": 624.87,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-14T06:57:57.224145"
+  },
+  {
+    "id": "7d9d31d4-0f14-40f7-8748-ed816c23b10f",
+    "vehicle_id": "2159866a-72b3-4c6c-a983-e5ca48e3db06",
+    "trip_id": "b5f79435-2c13-4fe6-a068-8f476282304f",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 34983.56,
+    "volume_liters": 368.25,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-12T06:57:57.224159"
+  },
+  {
+    "id": "0fda0736-7e7d-4937-b252-428cbd722736",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "trip_id": "e4d3c6b7-2c1a-4991-a3d4-d66309632d74",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 48864.58,
+    "volume_liters": 514.36,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-30T06:57:57.224172"
+  },
+  {
+    "id": "12cfeb0a-7f7a-484c-b08a-7bdbe9528343",
+    "vehicle_id": "e7b69154-4779-4471-a9d0-0f6400983aa8",
+    "trip_id": "7053b264-2abb-4014-8fa3-082a9997d257",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 38618.64,
+    "volume_liters": 406.51,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-11T06:57:57.224185"
+  },
+  {
+    "id": "3818ebb4-4f60-4176-a818-8b3467c363a7",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "trip_id": "0cd9241a-7442-46e8-9c96-a3d9fdbebadb",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 25583.69,
+    "volume_liters": 269.3,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-16T06:57:57.224201"
+  },
+  {
+    "id": "3919b662-2f71-4e1f-85e9-3af687354060",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "trip_id": "d678bc8f-1bbd-45c4-88a8-bae9bc5a3adf",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 35449.44,
+    "volume_liters": 373.15,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-21T06:57:57.224215"
+  },
+  {
+    "id": "4da0ac42-3669-48b0-ac82-930719429a7c",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "trip_id": "d2bc435b-041f-4c72-bb4d-30483739bae1",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 42269.68,
+    "volume_liters": 444.94,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-20T06:57:57.224229"
+  },
+  {
+    "id": "41e842fc-7b83-4939-ab13-599a64f39aa6",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "trip_id": "22cb8c71-cf3e-47ff-843f-eee39b594a5d",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 7630.59,
+    "volume_liters": 80.32,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-11T06:57:57.224242"
+  },
+  {
+    "id": "08cd6dd2-9169-4cf2-bf58-167909a5c446",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "trip_id": "40da8ba4-03c3-4db2-849f-33f140bdaee5",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 42220.85,
+    "volume_liters": 444.43,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-09T06:57:57.224255"
+  },
+  {
+    "id": "bf682c65-c980-4272-b655-ddd802d19213",
+    "vehicle_id": "a57783f3-a723-49e5-95aa-0a1dd4d1221c",
+    "trip_id": "ba341971-2fbf-4365-a408-e063567836a9",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 35651.03,
+    "volume_liters": 375.27,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-05T06:57:57.224269"
+  },
+  {
+    "id": "1ba16464-a8a9-4629-bbc9-692f11c6f607",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "trip_id": "a6884811-be95-4e9d-bbb0-8f54fbc1f9eb",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 33516.57,
+    "volume_liters": 352.81,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-12T06:57:57.224282"
+  },
+  {
+    "id": "295bbdfb-98ed-4071-b5f3-91d84fb61fa3",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "trip_id": "3a46bf4b-6ff4-4c38-91ef-9dd28f19ff8b",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 30550.1,
+    "volume_liters": 321.58,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-10T06:57:57.224295"
+  },
+  {
+    "id": "646f8c5e-2ec7-4257-b4ad-886ae7cd794c",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "trip_id": "f0d247a3-32b4-4ee5-9a7f-73c46f1fa1d6",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 39987.97,
+    "volume_liters": 420.93,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-12T06:57:57.224309"
+  },
+  {
+    "id": "62630c02-639a-4027-b465-dd408a03ba88",
+    "vehicle_id": "d2bdf7d0-2eb0-4d71-8bda-253bede03fb9",
+    "trip_id": "0620deca-46fc-4068-b8ac-d374b4a739e5",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 27364.56,
+    "volume_liters": 288.05,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-06T06:57:57.224322"
+  },
+  {
+    "id": "65a519f3-bca0-4abd-abf1-f562f9ab65ea",
+    "vehicle_id": "2a3dd875-ad17-44b8-9ef3-bca4d0555cb3",
+    "trip_id": "25aeb103-1382-4334-a5cc-2b4d222e59a3",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 16863.26,
+    "volume_liters": 177.51,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-08-25T06:57:57.224337"
+  },
+  {
+    "id": "2818084c-1373-46ac-af38-4bb866e8d434",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "trip_id": "3de13b85-f3a1-4bc6-9407-5114676c0f31",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 36844.99,
+    "volume_liters": 387.84,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-25T06:57:57.224351"
+  },
+  {
+    "id": "8ff29e54-9bd2-4ea0-b210-fad3e6ac26f3",
+    "vehicle_id": "7a7cae2f-2b6d-4818-b697-bdf57ba2666d",
+    "trip_id": "f69141bf-19c8-4bbe-b828-add8d09b90d7",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 18382.88,
+    "volume_liters": 193.5,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-22T06:57:57.224364"
+  },
+  {
+    "id": "e069587a-c971-489e-9aa1-f36fe7b739f6",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "trip_id": "81ca13ad-5f47-4f1a-9c21-dcd4780aee2a",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 39847.94,
+    "volume_liters": 419.45,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-05T06:57:57.224378"
+  },
+  {
+    "id": "4426baf4-d31b-40d8-8a82-839d84a16e18",
+    "vehicle_id": "fb5745d6-2885-43ce-8ed1-b265e9e19678",
+    "trip_id": "1ee67747-f12a-4a44-b271-02b76ee568c7",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 40854.18,
+    "volume_liters": 430.04,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-31T06:57:57.224392"
+  },
+  {
+    "id": "903c0e2f-efea-4442-9cfe-b26dae88310f",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "trip_id": "ee1f2182-61c8-419a-98b8-b782c7ebff99",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 51566.0,
+    "volume_liters": 542.8,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-11T06:57:57.224406"
+  },
+  {
+    "id": "0152a573-8c01-417f-a8a7-0c0389568bdd",
+    "vehicle_id": "f1665bae-d484-4b50-a551-e08c2e9a8270",
+    "trip_id": "f5e91c5c-0ecf-4e47-b974-a5dc16a18b29",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 41348.94,
+    "volume_liters": 435.25,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-17T06:57:57.224419"
+  },
+  {
+    "id": "622c6a4b-e88b-49de-8ab5-89d060fff9c7",
+    "vehicle_id": "3369ef50-21f0-423f-a845-ad2411a4d917",
+    "trip_id": "ed9be67f-6e7a-4018-8000-afbd9c8fb411",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 41820.52,
+    "volume_liters": 440.22,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-12T06:57:57.224433"
+  },
+  {
+    "id": "8cd476a2-a2a4-4b27-bad8-fda3c0492402",
+    "vehicle_id": "723c9593-1d6c-498b-a246-09adc3974940",
+    "trip_id": "0a2abf87-6516-47e7-8a57-5be6be983244",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 21006.78,
+    "volume_liters": 221.12,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-02T06:57:57.224447"
+  },
+  {
+    "id": "1a3bafe2-1849-4f7b-97ee-158d621bd5d4",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "trip_id": "ece0a93d-015f-4bc0-a6b2-81fd86bab8a4",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 51601.15,
+    "volume_liters": 543.17,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-20T06:57:57.224460"
+  },
+  {
+    "id": "907bf2cc-26f2-4d70-a5f7-b61d980fcf1a",
+    "vehicle_id": "af7f5064-cfcd-44ce-9f42-55f121f619ef",
+    "trip_id": "a0db1f19-e359-433f-aeba-465964dfd132",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 27037.38,
+    "volume_liters": 284.6,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-19T06:57:57.224473"
+  },
+  {
+    "id": "822bccb7-9920-4a07-b80e-5c45076e9990",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "trip_id": "3951f1fd-65fb-4ee7-93aa-1e8dd14d6a8c",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 25954.95,
+    "volume_liters": 273.21,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-03T06:57:57.224487"
+  },
+  {
+    "id": "7041d024-bc82-4347-b20c-576a88907e79",
+    "vehicle_id": "1d7ac6a5-87d6-497f-9ae7-36c5e334d777",
+    "trip_id": "dc73e254-719e-404f-97f0-f26130dbb880",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 42762.16,
+    "volume_liters": 450.13,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-11T06:57:57.224501"
+  },
+  {
+    "id": "6a9d72df-ba75-4559-a4ec-ecdfd92d79ab",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "trip_id": "1a83f3dc-77c0-47ea-9510-c6d40ded8cfb",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 35097.75,
+    "volume_liters": 369.45,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-04T06:57:57.224514"
+  },
+  {
+    "id": "f71d1fc7-c88b-4278-86c9-c227508be27e",
+    "vehicle_id": "723c9593-1d6c-498b-a246-09adc3974940",
+    "trip_id": "bf7666aa-e856-42da-b587-70efe7079688",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 24385.55,
+    "volume_liters": 256.69,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-30T06:57:57.224528"
+  },
+  {
+    "id": "5c57fe53-2ea5-4001-9553-cec5c9487bce",
+    "vehicle_id": "f1665bae-d484-4b50-a551-e08c2e9a8270",
+    "trip_id": "8ce0779b-c745-4c0a-9c7d-aaa49f635d1b",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 13660.62,
+    "volume_liters": 143.8,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-08T06:57:57.224543"
+  },
+  {
+    "id": "901608b8-8a1a-4540-b22b-097169c9ce38",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "trip_id": "ee573576-31f0-43c0-b6ea-6d115cf33d71",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 41544.64,
+    "volume_liters": 437.31,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-29T06:57:57.224559"
+  },
+  {
+    "id": "0caac1b4-9b18-4ad7-90b1-c7b2f6410480",
+    "vehicle_id": "2050141e-e74e-49eb-bba9-6c9dc230ed04",
+    "trip_id": "5ab4d4a7-7449-469a-8b08-76616bdd293c",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 24237.16,
+    "volume_liters": 255.13,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-24T06:57:57.224572"
+  },
+  {
+    "id": "7ab61edb-9170-4d1c-aa47-3b9d5fe850ed",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "trip_id": "c1cfcf7a-a21e-4bc2-97be-b4f8aa703bc7",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 35013.39,
+    "volume_liters": 368.56,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-20T06:57:57.224584"
+  },
+  {
+    "id": "1126d4dc-5db6-4caf-b465-90166f448c8a",
+    "vehicle_id": "01dc37d3-1524-4025-9889-db7648a43902",
+    "trip_id": "03bbf51b-5250-4924-91a3-19ad738a0f49",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 7939.72,
+    "volume_liters": 83.58,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-21T06:57:57.224596"
+  },
+  {
+    "id": "1189d97e-c194-48e4-8143-c55c047fd797",
+    "vehicle_id": "b42cbd26-63fd-485e-b8f4-6ebd2cd1fd3f",
+    "trip_id": "a50b58b2-e339-430c-bb94-e7623cb6a2c5",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 13158.83,
+    "volume_liters": 138.51,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-26T06:57:57.224609"
+  },
+  {
+    "id": "e0f937a5-37b9-4df0-98f3-88291846dd41",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "trip_id": "080a964a-f0df-44e4-a1fe-08d263eda130",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 19318.44,
+    "volume_liters": 203.35,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-29T06:57:57.224623"
+  },
+  {
+    "id": "30a255ab-c4ff-4a31-a077-5ad3a747c3bc",
+    "vehicle_id": "3369ef50-21f0-423f-a845-ad2411a4d917",
+    "trip_id": "19ac1a46-ac3d-492e-bf7d-8f44c15e2495",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 13278.91,
+    "volume_liters": 139.78,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-21T06:57:57.224640"
+  },
+  {
+    "id": "28054461-c617-4878-be13-a24a3bf27172",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "trip_id": "f6e47b65-4072-4e15-988b-608724be02a1",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 40839.17,
+    "volume_liters": 429.89,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-20T06:57:57.224654"
+  },
+  {
+    "id": "6c780788-72c5-4da5-aac1-6f5e9d491bb3",
+    "vehicle_id": "f1665bae-d484-4b50-a551-e08c2e9a8270",
+    "trip_id": "3356c6e9-fa5d-4955-bb7d-689a00a7397b",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 35432.91,
+    "volume_liters": 372.98,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-01T06:57:57.224670"
+  },
+  {
+    "id": "61939a15-5b32-48bb-8518-839ccda54d04",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "trip_id": "b7c26cdb-29f7-4cbe-aff1-c2b54111ee2d",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 25343.34,
+    "volume_liters": 266.77,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-17T06:57:57.224683"
+  },
+  {
+    "id": "5ce86dfc-aaf9-4ce5-8dd3-9e5404e714de",
+    "vehicle_id": "6d53a54d-69a2-427f-b615-2b025f0f9720",
+    "trip_id": "3d232ddd-f7aa-4399-b1fe-d99653c164f3",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 49051.92,
+    "volume_liters": 516.34,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-12T06:57:57.224697"
+  },
+  {
+    "id": "8e631983-f946-42e6-ad89-f90f4ba439e6",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "trip_id": "9e8eb434-0c54-4ef3-a252-41099d16ed93",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 14241.83,
+    "volume_liters": 149.91,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-04T06:57:57.224710"
+  },
+  {
+    "id": "e273429b-6890-4324-ae2d-752743a47dd5",
+    "vehicle_id": "242ba9c6-0141-4627-9dea-17968d968942",
+    "trip_id": "9da2078a-1536-458a-9ed7-a40295e9e36a",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 10662.04,
+    "volume_liters": 112.23,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-14T06:57:57.224724"
+  },
+  {
+    "id": "da51cae8-2b6a-4e5d-bdab-3d2321eb24b4",
+    "vehicle_id": "03b76a79-4daf-4880-a0c2-65602cf1d985",
+    "trip_id": "457c51d9-3770-4aa9-9e59-fa2f9c326dd3",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 37943.38,
+    "volume_liters": 399.4,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-23T06:57:57.224738"
+  },
+  {
+    "id": "2430c264-5418-40fa-9410-4501daa186da",
+    "vehicle_id": "e8acc2c7-fbfb-42ce-b08a-cf0845ef9d72",
+    "trip_id": "e0773650-3dc9-4cdf-a825-4accd90f1c38",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 34720.6,
+    "volume_liters": 365.48,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-16T06:57:57.224752"
+  },
+  {
+    "id": "3ef192a5-9cd4-438e-a96a-6aa8372f40a7",
+    "vehicle_id": "a57783f3-a723-49e5-95aa-0a1dd4d1221c",
+    "trip_id": "8b2b4941-99cf-4913-8583-a7647688e20b",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 13169.66,
+    "volume_liters": 138.63,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-08T06:57:57.224765"
+  },
+  {
+    "id": "1a75cd0f-34ae-459d-b665-5de285130da1",
+    "vehicle_id": "b42cbd26-63fd-485e-b8f4-6ebd2cd1fd3f",
+    "trip_id": "26fee406-1380-4132-871a-820c590fe983",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 39527.22,
+    "volume_liters": 416.08,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-03T06:57:57.224779"
+  },
+  {
+    "id": "f1a1a211-0520-4db6-8efb-17476ce45421",
+    "vehicle_id": "2159866a-72b3-4c6c-a983-e5ca48e3db06",
+    "trip_id": "55587727-2d97-47f1-8860-1e0969ded1ca",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 29536.45,
+    "volume_liters": 310.91,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-15T06:57:57.224792"
+  },
+  {
+    "id": "4986bd58-954e-4795-ab77-4e4ac63bf83f",
+    "vehicle_id": "6d53a54d-69a2-427f-b615-2b025f0f9720",
+    "trip_id": "e5f01ba3-6416-451c-9cfe-83fed4683da8",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 8389.26,
+    "volume_liters": 88.31,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-08-29T06:57:57.224806"
+  },
+  {
+    "id": "76da8462-6b24-492a-8c25-6142e77f5999",
+    "vehicle_id": "78c65f0a-e95d-450a-a284-e1149f625f57",
+    "trip_id": "3470d9c4-aac5-4095-b5e3-7c4bcf962724",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 36646.82,
+    "volume_liters": 385.76,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-20T06:57:57.224819"
+  },
+  {
+    "id": "0763156d-65b7-4020-97b0-02b7a39a7cd0",
+    "vehicle_id": "7564a67e-b7e5-47ae-aff5-f43c2b7dddaf",
+    "trip_id": "efd43f46-5794-4cbb-b888-943c638d0e24",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 27764.89,
+    "volume_liters": 292.26,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-29T06:57:57.224834"
+  },
+  {
+    "id": "77d9cee3-9d0c-4db3-a95c-bc72f6558d1c",
+    "vehicle_id": "242ba9c6-0141-4627-9dea-17968d968942",
+    "trip_id": "3fd37e6e-e487-4cc7-a136-f6f99e72196e",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 37306.5,
+    "volume_liters": 392.7,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-15T06:57:57.224848"
+  },
+  {
+    "id": "fab38a52-6141-4790-b0f2-3e4d80f86502",
+    "vehicle_id": "247eb157-beac-427f-a59b-5a6a6932705b",
+    "trip_id": "2272f523-1515-49f3-92b6-0d1e7b6b8a80",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 28495.63,
+    "volume_liters": 299.95,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-12T06:57:57.224862"
+  },
+  {
+    "id": "55375c23-0722-4b2c-825b-65c8eac192ce",
+    "vehicle_id": "6849cb4f-543c-4973-863c-23ab61853227",
+    "trip_id": "c79aae91-72da-4dc0-bb90-6de766902a72",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 20279.46,
+    "volume_liters": 213.47,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-03T06:57:57.224875"
+  },
+  {
+    "id": "bc9d359c-505f-4ecf-b654-39dd7e054816",
+    "vehicle_id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "trip_id": "ed8c5eee-c5d9-4442-9130-8a47cf304e1b",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 24404.36,
+    "volume_liters": 256.89,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-14T06:57:57.224890"
+  },
+  {
+    "id": "2a09a79e-4038-44b7-b02b-d44590788c50",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "trip_id": "749e3821-b747-44b7-8cc1-ba35d7949cf7",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 14324.29,
+    "volume_liters": 150.78,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-26T06:57:57.224904"
+  },
+  {
+    "id": "2d7d8043-2bcc-4916-b958-cb80f4e5f111",
+    "vehicle_id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "trip_id": "0c517fa2-6a08-4336-924d-32129488ab10",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 36773.36,
+    "volume_liters": 387.09,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-27T06:57:57.224918"
+  },
+  {
+    "id": "1ff356b5-f4d5-4989-a9f3-b988a7af67de",
+    "vehicle_id": "816eb4e2-4cf4-4efc-ab2d-50c7774c5d60",
+    "trip_id": "8f0df0c0-d1ea-4b0f-aeae-ec176cb529f5",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 14063.42,
+    "volume_liters": 148.04,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-08-25T06:57:57.224931"
+  },
+  {
+    "id": "8f052f3e-2dc5-40c7-946e-aabaa4c04a45",
+    "vehicle_id": "40378422-a9b9-44c8-80f9-fa3be085ca0c",
+    "trip_id": "770cc603-128e-4f5b-9218-5d6d0310c9dc",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 15862.91,
+    "volume_liters": 166.98,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-03T06:57:57.224944"
+  },
+  {
+    "id": "65832d6c-bd1b-438d-8c7b-9b4aec99ac89",
+    "vehicle_id": "0017fc50-69f0-4371-a0b6-c428f8caa77c",
+    "trip_id": "abd58eef-ac07-4810-bf44-fbf031265402",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 53651.25,
+    "volume_liters": 564.75,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-27T06:57:57.224956"
+  },
+  {
+    "id": "84151560-0b17-4196-832c-53d5e57096eb",
+    "vehicle_id": "247eb157-beac-427f-a59b-5a6a6932705b",
+    "trip_id": "b8e942ef-e64a-4890-bc68-60878db50638",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 9541.61,
+    "volume_liters": 100.44,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-06T06:57:57.224970"
+  },
+  {
+    "id": "75a60997-cc35-4ad8-b772-90b295561415",
+    "vehicle_id": "e7b69154-4779-4471-a9d0-0f6400983aa8",
+    "trip_id": "e0b9c3dd-1ac6-4ca2-a0aa-35f34d41c987",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 10959.39,
+    "volume_liters": 115.36,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-19T06:57:57.224982"
+  },
+  {
+    "id": "f49857a0-ee89-4841-b48b-c0dc22ac6e09",
+    "vehicle_id": "e8acc2c7-fbfb-42ce-b08a-cf0845ef9d72",
+    "trip_id": "d9e41e89-53df-4539-9a20-8a0b518170ff",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 14824.75,
+    "volume_liters": 156.05,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-17T06:57:57.224994"
+  },
+  {
+    "id": "66d72ed4-871d-479b-ac8f-038e435f6627",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "trip_id": "574b7d06-7b52-49b6-8906-029f43b9f62c",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 32639.91,
+    "volume_liters": 343.58,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-13T06:57:57.225007"
+  },
+  {
+    "id": "87e6e707-bc32-48c1-ba6b-0c95ce3d4442",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "trip_id": "c8eea971-a017-40a7-b1bb-79d9f7406245",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 41690.75,
+    "volume_liters": 438.85,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-30T06:57:57.225019"
+  },
+  {
+    "id": "3a0414c3-8b68-4580-b3bd-3a5e73361942",
+    "vehicle_id": "7b7c28d6-caca-4411-a3c1-1532eb214a0e",
+    "trip_id": "a76b044c-d6d2-40d7-84ac-0fd38619320f",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 21887.81,
+    "volume_liters": 230.4,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-08T06:57:57.225031"
+  },
+  {
+    "id": "ab27dbd3-30d4-4753-9154-12630cf135df",
+    "vehicle_id": "2159866a-72b3-4c6c-a983-e5ca48e3db06",
+    "trip_id": "d3d0cf5c-c994-42ce-ad67-358bdb371767",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 23525.23,
+    "volume_liters": 247.63,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-20T06:57:57.225044"
+  },
+  {
+    "id": "830880ad-bd3f-4abc-8845-aaadf429c92f",
+    "vehicle_id": "2050141e-e74e-49eb-bba9-6c9dc230ed04",
+    "trip_id": "4e56a999-cd67-4835-a3eb-aa74bcc02d43",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 25867.55,
+    "volume_liters": 272.29,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-03T06:57:57.225055"
+  },
+  {
+    "id": "148b8675-72c1-40b8-a68e-457c8503352e",
+    "vehicle_id": "1d7ac6a5-87d6-497f-9ae7-36c5e334d777",
+    "trip_id": "4b2cd714-7cbd-495f-8ca3-2ffae69ed9ff",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 17725.48,
+    "volume_liters": 186.58,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-03T06:57:57.225067"
+  },
+  {
+    "id": "e84b85e0-0db1-4371-a336-14a1210ed577",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "trip_id": "9cd9e0f1-17fa-40dd-8bd6-2df671adb5ab",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 22092.63,
+    "volume_liters": 232.55,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-29T06:57:57.225079"
+  },
+  {
+    "id": "cdf1c3da-438e-4ada-b760-59f961e36df0",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "trip_id": "f0ea6d6e-7e44-43ca-a076-3a3de57c61fd",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 22585.49,
+    "volume_liters": 237.74,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-02T06:57:57.225092"
+  },
+  {
+    "id": "74088cc5-d081-48b5-b600-5559a3bd9a64",
+    "vehicle_id": "92c55979-6881-40b0-bb44-8bf2f110129c",
+    "trip_id": "2e1c33f5-f159-44c9-980c-4b814bc2ea47",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 9302.78,
+    "volume_liters": 97.92,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-29T06:57:57.225104"
+  },
+  {
+    "id": "c7de3c2e-4861-42fc-88a7-7e241ea6aa9b",
+    "vehicle_id": "2050141e-e74e-49eb-bba9-6c9dc230ed04",
+    "trip_id": "5cd4ad30-7bf3-4637-9c4b-b66de4a91f34",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 6650.76,
+    "volume_liters": 70.01,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-03T06:57:57.225117"
+  },
+  {
+    "id": "20228f19-ac6f-468c-ba33-eefc449b3a2c",
+    "vehicle_id": "78c65f0a-e95d-450a-a284-e1149f625f57",
+    "trip_id": "42436c71-7491-4e2f-8825-8226cc03a0ce",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 26916.73,
+    "volume_liters": 283.33,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-08-25T06:57:57.225130"
+  },
+  {
+    "id": "60bff956-8782-482a-9ef9-0f4765da6732",
+    "vehicle_id": "e8acc2c7-fbfb-42ce-b08a-cf0845ef9d72",
+    "trip_id": "e7dc2d82-2d61-40b6-8db6-34044f9ece44",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 31154.68,
+    "volume_liters": 327.94,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-24T06:57:57.225142"
+  },
+  {
+    "id": "835ef7dc-a3f0-4303-85b2-7c2c446e0a78",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "trip_id": "a47b4bc2-057c-4cf4-80c1-cf85fd222585",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 31888.65,
+    "volume_liters": 335.67,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-13T06:57:57.225154"
+  },
+  {
+    "id": "b2005a7e-c6cd-4b81-b0b4-145905b22cb6",
+    "vehicle_id": "7b7c28d6-caca-4411-a3c1-1532eb214a0e",
+    "trip_id": "a0d46c39-8247-4bb2-a187-9a43a55f2307",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 43960.87,
+    "volume_liters": 462.75,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-18T06:57:57.225166"
+  },
+  {
+    "id": "de1b8ee7-5934-49aa-aba9-2d37b12dbc86",
+    "vehicle_id": "f1e0e1de-132e-4a1f-a09a-ae8b35c39dad",
+    "trip_id": "f321906a-567a-45a3-a1a0-950dfdecf255",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 32320.14,
+    "volume_liters": 340.21,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-02T06:57:57.225177"
+  },
+  {
+    "id": "8a32726b-4fa9-45a8-ba39-983e1168562e",
+    "vehicle_id": "fb5745d6-2885-43ce-8ed1-b265e9e19678",
+    "trip_id": "0497831e-e115-4ac6-9356-cb9b0bd9d5b4",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 47476.06,
+    "volume_liters": 499.75,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-06T06:57:57.225189"
+  },
+  {
+    "id": "2798fd09-4de9-4f35-a33e-e03b30025d97",
+    "vehicle_id": "730c097a-999e-48cc-8561-f3774acda619",
+    "trip_id": "8c9f1c75-3b99-490f-a115-524358e56528",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 46015.34,
+    "volume_liters": 484.37,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-10T06:57:57.225202"
+  },
+  {
+    "id": "c9549759-7ceb-47e9-8c81-980ee16bd827",
+    "vehicle_id": "2a3dd875-ad17-44b8-9ef3-bca4d0555cb3",
+    "trip_id": "9dd68d1a-9443-4c24-87b5-6c0a28202fb0",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 20545.46,
+    "volume_liters": 216.27,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-11T06:57:57.225214"
+  },
+  {
+    "id": "0da49e51-0092-4211-bccb-7401ee430197",
+    "vehicle_id": "d2bdf7d0-2eb0-4d71-8bda-253bede03fb9",
+    "trip_id": "617d1289-b8e7-4c89-afbc-2e8ccb7ac45d",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 30306.33,
+    "volume_liters": 319.01,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-09T06:57:57.225227"
+  },
+  {
+    "id": "b2efedc0-84c2-4ac9-92b4-394b5a3e5230",
+    "vehicle_id": "b42cbd26-63fd-485e-b8f4-6ebd2cd1fd3f",
+    "trip_id": "566c7510-c6d0-4b9e-a6be-612f763aeaa0",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 9875.06,
+    "volume_liters": 103.95,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-29T06:57:57.225240"
+  },
+  {
+    "id": "5982bd9c-8fa1-4b69-8307-492cca13e8af",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "trip_id": "a0cb79f4-ba1e-4377-85ee-2c2be63f0c01",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 40790.72,
+    "volume_liters": 429.38,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-31T06:57:57.225253"
+  },
+  {
+    "id": "c007f80e-6b3d-4c03-84c2-8f810319e8ad",
+    "vehicle_id": "6d53a54d-69a2-427f-b615-2b025f0f9720",
+    "trip_id": "81de2945-9eb0-4948-94cf-636ec35c0d5a",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 42421.3,
+    "volume_liters": 446.54,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-28T06:57:57.225265"
+  },
+  {
+    "id": "833288f3-05fb-454c-9f9c-57e598cd06b9",
+    "vehicle_id": "1dc84404-0611-4280-9a97-4f2eb77da05a",
+    "trip_id": "b3f64cf3-2f43-4867-add0-0fd033745d87",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 6616.18,
+    "volume_liters": 69.64,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-13T06:57:57.225277"
+  },
+  {
+    "id": "4ae91107-d342-404a-ac15-cfa3a8be0afa",
+    "vehicle_id": "1d7ac6a5-87d6-497f-9ae7-36c5e334d777",
+    "trip_id": "9b7ab429-eb60-432d-a9cb-6dc2dd854712",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 12304.97,
+    "volume_liters": 129.53,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-09T06:57:57.225289"
+  },
+  {
+    "id": "c53c39d3-c8d1-4b1d-809b-fbbc61f3c272",
+    "vehicle_id": "e8acc2c7-fbfb-42ce-b08a-cf0845ef9d72",
+    "trip_id": "f6a4a29d-711c-4bc6-848d-1ed3a92c62e6",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 13657.39,
+    "volume_liters": 143.76,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-06T06:57:57.225301"
+  },
+  {
+    "id": "d02b39c3-26ca-4d2d-9018-3f0a15f876dd",
+    "vehicle_id": "2a3dd875-ad17-44b8-9ef3-bca4d0555cb3",
+    "trip_id": "41c8645f-6e97-44dd-8c32-a74c54bd3683",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 31111.17,
+    "volume_liters": 327.49,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-17T06:57:57.225313"
+  },
+  {
+    "id": "7463e431-044e-488d-83e9-e85a4882a771",
+    "vehicle_id": "0017fc50-69f0-4371-a0b6-c428f8caa77c",
+    "trip_id": "27ad982e-72b6-4cab-9173-da5f8be46086",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 20037.59,
+    "volume_liters": 210.92,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-26T06:57:57.225325"
+  },
+  {
+    "id": "4e5f5b9f-9a95-4ecd-bfac-a418c24dc539",
+    "vehicle_id": "c4f4ca6b-06a9-45e8-af7e-13fb0f7ee4b0",
+    "trip_id": "32684064-c733-4739-b3d4-1d15d7f7dcbf",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 15597.86,
+    "volume_liters": 164.19,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-06T06:57:57.225338"
+  },
+  {
+    "id": "9a129730-b1bc-485a-95a3-6d84441a0a60",
+    "vehicle_id": "7b7c28d6-caca-4411-a3c1-1532eb214a0e",
+    "trip_id": "466f2bf4-590b-4f07-8d30-196967b572c0",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 42143.33,
+    "volume_liters": 443.61,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-16T06:57:57.225350"
+  },
+  {
+    "id": "4fa66e0d-f048-4e92-a449-83d1ebae05d1",
+    "vehicle_id": "730c097a-999e-48cc-8561-f3774acda619",
+    "trip_id": "67beb87a-61fc-40b4-9ede-2e5c5ca19f92",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 35916.08,
+    "volume_liters": 378.06,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-01T06:57:57.225363"
+  },
+  {
+    "id": "159cb88b-d73f-49c2-bfb9-422d6cb98c07",
+    "vehicle_id": "6d53a54d-69a2-427f-b615-2b025f0f9720",
+    "trip_id": "e29f0019-23f6-4191-a54e-0f7f9b2186a0",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 18826.34,
+    "volume_liters": 198.17,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-08-29T06:57:57.225375"
+  },
+  {
+    "id": "30604981-5d3c-4294-b297-2808a70fc338",
+    "vehicle_id": "7a7cae2f-2b6d-4818-b697-bdf57ba2666d",
+    "trip_id": "b4c54716-41b0-40b5-af47-3e7d9c31aecd",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 6004.0,
+    "volume_liters": 63.2,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-31T06:57:57.225389"
+  },
+  {
+    "id": "57864b4b-32a2-41a3-a304-9237ca135308",
+    "vehicle_id": "0017fc50-69f0-4371-a0b6-c428f8caa77c",
+    "trip_id": "f951465a-39ed-4296-b402-2525b7f8a185",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 34348.2,
+    "volume_liters": 361.56,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-21T06:57:57.225402"
+  },
+  {
+    "id": "3ae264d9-6364-49b0-a160-d61c923c8a90",
+    "vehicle_id": "d0428304-078e-4bf6-934d-26f8a08180a5",
+    "trip_id": "432dc86c-1852-4cd9-9f8c-f47445d085c2",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 52188.06,
+    "volume_liters": 549.35,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-13T06:57:57.225414"
+  },
+  {
+    "id": "0ced6f6f-879e-44d4-8a6d-f317149122c8",
+    "vehicle_id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "trip_id": "ec87c272-f23a-4f97-bf27-45fcf0c93491",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 17501.85,
+    "volume_liters": 184.23,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-29T06:57:57.225427"
+  },
+  {
+    "id": "47e53754-d283-42c4-adec-8c28f6d9c35e",
+    "vehicle_id": "3369ef50-21f0-423f-a845-ad2411a4d917",
+    "trip_id": "bba9fdbf-fe6a-4a35-bd23-a85c8ce98ac0",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 35501.69,
+    "volume_liters": 373.7,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-26T06:57:57.225439"
+  },
+  {
+    "id": "f88ba515-ff81-4faa-8c6e-7a7f681ff27b",
+    "vehicle_id": "e7b69154-4779-4471-a9d0-0f6400983aa8",
+    "trip_id": "905906c7-fc19-4158-9b0c-4dd1d9f44f09",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 42066.57,
+    "volume_liters": 442.81,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-10T06:57:57.225450"
+  },
+  {
+    "id": "d52f630f-282e-42b8-a336-12e9cea41d58",
+    "vehicle_id": "98e9ca06-bd8f-4296-87a5-8f4341f09ca9",
+    "trip_id": "6fbbe964-a3eb-4d5b-ba2e-60a3b2f28ba9",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 32737.76,
+    "volume_liters": 344.61,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-31T06:57:57.225463"
+  },
+  {
+    "id": "75f16fe6-9f62-4c22-87af-874bba3c6c52",
+    "vehicle_id": "886b211b-29a7-45e5-b16d-ecfdb182c778",
+    "trip_id": "ba8f901b-c2d6-4edb-8ebb-44f8cc5dd708",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 31447.28,
+    "volume_liters": 331.02,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-18T06:57:57.225475"
+  },
+  {
+    "id": "f33def35-f14f-4014-8658-d364d0e9943e",
+    "vehicle_id": "7a7cae2f-2b6d-4818-b697-bdf57ba2666d",
+    "trip_id": "c92b52fe-0239-4a68-833c-7ca11d053682",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 16294.59,
+    "volume_liters": 171.52,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-30T06:57:57.225486"
+  },
+  {
+    "id": "cf905fe8-63d8-45ba-9084-3515f2f8a356",
+    "vehicle_id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "trip_id": "97890abf-3de7-4191-9f9e-4c44d254233b",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 34443.58,
+    "volume_liters": 362.56,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-01T06:57:57.225502"
+  },
+  {
+    "id": "ac704e82-906d-4277-8734-699a36376195",
+    "vehicle_id": "fb5745d6-2885-43ce-8ed1-b265e9e19678",
+    "trip_id": "4ed10b9c-bb65-4c5f-99d8-cdb287b561b2",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 42397.17,
+    "volume_liters": 446.29,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-19T06:57:57.225519"
+  },
+  {
+    "id": "52f53b35-19e5-4c43-9953-bac0d00f0c6b",
+    "vehicle_id": "730c097a-999e-48cc-8561-f3774acda619",
+    "trip_id": "532d13d4-68e5-491d-98de-8783260374ef",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 26281.75,
+    "volume_liters": 276.65,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-26T06:57:57.225533"
+  },
+  {
+    "id": "891b691f-cb98-4c0a-af17-2c8da6a616f5",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "trip_id": "cf0483d6-58ff-4cf0-a415-1aea6070747c",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 46521.31,
+    "volume_liters": 489.7,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-08T06:57:57.225547"
+  },
+  {
+    "id": "978e56cc-a2ac-4360-b7c9-894a2bdf97c6",
+    "vehicle_id": "e6f2d2c5-3f82-47ae-b9c3-4c8c13e5d62d",
+    "trip_id": "306006e7-1abe-499c-92bb-3c735cd228f5",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 20910.83,
+    "volume_liters": 220.11,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-13T06:57:57.225560"
+  },
+  {
+    "id": "60181722-cdc9-4a8a-9959-05d8b0d6ada7",
+    "vehicle_id": "5d3427e1-23ba-414c-98ea-2dae99054b49",
+    "trip_id": "60c1d3ad-0839-49ef-bc21-ac7241e2d35f",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 24228.8,
+    "volume_liters": 255.04,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-15T06:57:57.225575"
+  },
+  {
+    "id": "90389515-ce37-476e-8350-852107fb54df",
+    "vehicle_id": "7564a67e-b7e5-47ae-aff5-f43c2b7dddaf",
+    "trip_id": "87ae9be3-0149-4fcb-b0cd-ccf3f1ac0416",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 10107.62,
+    "volume_liters": 106.4,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-03T06:57:57.225589"
+  },
+  {
+    "id": "7654c0f7-e711-4311-b60c-61e75e91f547",
+    "vehicle_id": "6849cb4f-543c-4973-863c-23ab61853227",
+    "trip_id": "bd8d52ac-390d-4a08-a49e-bcac15e55df5",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 21822.26,
+    "volume_liters": 229.71,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-07T06:57:57.225602"
+  },
+  {
+    "id": "904e417c-e079-440e-937e-a87203df35f5",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "trip_id": "d59b7d61-5183-4190-843a-f22d3f7c0e9c",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 43672.64,
+    "volume_liters": 459.71,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-12T06:57:57.225616"
+  },
+  {
+    "id": "b1a52825-5dbe-4537-931f-ec88e8bdd6ba",
+    "vehicle_id": "fb5745d6-2885-43ce-8ed1-b265e9e19678",
+    "trip_id": "2ddfd16f-1eff-447e-a784-9c74dca1d25c",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 45471.56,
+    "volume_liters": 478.65,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-29T06:57:57.225629"
+  },
+  {
+    "id": "73f152c8-9611-45d2-9a97-ef6300bb3b9a",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "trip_id": "9dde6c9b-2271-44ae-b327-88d854d25020",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 21971.03,
+    "volume_liters": 231.27,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-13T06:57:57.225643"
+  },
+  {
+    "id": "3f83fc41-0d99-4d35-b0d2-ed334d092c2e",
+    "vehicle_id": "6849cb4f-543c-4973-863c-23ab61853227",
+    "trip_id": "5c01b485-fdff-44c3-84e8-7738e04e08ba",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 54653.12,
+    "volume_liters": 575.3,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-11T06:57:57.225658"
+  },
+  {
+    "id": "59b574d6-7582-416d-9e27-f44410a261a6",
+    "vehicle_id": "c4f4ca6b-06a9-45e8-af7e-13fb0f7ee4b0",
+    "trip_id": "c70fd434-61f9-4f52-8fff-ec55c8f61e75",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 23588.69,
+    "volume_liters": 248.3,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-16T06:57:57.225672"
+  },
+  {
+    "id": "a53c5239-3a2b-4e04-a6ef-22348f4d1e7a",
+    "vehicle_id": "f1665bae-d484-4b50-a551-e08c2e9a8270",
+    "trip_id": "a879abff-3bcf-4d86-aa4d-366eb7e03704",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 20960.99,
+    "volume_liters": 220.64,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-20T06:57:57.225685"
+  },
+  {
+    "id": "18349985-0da5-4af7-bd42-57177e12df8a",
+    "vehicle_id": "6d53a54d-69a2-427f-b615-2b025f0f9720",
+    "trip_id": "de0f7b3b-ccd0-447d-bb3d-fd34137e1c3b",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 53275.24,
+    "volume_liters": 560.79,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-30T06:57:57.225699"
+  },
+  {
+    "id": "d22abd6d-93ab-4a6f-9bf5-2fed0db13346",
+    "vehicle_id": "cfe4d416-8f32-4c01-bd91-2d5dfbae129d",
+    "trip_id": "62c9a423-5be2-43e7-8acc-1d52fc4cf69b",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 42701.36,
+    "volume_liters": 449.49,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-11T06:57:57.225713"
+  },
+  {
+    "id": "542601bb-37bb-4910-bd3e-7410b252db6e",
+    "vehicle_id": "7b7c28d6-caca-4411-a3c1-1532eb214a0e",
+    "trip_id": "b8795ff3-4675-48f0-9260-736136b0b249",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 47118.1,
+    "volume_liters": 495.98,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-30T06:57:57.225727"
+  },
+  {
+    "id": "9c4beed1-017b-4043-87af-415b0cf7347b",
+    "vehicle_id": "6d20a5ad-7267-4fc0-85ae-9cc592ce597c",
+    "trip_id": "b007511b-5b72-47ac-b397-51df2d57649d",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 20329.81,
+    "volume_liters": 214.0,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-26T06:57:57.225740"
+  },
+  {
+    "id": "4ee6c665-cb17-4547-aecb-31f0ffad6b40",
+    "vehicle_id": "e7b69154-4779-4471-a9d0-0f6400983aa8",
+    "trip_id": "737cb04b-f366-4061-8bd9-cb628c2ae695",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 40465.25,
+    "volume_liters": 425.95,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-18T06:57:57.225754"
+  },
+  {
+    "id": "52ab0a0d-7a5f-49aa-9881-cf2248b6fef8",
+    "vehicle_id": "63663797-33c7-4147-a39d-ac67fc094622",
+    "trip_id": "8cd9e380-2ecb-4b1b-8bb8-30f43b9215b9",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 36429.08,
+    "volume_liters": 383.46,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-19T06:57:57.225767"
+  },
+  {
+    "id": "7c00feab-1d2c-437b-afd7-ca19b926edce",
+    "vehicle_id": "d0428304-078e-4bf6-934d-26f8a08180a5",
+    "trip_id": "4a43fcdf-3cf9-4681-8334-50d2165c444e",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 36977.99,
+    "volume_liters": 389.24,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-12T06:57:57.225781"
+  },
+  {
+    "id": "9fb3dba1-1398-41e2-8be5-0573efb962dd",
+    "vehicle_id": "6849cb4f-543c-4973-863c-23ab61853227",
+    "trip_id": "058bdd26-6f70-4d96-9f3b-3aad9561b13e",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 66974.81,
+    "volume_liters": 705.0,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-05T06:57:57.225794"
+  },
+  {
+    "id": "bfd4c851-fec6-48f2-9ff2-23f13c978f61",
+    "vehicle_id": "7a7cae2f-2b6d-4818-b697-bdf57ba2666d",
+    "trip_id": "e7f92995-b8a9-413d-87a4-f31c88664966",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 48221.81,
+    "volume_liters": 507.6,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-06T06:57:57.225808"
+  },
+  {
+    "id": "cc2cc017-7d46-422e-bbb8-be52303469c4",
+    "vehicle_id": "242ba9c6-0141-4627-9dea-17968d968942",
+    "trip_id": "68805c6b-0307-4f0d-890c-e36737259ae4",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 33247.53,
+    "volume_liters": 349.97,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-17T06:57:57.225821"
+  },
+  {
+    "id": "6510fdab-de45-44ed-9320-c217d1e523b0",
+    "vehicle_id": "e6f2d2c5-3f82-47ae-b9c3-4c8c13e5d62d",
+    "trip_id": "1ded184a-aeb1-4c2b-99ad-3b4a399bc6bf",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 35184.77,
+    "volume_liters": 370.37,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-05T06:57:57.225833"
+  },
+  {
+    "id": "83d507a3-0c94-4718-9e3b-fafade04fd8b",
+    "vehicle_id": "f1e0e1de-132e-4a1f-a09a-ae8b35c39dad",
+    "trip_id": "1d21ee76-0812-41b4-a1b5-14a7b4056b84",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 35119.6,
+    "volume_liters": 369.68,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-16T06:57:57.225845"
+  },
+  {
+    "id": "7540a492-3678-4c7e-9e20-a4e9cfe4b8a6",
+    "vehicle_id": "d389a406-6b1e-45f8-9790-b56ece379630",
+    "trip_id": "2da1853d-260d-4faa-85c3-c83015a0377e",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 21092.28,
+    "volume_liters": 222.02,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-19T06:57:57.225860"
+  },
+  {
+    "id": "2ca9321a-a791-461e-a7e9-da834e700bd9",
+    "vehicle_id": "92c55979-6881-40b0-bb44-8bf2f110129c",
+    "trip_id": "1dcfc6fc-7109-4143-af8a-82230be96663",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 48229.41,
+    "volume_liters": 507.68,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-15T06:57:57.225872"
+  },
+  {
+    "id": "675a1038-edb6-4942-9fe0-315c31f4c391",
+    "vehicle_id": "f9b7cffc-5964-407f-a7d9-e8e96022f500",
+    "trip_id": "509a8f24-1882-4c57-b189-11ed5882fc76",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 29434.8,
+    "volume_liters": 309.84,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-16T06:57:57.225885"
+  },
+  {
+    "id": "f18689cc-1397-4101-ac8a-8ac53c98f87c",
+    "vehicle_id": "5d3427e1-23ba-414c-98ea-2dae99054b49",
+    "trip_id": "2acc0edc-ec1e-47dc-b910-be692c224cce",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 6896.05,
+    "volume_liters": 72.59,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-17T06:57:57.225896"
+  },
+  {
+    "id": "6d52264f-34a9-4a39-aad8-9f2ef17fb405",
+    "vehicle_id": "2050141e-e74e-49eb-bba9-6c9dc230ed04",
+    "trip_id": "a9d3f5e8-94f9-4524-b431-62baf43c2890",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 27395.53,
+    "volume_liters": 288.37,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-18T06:57:57.225908"
+  },
+  {
+    "id": "39135901-8b37-43d5-94a5-c5dcf1dca990",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "trip_id": "57946197-5f8b-4958-9414-fa28b4a6a7a3",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 41101.18,
+    "volume_liters": 432.64,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-12-01T06:57:57.225920"
+  },
+  {
+    "id": "aa280ca8-8ce1-45a6-a261-7621db9cbb76",
+    "vehicle_id": "5d3427e1-23ba-414c-98ea-2dae99054b49",
+    "trip_id": "21b2b8fd-b842-42a8-9d8f-44f84b874ee2",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 32741.56,
+    "volume_liters": 344.65,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-10-27T06:57:57.225941"
+  },
+  {
+    "id": "275bfa35-0336-4c00-8e92-2eed0f86cd20",
+    "vehicle_id": "a57783f3-a723-49e5-95aa-0a1dd4d1221c",
+    "trip_id": "dd8759eb-fa27-489a-9e04-f73828752088",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 14168.87,
+    "volume_liters": 149.15,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-11-27T06:57:57.225954"
+  },
+  {
+    "id": "9493a6f9-98c3-457e-b180-b3b6a6772edd",
+    "vehicle_id": "2050141e-e74e-49eb-bba9-6c9dc230ed04",
+    "trip_id": "ee7a6d98-9462-4896-84d4-e0ce5c96bfff",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 49919.27,
+    "volume_liters": 525.47,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-10T06:57:57.225967"
+  },
+  {
+    "id": "a6d066a8-4041-4716-9d63-42b9d01d8a6b",
+    "vehicle_id": "2050141e-e74e-49eb-bba9-6c9dc230ed04",
+    "trip_id": "bd6eaf32-014d-486e-a94b-1b445ebc1c5c",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 40719.28,
+    "volume_liters": 428.62,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2025-09-30T06:57:57.225979"
+  },
+  {
+    "id": "ed0d54ec-a05a-4d29-afc0-a63d9f039130",
+    "vehicle_id": "5d3427e1-23ba-414c-98ea-2dae99054b49",
+    "trip_id": "8c1ac918-7d1f-4d6f-ac88-759fb5411146",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 30443.89,
+    "volume_liters": 320.46,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-02-02T06:57:57.225991"
+  },
+  {
+    "id": "8b691155-174a-4824-a4cf-cc2c68d537cf",
+    "vehicle_id": "59fef87b-6cf3-42a8-90f7-ae8a249ff62e",
+    "trip_id": "6def086b-76df-434f-968c-c7560f08b009",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Fuel",
+    "cost": 39059.44,
+    "volume_liters": 411.15,
+    "description": "Auto-generated fuel expense",
+    "logged_at": "2026-01-23T06:57:57.226003"
+  }
+];
+

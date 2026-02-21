@@ -1,7 +1,7 @@
 import { http, HttpResponse } from 'msw';
 import { mockVehicles, mockDrivers, mockTrips, mockExpenses } from './data';
 import { Vehicle, Driver, Trip, Expense } from '../types';
-import { format, subDays } from 'date-fns';
+import { format, subDays, startOfDay, endOfDay, isWithinInterval } from 'date-fns';
 
 const vehicles: Vehicle[] = [...mockVehicles] as Vehicle[];
 const drivers: Driver[] = [...mockDrivers] as Driver[];
@@ -11,15 +11,34 @@ const expenses: Expense[] = [...mockExpenses] as Expense[];
 export const handlers = [
   // --- Dashboard Aggregations ---
   http.get('/api/dashboard/revenue-expenses', () => {
-    // Generate a quick 7-day mock series
+    const today = new Date();
     const data = Array.from({ length: 7 }).map((_, i) => {
-      const date = subDays(new Date(), 6 - i);
-      // Fuzz some numbers for realism
-      const revenue = Math.floor(Math.random() * 50000) + 10000;
-      const expense = Math.floor(revenue * (Math.random() * 0.4 + 0.3));
+      const targetDate = subDays(today, 6 - i);
+      const start = startOfDay(targetDate);
+      const end = endOfDay(targetDate);
+
+      // Filter trips within the day (excluding Draft/Cancelled)
+      const dailyTrips = trips.filter(
+        (t) =>
+          t.created_at &&
+          isWithinInterval(new Date(t.created_at), { start, end }) &&
+          t.status !== 'Cancelled' &&
+          t.status !== 'Draft'
+      );
+
+      // Filter expenses within the day
+      const dailyExpenses = expenses.filter(
+        (e) =>
+          e.logged_at &&
+          isWithinInterval(new Date(e.logged_at), { start, end })
+      );
+
+      // Sum expected revenue and costs
+      const revenue = dailyTrips.reduce((sum, t) => sum + (t.expected_revenue || 0), 0);
+      const expense = dailyExpenses.reduce((sum, e) => sum + (e.cost || 0), 0);
 
       return {
-        date: format(date, 'MMM dd'),
+        date: format(targetDate, 'MMM dd'),
         revenue,
         expenses: expense,
       };

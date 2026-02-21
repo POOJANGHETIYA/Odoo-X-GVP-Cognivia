@@ -42,7 +42,10 @@ CREATE TABLE vehicles (
     acquisition_cost NUMERIC(12,2) NOT NULL CHECK (acquisition_cost >= 0),
     status vehicle_status NOT NULL DEFAULT 'Available',
     created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+    updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    brand VARCHAR(100), -- e.g., 'Tata', 'Mahindra', 'Ashok Leyland'
+    manufacturing_year INTEGER CHECK (manufacturing_year > 1990 AND manufacturing_year <= 2100),
+    registration_date DATE DEFAULT CURRENT_DATE
 );
 
 -- DRIVERS (The human resource)

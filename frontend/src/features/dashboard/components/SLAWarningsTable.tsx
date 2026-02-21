@@ -13,8 +13,16 @@ export function SLAWarningsTable() {
   }
 
   // PRD: trip in At_Pickup status for more than 2 hours.
-  // We mock this by showing ALL At_Pickup trips since our schema lacks a status timestamp.
-  const warningTrips = trips?.filter(t => t.status === 'At_Pickup') || [];
+  // We use created_at to check if trip is older than 2 hours as a proxy.
+  const warningTrips = trips?.filter(t => {
+    if (t.status !== 'At_Pickup') return false;
+    if (!t.created_at) return false;
+
+    // Check if more than 2 hours have passed since created_at
+    const createdTime = new Date(t.created_at).getTime();
+    const twoHoursInMs = 2 * 60 * 60 * 1000;
+    return (Date.now() - createdTime) > twoHoursInMs;
+  }) || [];
 
   if (warningTrips.length === 0) {
     return (

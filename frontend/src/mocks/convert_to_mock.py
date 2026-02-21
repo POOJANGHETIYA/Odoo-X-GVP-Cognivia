@@ -1,7 +1,7 @@
 import json
 
 INPUT_FILE = "fleet_mock_data.json"
-OUTPUT_FILE = "data.ts"
+OUTPUT_FILE = "mockData.ts"
 
 def format_ts_export(name, data):
     return f"export const {name} = {json.dumps(data, indent=2)};\n\n"
