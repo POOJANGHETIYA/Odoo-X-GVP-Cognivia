@@ -2,10 +2,10 @@ import { http, HttpResponse } from 'msw';
 import { mockVehicles, mockDrivers, mockTrips, mockExpenses } from './data';
 import { Vehicle, Driver, Trip, Expense } from '../types';
 
-let vehicles = [...mockVehicles];
-let drivers = [...mockDrivers];
-let trips = [...mockTrips];
-let expenses = [...mockExpenses];
+const vehicles = [...mockVehicles];
+const drivers = [...mockDrivers];
+const trips = [...mockTrips];
+const expenses = [...mockExpenses];
 
 export const handlers = [
   // --- Vehicles ---
