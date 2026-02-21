@@ -117,9 +117,11 @@ export function MaintenancePage() {
     const inProgress = logs?.filter(l => l.status === 'In_Progress').length || 0;
     const completedThisMonth = logs?.filter(l => {
         if (l.status !== 'Completed' || !l.completed_date) return false;
-        const d = parseISO(l.completed_date);
-        const now = new Date();
-        return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
+        try {
+            const d = parseISO(l.completed_date);
+            const now = new Date();
+            return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
+        } catch (e) { return false; }
     }).length || 0;
 
     return (
@@ -226,7 +228,9 @@ export function MaintenancePage() {
                                                 {log.odometer_at_service.toLocaleString('en-IN')} km
                                             </td>
                                             <td className="px-5 py-4">
-                                                <div className="text-slate-700">{format(parseISO(log.scheduled_date), 'dd MMM yyyy')}</div>
+                                                <div className="text-slate-700">
+                                                    {log.scheduled_date ? format(parseISO(log.scheduled_date), 'dd MMM yyyy') : '—'}
+                                                </div>
                                                 {log.next_service_due && (
                                                     <div className="text-[10px] text-slate-400 mt-0.5">
                                                         Next: {format(parseISO(log.next_service_due), 'dd MMM yyyy')}

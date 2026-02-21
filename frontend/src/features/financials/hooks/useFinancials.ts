@@ -45,15 +45,20 @@ export function useFinancialStats() {
 
     data.trips.forEach(t => {
         if (!t.created_at) return;
-        const month = format(parseISO(t.created_at), 'MMM yy');
-        if (!monthlyDataMap[month]) monthlyDataMap[month] = { month, revenue: 0, expenses: 0 };
-        monthlyDataMap[month].revenue += t.expected_revenue;
+        try {
+            const month = format(parseISO(t.created_at), 'MMM yy');
+            if (!monthlyDataMap[month]) monthlyDataMap[month] = { month, revenue: 0, expenses: 0 };
+            monthlyDataMap[month].revenue += t.expected_revenue;
+        } catch (e) { console.error("Error parsing trip date", e); }
     });
 
     data.expenses.forEach(e => {
-        const month = format(parseISO(e.logged_at), 'MMM yy');
-        if (!monthlyDataMap[month]) monthlyDataMap[month] = { month, revenue: 0, expenses: 0 };
-        monthlyDataMap[month].expenses += e.cost;
+        if (!e.logged_at) return;
+        try {
+            const month = format(parseISO(e.logged_at), 'MMM yy');
+            if (!monthlyDataMap[month]) monthlyDataMap[month] = { month, revenue: 0, expenses: 0 };
+            monthlyDataMap[month].expenses += e.cost;
+        } catch (e) { console.error("Error parsing expense date", e); }
     });
 
     const monthlyTrend = Object.values(monthlyDataMap).sort((a, b) => {
