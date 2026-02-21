@@ -4,6 +4,8 @@ import {
   Network,
   ArrowRightLeft,
   Truck,
+  ClipboardList,
+  Wrench,
 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
@@ -12,6 +14,8 @@ const MENU_ITEMS = [
   { name: "Office trips", icon: Truck, href: "/trips" },
   { name: "Cars", icon: Car, href: "/vehicles" },
   { name: "Directory", icon: Network, href: "/drivers" },
+  { name: "Requests", icon: ClipboardList, href: "/trips" },
+  { name: "Service", icon: Wrench, href: "/maintenance" },
   { name: "Transactions", icon: ArrowRightLeft, href: "/financials" },
 ];
 

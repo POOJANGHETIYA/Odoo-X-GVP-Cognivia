@@ -8577,3 +8577,110 @@ export const mockExpenses = [
   }
 ];
 
+// ==================== MAINTENANCE & SERVICE LOGS ====================
+export const mockMaintenanceLogs = [
+  {
+    "id": "m-001-uuid-eeee-000000000001",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "service_type": "Engine_Repair",
+    "description": "Engine overheating issue — replaced radiator hose and thermostat",
+    "cost": 15000,
+    "odometer_at_service": 69474,
+    "scheduled_date": "2026-02-19",
+    "completed_date": null,
+    "next_service_due": null,
+    "status": "In_Progress",
+    "technician_name": "Ramesh Autowala"
+  },
+  {
+    "id": "m-002-uuid-eeee-000000000002",
+    "vehicle_id": "e6f2d2c5-3f82-47ae-b9c3-4c8c13e5d62d",
+    "service_type": "Oil_Change",
+    "description": "Routine 10,000 km oil change — synthetic 15W-40",
+    "cost": 3500,
+    "odometer_at_service": 41001,
+    "scheduled_date": "2026-02-10",
+    "completed_date": "2026-02-10",
+    "next_service_due": "2026-05-10",
+    "status": "Completed",
+    "technician_name": "Sunil Mechanic"
+  },
+  {
+    "id": "m-003-uuid-eeee-000000000003",
+    "vehicle_id": "886b211b-29a7-45e5-b16d-ecfdb182c778",
+    "service_type": "Brake_Service",
+    "description": "Front brake pads worn — replaced with ceramic pads",
+    "cost": 8500,
+    "odometer_at_service": 49663,
+    "scheduled_date": "2026-02-05",
+    "completed_date": "2026-02-06",
+    "next_service_due": "2026-08-05",
+    "status": "Completed",
+    "technician_name": "Kiran Brakes"
+  },
+  {
+    "id": "m-004-uuid-eeee-000000000004",
+    "vehicle_id": "c4f4ca6b-06a9-45e8-af7e-13fb0f7ee4b0",
+    "service_type": "Tire_Replacement",
+    "description": "Rear axle tires worn below 3mm tread — full replacement",
+    "cost": 42000,
+    "odometer_at_service": 50866,
+    "scheduled_date": "2026-02-15",
+    "completed_date": "2026-02-15",
+    "next_service_due": "2026-08-15",
+    "status": "Completed",
+    "technician_name": "MRF Service Center"
+  },
+  {
+    "id": "m-005-uuid-eeee-000000000005",
+    "vehicle_id": "e8a5ee62-8e0b-4679-9bef-7a356035481b",
+    "service_type": "General_Inspection",
+    "description": "Quarterly fleet inspection — brakes, tires, lights, fluids",
+    "cost": 2000,
+    "odometer_at_service": 36887,
+    "scheduled_date": "2026-03-01",
+    "completed_date": null,
+    "next_service_due": null,
+    "status": "Scheduled",
+    "technician_name": "Fleet Inspect Co."
+  },
+  {
+    "id": "m-006-uuid-eeee-000000000006",
+    "vehicle_id": "6849cb4f-543c-4973-863c-23ab61853227",
+    "service_type": "Battery_Replacement",
+    "description": "Battery dead — replaced with Amaron 65Ah",
+    "cost": 6800,
+    "odometer_at_service": 80820,
+    "scheduled_date": "2026-02-18",
+    "completed_date": "2026-02-18",
+    "next_service_due": "2028-02-18",
+    "status": "Completed",
+    "technician_name": "Sunil Mechanic"
+  },
+  {
+    "id": "m-007-uuid-eeee-000000000007",
+    "vehicle_id": "10bf6826-1c4b-404e-b0aa-dac2c4e4b3c6",
+    "service_type": "Engine_Repair",
+    "description": "Major engine rebuild before retirement decision",
+    "cost": 85000,
+    "odometer_at_service": 70936,
+    "scheduled_date": "2026-01-25",
+    "completed_date": null,
+    "next_service_due": null,
+    "status": "Cancelled",
+    "technician_name": "Heavy Duty Motors"
+  },
+  {
+    "id": "m-008-uuid-eeee-000000000008",
+    "vehicle_id": "03b76a79-4daf-4880-a0c2-65602cf1d985",
+    "service_type": "Oil_Change",
+    "description": "Scheduled 15,000 km service — oil + filter change",
+    "cost": 4200,
+    "odometer_at_service": 74518,
+    "scheduled_date": "2026-02-25",
+    "completed_date": null,
+    "next_service_due": null,
+    "status": "Scheduled",
+    "technician_name": "QuickFit Garage"
+  }
+];

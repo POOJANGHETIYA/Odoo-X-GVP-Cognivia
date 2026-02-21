@@ -87,6 +87,27 @@ export const ExpenseSchema = z.object({
     logged_at: z.string(),
 });
 
+// ==================== MAINTENANCE & SERVICE LOGS ====================
+export const MaintenanceStatusSchema = z.enum(['Scheduled', 'In_Progress', 'Completed', 'Cancelled']);
+export const ServiceTypeSchema = z.enum([
+  'Oil_Change', 'Tire_Replacement', 'Engine_Repair', 'Brake_Service',
+  'General_Inspection', 'Battery_Replacement', 'Other',
+]);
+
+export const MaintenanceLogSchema = z.object({
+  id: z.string().uuid(),
+  vehicle_id: z.string().uuid(),
+  service_type: ServiceTypeSchema,
+  description: z.string(),
+  cost: z.number().nonnegative(),
+  odometer_at_service: z.number().nonnegative(),
+  scheduled_date: z.string(),
+  completed_date: z.string().nullable().optional(),
+  next_service_due: z.string().nullable().optional(),
+  status: MaintenanceStatusSchema,
+  technician_name: z.string(),
+});
+
 // Infer TypeScript types from Zod schemas
 export type VehicleCategory = z.infer<typeof VehicleCategorySchema>;
 export type VehicleStatus = z.infer<typeof VehicleStatusSchema>;
@@ -101,3 +122,7 @@ export type Trip = z.infer<typeof TripSchema>;
 
 export type ExpenseCategory = z.infer<typeof ExpenseCategorySchema>;
 export type Expense = z.infer<typeof ExpenseSchema>;
+
+export type MaintenanceStatus = z.infer<typeof MaintenanceStatusSchema>;
+export type ServiceType = z.infer<typeof ServiceTypeSchema>;
+export type MaintenanceLog = z.infer<typeof MaintenanceLogSchema>;
