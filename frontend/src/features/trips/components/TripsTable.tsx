@@ -19,7 +19,7 @@ const STATUS_CONFIG: Record<TripStatus, { label: string; bg: string; text: strin
 
 function StatusBadge({ status }: { status: TripStatus }) {
   const config = STATUS_CONFIG[status];
-  
+
   return (
     <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded text-xs font-semibold ${config.bg} ${config.text}`}>
       {config.label}
@@ -29,15 +29,15 @@ function StatusBadge({ status }: { status: TripStatus }) {
 
 export function TripsTable({ trips, vehicles, drivers, isLoading }: TripsTableProps) {
   // Helper to get vehicle info by ID
-  const getVehicle = (vehicleId: string | null | undefined) => 
+  const getVehicle = (vehicleId: string | null | undefined) =>
     vehicles.find(v => v.id === vehicleId);
 
   // Helper to get driver info by ID
-  const getDriver = (driverId: string | null | undefined) => 
+  const getDriver = (driverId: string | null | undefined) =>
     drivers.find(d => d.id === driverId);
 
   // Format vehicle category for display
-  const formatCategory = (category: string) => 
+  const formatCategory = (category: string) =>
     category.replace(/_/g, ' ');
 
   if (isLoading) {
@@ -80,7 +80,7 @@ export function TripsTable({ trips, vehicles, drivers, isLoading }: TripsTablePr
             {trips.map((trip, index) => {
               const vehicle = getVehicle(trip.vehicle_id);
               const driver = getDriver(trip.driver_id);
-              
+
               return (
                 <tr key={trip.id} className="hover:bg-slate-50/50 transition-colors">
                   <td className="px-6 py-4">
@@ -98,12 +98,12 @@ export function TripsTable({ trips, vehicles, drivers, isLoading }: TripsTablePr
                   </td>
                   <td className="px-6 py-4">
                     <span className="text-blue-500 font-medium">
-                      {trip.pickup_address.split(',')[1]?.trim() || trip.pickup_address.split(',')[0]}
+                      {trip.pickup_address?.split(',')[1]?.trim() || trip.pickup_address?.split(',')[0] || '—'}
                     </span>
                   </td>
                   <td className="px-6 py-4">
                     <span className="text-cyan-500 font-medium">
-                      {trip.dropoff_address.split(',')[1]?.trim() || trip.dropoff_address.split(',')[0]}
+                      {trip.dropoff_address?.split(',')[1]?.trim() || trip.dropoff_address?.split(',')[0] || '—'}
                     </span>
                   </td>
                   <td className="px-6 py-4">
@@ -115,7 +115,7 @@ export function TripsTable({ trips, vehicles, drivers, isLoading }: TripsTablePr
           </tbody>
         </table>
       </div>
-      
+
       {trips.length === 0 && (
         <div className="p-8 text-center">
           <p className="text-slate-500">No trips found. Create your first trip to get started.</p>

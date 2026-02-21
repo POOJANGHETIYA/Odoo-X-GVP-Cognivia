@@ -9,6 +9,8 @@ import { MainLayout } from '../components/layout/MainLayout';
 import { LoginPage } from '../features/auth/LoginPage';
 import { DashboardPage } from '../features/dashboard/DashboardPage';
 import { MaintenancePage } from '../features/maintenance/MaintenancePage';
+import { VehiclesPage } from '../features/vehicles/VehiclesPage';
+import { TripsPage } from '../features/trips/TripsPage';
 
 interface RouterContext {
     auth: {
@@ -62,7 +64,7 @@ const PlaceholderPage = ({ title }: { title: string }) => (
 const vehiclesRoute = createRoute({
     getParentRoute: () => appRoute,
     path: '/vehicles',
-    component: () => <PlaceholderPage title="Vehicles Directory" />,
+    component: VehiclesPage,
 });
 
 const driversRoute = createRoute({
@@ -74,7 +76,7 @@ const driversRoute = createRoute({
 const tripsRoute = createRoute({
     getParentRoute: () => appRoute,
     path: '/trips',
-    component: () => <PlaceholderPage title="Trip Dispatcher" />,
+    component: TripsPage,
 });
 
 const financialsRoute = createRoute({

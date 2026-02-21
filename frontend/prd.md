@@ -32,7 +32,7 @@ src/
 │   ├── drivers/     # Driver profiles & compliance
 │   ├── trips/       # Dispatcher workflow, Kanban/Tables
 │   └── financials/  # Expenses and ROI tracking
-├── mocks/           # MSW handlers.ts, data.ts, browser.ts
+├── mocks/           # MSW handlers.ts, mockData.ts, browser.ts
 ├── routes/          # TanStack Router file-based route definitions
 ├── lib/             # Axios instance, utility functions (cn, currency formatter)
 └── types/           # Global TypeScript interfaces (Zod inferred types)
@@ -105,7 +105,7 @@ The UI forms and MSW mock database must adhere strictly to these data shapes bas
 1. Initialize Vite React TypeScript project.
 2. Install dependencies: Tailwind, Shadcn, TanStack Router, TanStack Query, React Hook Form, Zod, Lucide, Recharts, MSW, Axios.
 3. Setup `src/types/index.ts` containing the Zod schemas and inferred TypeScript types.
-4. Setup `src/mocks/data.ts` with initial mock data arrays and `src/mocks/handlers.ts` to intercept standard REST API calls (GET/POST/PUT) and mutate the arrays in memory.
+4. Setup `src/mocks/mockData.ts` with initial mock data arrays and `src/mocks/handlers.ts` to intercept standard REST API calls (GET/POST/PUT) and mutate the arrays in memory.
 5. Setup the TanStack Router file structure and build the `__root.tsx` layout.
 6. Build out the pages one by one, using React Query to fetch data from the MSW handlers.
 
