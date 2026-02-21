@@ -19,40 +19,38 @@ export function KPICard({
   trend,
   trendIcon: TrendIcon,
   trendDirection = 'neutral',
-  colorClass = 'text-slate-600 bg-slate-100 ring-1 ring-slate-200'
+  colorClass = 'text-zinc-600 bg-zinc-100 ring-1 ring-zinc-200'
 }: KPICardProps) {
 
   const trendColors = {
-    up: 'text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full ring-1 ring-emerald-200',
-    down: 'text-rose-600 bg-rose-50 px-2 py-0.5 rounded-full ring-1 ring-rose-200',
-    neutral: 'text-slate-500 bg-slate-50 px-2 py-0.5 rounded-full ring-1 ring-slate-200'
+    up: 'text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full ring-1 ring-inset ring-emerald-600/20',
+    down: 'text-red-700 bg-red-50 px-2 py-0.5 rounded-full ring-1 ring-inset ring-red-600/10',
+    neutral: 'text-zinc-700 bg-zinc-100 px-2 py-0.5 rounded-full ring-1 ring-inset ring-zinc-500/10'
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group relative overflow-hidden">
-      <div className="absolute top-0 right-0 -mt-6 -mr-6 w-24 h-24 bg-gradient-to-br from-slate-50 to-slate-100 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-500 ease-out z-0"></div>
-
-      <div className="relative z-10">
-        <div className="flex justify-between items-start mb-6">
-          <div className={`p-3.5 rounded-xl shadow-sm ${colorClass}`}>
-            <Icon className="w-6 h-6" strokeWidth={2.5} />
+    <div className="bg-white rounded-lg border border-zinc-200 shadow-sm p-5 hover:border-zinc-300 transition-all duration-200 group relative">
+      <div className="flex justify-between items-start mb-4">
+        <div className={`p-2 rounded-lg ${colorClass}`}>
+          <Icon className="w-5 h-5" strokeWidth={2} />
+        </div>
+        {trend && (
+          <div className={`flex items-center space-x-1 text-[11px] font-bold ${trendColors[trendDirection]}`}>
+            {TrendIcon && <TrendIcon className="w-3 h-3" />}
+            <span>{trend}</span>
           </div>
-          {trend && (
-            <div className={`flex items-center space-x-1 text-xs font-bold ${trendColors[trendDirection]}`}>
-              {TrendIcon && <TrendIcon className="w-3.5 h-3.5" />}
-              <span>{trend}</span>
-            </div>
-          )}
-        </div>
-        <div>
-          <h3 className="text-slate-500 text-sm font-semibold mb-1 uppercase tracking-wider">{title}</h3>
-          <p className="text-4xl font-black text-slate-800 tracking-tight group-hover:text-indigo-900 transition-colors">
-            {typeof value === 'number' ? value.toLocaleString() : value}
+        )}
+      </div>
+      <div>
+        <h3 className="text-zinc-500 text-sm font-medium mb-1">{title}</h3>
+        <p className="text-3xl font-bold text-zinc-900 tabular-nums tracking-tight">
+          {typeof value === 'number' ? value.toLocaleString() : value}
+        </p>
+        {description && (
+          <p className="mt-2 text-zinc-400 text-[11px] font-medium tracking-wide flex items-center">
+            {description}
           </p>
-          {description && (
-            <p className="mt-2 text-slate-400 text-xs font-medium">{description}</p>
-          )}
-        </div>
+        )}
       </div>
     </div>
   );

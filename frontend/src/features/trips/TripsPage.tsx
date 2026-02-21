@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { Table2, LayoutDashboard, Search } from 'lucide-react';
+import { Table2, LayoutDashboard, Search, Plus, ChevronDown, ListFilter, AlertCircle } from 'lucide-react';
 import { TripsTable } from './components/TripsTable';
 import { CreateTripModal } from './components/CreateTripModal';
 import { useTrips, useVehicles, useDrivers } from './hooks/useTripsData';
+import { Skeleton } from '@/components/ui/Skeleton';
 
 export function TripsPage() {
   const [viewMode, setViewMode] = useState<'table' | 'dashboard'>('table');
@@ -15,12 +16,12 @@ export function TripsPage() {
 
   const isLoading = tripsLoading;
 
-  const pendingCount = trips?.filter(t => 
+  const pendingCount = trips?.filter(t =>
     t.status === 'Unassigned' || t.status === 'Draft'
   ).length || 0;
 
   // Filter trips based on search
-  const filteredTrips = trips?.filter(trip => 
+  const filteredTrips = trips?.filter(trip =>
     trip.tracking_number.toLowerCase().includes(searchQuery.toLowerCase()) ||
     (trip.pickup_address?.toLowerCase().includes(searchQuery.toLowerCase())) ||
     (trip.dropoff_address?.toLowerCase().includes(searchQuery.toLowerCase()))
@@ -30,138 +31,148 @@ export function TripsPage() {
   const paginatedTrips = filteredTrips.slice(0, recordsPerPage);
 
   return (
-    <div className="space-y-6 pb-8">
+    <div className="flex flex-col h-full max-w-[1600px] mx-auto pb-10">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-        <div className="flex items-center gap-4">
-          <h1 className="text-2xl font-bold text-slate-800 tracking-tight">Trip Dispatcher & Management</h1>
-          
-          {/* Pending Count Badge */}
-          <div className="flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 rounded-full">
-            <span className="text-amber-600 font-semibold text-sm">{pendingCount}</span>
-            <svg className="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+        <div className="flex flex-col md:flex-row md:items-center gap-6">
+          <div>
+            <h1 className="text-2xl font-bold tracking-tight text-zinc-900">Trip Dispatcher</h1>
+            <p className="text-sm text-zinc-500 mt-1">Orchestrate logistics delivery and movement across your fleet.</p>
           </div>
 
+          <div className="hidden md:block h-10 w-[1px] bg-zinc-200" />
+
           {/* View Toggle */}
-          <div className="flex bg-white border border-slate-200 rounded-lg p-0.5 shadow-sm">
+          <div className="flex bg-zinc-100/80 border border-zinc-200 rounded-lg p-1 shadow-sm h-10">
             <button
               onClick={() => setViewMode('table')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
-                viewMode === 'table'
-                  ? 'bg-[#2563eb] text-white'
-                  : 'text-slate-600 hover:text-slate-800'
-              }`}
+              className={`flex items - center gap - 2 px - 3 py - 1 text - xs font - bold rounded - md transition - all ${viewMode === 'table'
+                  ? 'bg-white text-zinc-900 shadow-sm border border-zinc-200/50'
+                  : 'text-zinc-500 hover:text-zinc-900'
+                } `}
             >
-              <Table2 className="w-4 h-4" />
-              Table
+              <Table2 className="w-3.5 h-3.5" />
+              Logistics List
             </button>
             <button
               onClick={() => setViewMode('dashboard')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
-                viewMode === 'dashboard'
-                  ? 'bg-[#2563eb] text-white'
-                  : 'text-slate-600 hover:text-slate-800'
-              }`}
+              className={`flex items - center gap - 2 px - 3 py - 1 text - xs font - bold rounded - md transition - all ${viewMode === 'dashboard'
+                  ? 'bg-white text-zinc-900 shadow-sm border border-zinc-200/50'
+                  : 'text-zinc-500 hover:text-zinc-900'
+                } `}
             >
-              <LayoutDashboard className="w-4 h-4" />
-              Dashboard
+              <LayoutDashboard className="w-3.5 h-3.5" />
+              Gantt View
             </button>
           </div>
         </div>
 
-        {/* New Trip Button - Top Right */}
         <button
           onClick={() => setShowNewTripForm(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#10b981] text-white font-semibold rounded-lg hover:bg-[#059669] transition-colors shadow-sm"
+          className="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-4 py-2.5 rounded-md text-sm shadow-sm transition-all focus:ring-2 focus:ring-indigo-500/20 active:scale-[0.98]"
         >
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-          </svg>
-          New Trip
+          <Plus className="w-4 h-4" />
+          Create New Trip
         </button>
       </div>
 
       {/* New Trip Modal */}
-      <CreateTripModal 
-        isOpen={showNewTripForm} 
-        onClose={() => setShowNewTripForm(false)} 
+      <CreateTripModal
+        isOpen={showNewTripForm}
+        onClose={() => setShowNewTripForm(false)}
       />
-
-      {/* Search Bar and Filters Row */}
-      <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
-        {/* Search Bar */}
-        <div className="flex-1 relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-          <input
-            type="text"
-            placeholder="Search bar ......"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10b981]/20 focus:border-[#10b981]"
-          />
-        </div>
-        
-        {/* Filter Buttons */}
-        <div className="flex items-center gap-2">
-          <button className="px-4 py-2.5 bg-white border border-slate-200 text-slate-700 font-medium rounded-lg hover:bg-slate-50 transition-colors">
-            Group by
-          </button>
-          <button className="px-4 py-2.5 bg-white border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-slate-50 transition-colors">
-            Filter
-          </button>
-          <button className="px-4 py-2.5 bg-white border border-slate-200 text-slate-700 font-medium rounded-lg hover:bg-slate-50 transition-colors">
-            Sort by...
-          </button>
-        </div>
-      </div>
-
-      {/* Records Info */}
-      <div className="flex items-center gap-4 text-sm text-slate-500">
-        <span>Records on the page</span>
-        <select 
-          value={recordsPerPage}
-          onChange={(e) => setRecordsPerPage(Number(e.target.value))}
-          className="border border-slate-200 rounded-md px-2 py-1 text-slate-700 bg-white"
-        >
-          <option value={5}>5</option>
-          <option value={10}>10</option>
-          <option value={25}>25</option>
-          <option value={50}>50</option>
-          <option value={100}>100</option>
-        </select>
-        <span>Shown: 1-{Math.min(recordsPerPage, filteredTrips.length)} of {filteredTrips.length}</span>
-      </div>
 
       {/* Pending Alert Banner */}
       {pendingCount > 0 && (
-        <div className="flex items-center justify-between px-4 py-3 bg-[#fef9c3] border border-[#fde047] rounded-lg">
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span className="text-slate-800 font-medium">You have trips pending processing</span>
+        <div className="flex items-center justify-between px-5 py-3 bg-amber-50 border border-amber-200 rounded-lg mb-8 shadow-sm">
+          <div className="flex items-center gap-3">
+            <div className="bg-amber-600 rounded-full p-1">
+              <AlertCircle className="w-4 h-4 text-white" />
+            </div>
+            <span className="text-sm text-amber-900 font-medium">
+              Action Required: <span className="font-bold">{pendingCount} trips</span> are awaiting route optimization and asset assignment.
+            </span>
           </div>
-          <button className="px-4 py-1.5 bg-slate-800 text-white text-sm font-medium rounded-md hover:bg-slate-700 transition-colors">
-            Show
+          <button className="px-4 py-1.5 bg-white border border-amber-200 text-amber-700 text-xs font-bold rounded-md hover:bg-amber-50 transition-all shadow-sm">
+            Process Now
           </button>
         </div>
       )}
 
-      {/* Main Content - Trips Table */}
-      {viewMode === 'table' ? (
-        <TripsTable 
-          trips={paginatedTrips} 
-          vehicles={vehicles || []} 
-          drivers={drivers || []} 
-          isLoading={isLoading} 
-        />
-      ) : (
-        <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-8 text-center">
-          <p className="text-slate-500">Dashboard view coming soon...</p>
+      {/* Main Container */}
+      <div className="bg-white border border-zinc-200 rounded-lg shadow-sm flex flex-col overflow-hidden">
+        {/* Toolbar */}
+        <div className="px-6 py-4 border-b border-zinc-200 bg-zinc-50/30 flex items-center justify-between gap-4">
+          <div className="flex flex-1 items-center gap-3">
+            <div className="relative max-w-sm flex-1">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
+              <input
+                type="text"
+                placeholder="Search tracking ID or location..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-9 pr-4 py-2 bg-white border border-zinc-200 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
+              />
+            </div>
+
+            <button className="inline-flex items-center gap-2 border border-zinc-200 px-3 py-2 rounded-md bg-white text-xs font-semibold text-zinc-700 hover:bg-zinc-50 shadow-sm transition-all h-9">
+              <ListFilter className="w-3.5 h-3.5" />
+              Filters
+              <ChevronDown className="w-3 h-3 text-zinc-400" />
+            </button>
+          </div>
+
+          <div className="flex items-center gap-4 text-sm text-zinc-500">
+            <div className="flex items-center gap-2">
+              <span className="font-medium text-xs">Rows:</span>
+              <select
+                value={recordsPerPage}
+                onChange={(e) => setRecordsPerPage(Number(e.target.value))}
+                className="bg-white border border-zinc-200 rounded-md px-2 py-1 text-xs font-bold text-zinc-700 outline-none focus:ring-2 focus:ring-indigo-500/20"
+              >
+                {[10, 25, 50, 100].map(v => <option key={v} value={v}>{v}</option>)}
+              </select>
+            </div>
+            <div className="h-4 w-[1px] bg-zinc-200" />
+            <span className="text-xs font-medium lowercase italic">
+              Dispatching <span className="text-zinc-900 font-bold tabular-nums">1-{Math.min(recordsPerPage, filteredTrips.length)}</span> of <span className="text-zinc-900 font-bold tabular-nums">{filteredTrips.length}</span>
+            </span>
+          </div>
         </div>
-      )}
+
+        {/* Content */}
+        <div className="flex-1 overflow-auto min-h-[400px]">
+          {isLoading ? (
+            <div className="p-0">
+              {Array.from({ length: 12 }).map((_, i) => (
+                <div key={i} className="flex items-center gap-6 px-6 py-4 border-b border-zinc-50 animate-pulse">
+                  <Skeleton className="h-4 w-24" />
+                  <div className="flex-1 space-y-2">
+                    <Skeleton className="h-4 w-1/4" />
+                    <Skeleton className="h-3 w-1/3" />
+                  </div>
+                  <Skeleton className="h-4 w-32" />
+                  <Skeleton className="h-6 w-20 rounded-md" />
+                </div>
+              ))}
+            </div>
+          ) : viewMode === 'table' ? (
+            <TripsTable
+              trips={paginatedTrips}
+              vehicles={vehicles || []}
+              drivers={drivers || []}
+            />
+          ) : (
+            <div className="flex flex-col items-center justify-center h-[500px] text-center p-12">
+              <div className="w-16 h-16 bg-zinc-50 rounded-full flex items-center justify-center mb-4">
+                <LayoutDashboard className="w-8 h-8 text-zinc-300" />
+              </div>
+              <h3 className="text-base font-bold text-zinc-900 mb-1">Interactive Gantt View</h3>
+              <p className="text-zinc-500 text-sm max-w-[280px]">We're currently building the advanced logistics dashboard. Check back soon!</p>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
