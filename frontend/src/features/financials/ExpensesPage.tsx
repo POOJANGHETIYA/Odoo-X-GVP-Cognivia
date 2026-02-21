@@ -16,11 +16,52 @@ export function ExpensesPage() {
         );
     }, [logs, search]);
 
-    if (isLoading) return <div className="p-8 text-center text-slate-500">Loading expense logs...</div>;
+    const stats = useMemo(() => {
+        if (!filteredLogs.length) return { distance: 0, fuel: 0, misc: 0 };
+        return filteredLogs.reduce((acc, current: any) => ({
+            distance: acc.distance + parseInt(current.distance.split(' ')[0]),
+            fuel: acc.fuel + current.fuelExpense,
+            misc: acc.misc + current.miscExpense,
+        }), { distance: 0, fuel: 0, misc: 0 });
+    }, [filteredLogs]);
+
+    if (isLoading) return <div className="p-8 text-center text-slate-500">Loading expenses...</div>;
 
     return (
         <div className="flex flex-col gap-6 pb-8">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="flex flex-col gap-1">
+                <h1 className="text-xl font-bold text-slate-900 tracking-tight text-[24px]">Expenses</h1>
+                <p className="text-sm text-slate-500">Aggregated financial tracking for your fleet operations</p>
+            </div>
+
+            {/* Stats Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                    <p className="text-slate-500 text-[11px] font-bold uppercase tracking-wider mb-1">Total Distance</p>
+                    <div className="flex items-end gap-2">
+                        <h3 className="text-2xl font-black text-slate-900 leading-none">{stats.distance.toLocaleString()}</h3>
+                        <span className="text-xs font-bold text-slate-400 mb-1">km</span>
+                    </div>
+                </div>
+
+                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                    <p className="text-slate-500 text-[11px] font-bold uppercase tracking-wider mb-1">Fuel Expense</p>
+                    <div className="flex items-end gap-2">
+                        <span className="text-lg font-bold text-slate-400 mb-0.5">₹</span>
+                        <h3 className="text-2xl font-black text-slate-900 leading-none">{stats.fuel.toLocaleString()}</h3>
+                    </div>
+                </div>
+
+                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                    <p className="text-slate-500 text-[11px] font-bold uppercase tracking-wider mb-1">Misc. Expense</p>
+                    <div className="flex items-end gap-2">
+                        <span className="text-lg font-bold text-slate-400 mb-0.5">₹</span>
+                        <h3 className="text-2xl font-black text-slate-900 leading-none">{stats.misc.toLocaleString()}</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mt-2">
                 <div className="flex-1 max-w-xl relative">
                     <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
                     <input

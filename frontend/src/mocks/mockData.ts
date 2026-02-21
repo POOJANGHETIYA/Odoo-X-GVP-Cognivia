@@ -8574,6 +8574,76 @@ export const mockExpenses = [
     "volume_liters": 411.15,
     "description": "Auto-generated fuel expense",
     "logged_at": "2026-01-23T06:57:57.226003"
+  },
+  {
+    "id": "e-misc-001",
+    "vehicle_id": "7e437961-76bb-411f-9d86-7743da2d017a",
+    "trip_id": "57946197-5f8b-4958-9414-fa28b4a6a7a3",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Toll",
+    "cost": 850.0,
+    "description": "NH48 Highway Toll",
+    "logged_at": "2025-12-01T10:00:00.000000"
+  },
+  {
+    "id": "e-misc-002",
+    "vehicle_id": "5d3427e1-23ba-414c-98ea-2dae99054b49",
+    "trip_id": "21b2b8fd-b842-42a8-9d8f-44f84b874ee2",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Other",
+    "cost": 1200.0,
+    "description": "Loading/Unloading charges",
+    "logged_at": "2025-10-27T12:00:00.000000"
+  },
+  {
+    "id": "e-misc-003",
+    "vehicle_id": "a57783f3-a723-49e5-95aa-0a1dd4d1221c",
+    "trip_id": "dd8759eb-fa27-489a-9e04-f73828752088",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Toll",
+    "cost": 450.0,
+    "description": "State border tax",
+    "logged_at": "2025-11-27T14:00:00.000000"
+  },
+  {
+    "id": "e-misc-004",
+    "vehicle_id": "2050141e-e74e-49eb-bba9-6c9dc230ed04",
+    "trip_id": "ee7a6d98-9462-4896-84d4-e0ce5c96bfff",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Other",
+    "cost": 3000.0,
+    "description": "Parking & Storage",
+    "logged_at": "2026-01-10T16:00:00.000000"
+  },
+  {
+    "id": "e-misc-005",
+    "vehicle_id": "eb8cd63d-b70a-4ca9-827c-7df31e55ddc8",
+    "trip_id": "8c1ac918-7d1f-4d6f-ac88-759fb5411146",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Toll",
+    "cost": 550.0,
+    "description": "Tunnel Fee",
+    "logged_at": "2026-02-02T10:00:00.000000"
+  },
+  {
+    "id": "e-misc-006",
+    "vehicle_id": "59fef87b-6cf3-42a8-90f7-ae8a249ff62e",
+    "trip_id": "6def086b-76df-434f-968c-c7560f08b009",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Other",
+    "cost": 1500.0,
+    "description": "Cleaning & Sanitization",
+    "logged_at": "2026-01-23T14:00:00.000000"
+  },
+  {
+    "id": "e-misc-007",
+    "vehicle_id": "e7b69154-4779-4471-a9d0-0f6400983aa8",
+    "trip_id": "7053b264-2abb-4014-8fa3-082a9997d257",
+    "logged_by": "fae6cb13-8f47-45e7-88bb-f8ccd1f700f4",
+    "category": "Maintenance",
+    "cost": 4500.0,
+    "description": "Emergency Tire Plug",
+    "logged_at": "2026-02-11T12:00:00.000000"
   }
 ];
 

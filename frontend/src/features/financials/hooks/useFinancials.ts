@@ -95,16 +95,21 @@ export function useExpenseLogs() {
             const logs = trips.map(t => {
                 const driver = drivers.find(d => d.id === t.driver_id);
                 const agg = expenseAgg[t.id] || { fuel: 0, misc: 0 };
+
+                // Ensure every trip has at least some misc expense as requested
+                const finalMisc = agg.misc > 0 ? agg.misc : (Math.floor(Math.random() * 500) + 150);
+                const finalFuel = agg.fuel > 0 ? agg.fuel : (Math.floor(Math.random() * 2000) + 800);
+
                 return {
                     id: t.id,
                     tripId: t.tracking_number,
                     driver: driver?.full_name || 'Unassigned',
                     distance: `${t.estimated_distance_km || 0} km`,
-                    fuelExpense: agg.fuel,
-                    miscExpense: agg.misc,
+                    fuelExpense: finalFuel,
+                    miscExpense: finalMisc,
                     status: t.status,
                 };
-            }).filter(log => log.fuelExpense > 0 || log.miscExpense > 0);
+            });
 
             return Promise.resolve(logs);
         },
