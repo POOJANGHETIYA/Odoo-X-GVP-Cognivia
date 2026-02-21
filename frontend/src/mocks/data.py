@@ -114,7 +114,10 @@ for _ in range(NUM_VEHICLES):
         "capacity_volume_cft": round(random.uniform(50, 1200), 2),
         "current_odometer": random.randint(10000, 80000),
         "acquisition_cost": random.randint(300000, 3000000),
-        "status": "Available",
+        "status": random.choices(
+            ["Available", "On_Trip", "In_Shop", "Retired"],
+            weights=[0.6, 0.25, 0.1, 0.05]
+        )[0],
         "brand": random_brand(),
         "manufacturing_year": random_manufacturing_year(),
         "registration_date": random_registration_date()
@@ -134,9 +137,12 @@ for _ in range(NUM_DRIVERS):
         "phone_number": f"+91{random.randint(6000000000,9999999999)}",
         "license_number": f"LIC-{random.randint(100000,999999)}",
         "license_class": category,
-        "license_expiry": (datetime.utcnow() + timedelta(days=1000)).date().isoformat(),
-        "safety_score": random.randint(70, 100),
-        "status": "Available"
+        "license_expiry": (datetime.utcnow() + timedelta(days=random.randint(-100, 1000))).date().isoformat(),
+        "safety_score": random.randint(40, 100),
+        "status": random.choices(
+            ["Available", "On_Duty", "Suspended", "Off_Duty"],
+            weights=[0.6, 0.3, 0.05, 0.05]
+        )[0]
     })
 
 # Index drivers by class
@@ -178,8 +184,8 @@ for _ in range(NUM_TRIPS):
     trip_id = str(uuid.uuid4())
 
     status = random.choices(
-        ["Completed", "In_Transit", "Cancelled"],
-        weights=[0.7, 0.2, 0.1]
+        ["Draft", "Unassigned", "Dispatched", "At_Pickup", "In_Transit", "Completed", "Cancelled"],
+        weights=[0.05, 0.15, 0.1, 0.1, 0.2, 0.35, 0.05]
     )[0]
 
     trip_date = random_date()

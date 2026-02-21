@@ -35,8 +35,8 @@ function StatusDot({ active }: { active?: boolean }) {
     return (
         <span
             className={`inline-block w-3.5 h-3.5 rounded-full border-2 ${active
-                    ? 'bg-green-500 border-green-400'
-                    : 'bg-red-500 border-red-400'
+                ? 'bg-green-500 border-green-400'
+                : 'bg-red-500 border-red-400'
                 }`}
         />
     );
@@ -99,10 +99,6 @@ export function VehiclesTable({ vehicles }: VehiclesTableProps) {
         return 0;
     });
 
-    const formatCapacity = (kg: number) =>
-        new Intl.NumberFormat('en-IN').format(kg) + ' kg';
-    const formatOdometer = (km: number) =>
-        new Intl.NumberFormat('en-IN').format(km) + ' km';
 
     if (vehicles.length === 0) {
         return (

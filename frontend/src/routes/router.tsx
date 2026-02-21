@@ -8,36 +8,22 @@ import {
 import { MainLayout } from '../components/layout/MainLayout';
 import { LoginPage } from '../features/auth/LoginPage';
 import { DashboardPage } from '../features/dashboard/DashboardPage';
+import { MaintenancePage } from '../features/maintenance/MaintenancePage';
 import { VehiclesPage } from '../features/vehicles/VehiclesPage';
 import { TripsPage } from '../features/trips/TripsPage';
 import { DriversPage } from '../features/drivers/DriversPage';
 import type { AuthContextType } from '../features/auth/AuthContext';
 
-// -----------------------------------------------------------
-// Router context (carries the auth state)
-// -----------------------------------------------------------
 interface RouterContext {
-    auth: AuthContextType;
+    auth: {
+        isAuthenticated: boolean;
+    };
 }
 
-// -----------------------------------------------------------
-// Placeholder for pages not yet implemented
-// -----------------------------------------------------------
-function PlaceholderPage({ title }: { title: string }) {
-    return (
-        <div className="flex flex-col items-center justify-center h-64 text-slate-400 gap-2">
-            <p className="text-lg font-semibold">{title}</p>
-            <p className="text-sm">Coming soon…</p>
-        </div>
-    );
-}
+const rootRoute = createRootRouteWithContext<RouterContext>()({
+    component: () => <Outlet />,
+});
 
-// -----------------------------------------------------------
-// Routes
-// -----------------------------------------------------------
-const rootRoute = createRootRouteWithContext<RouterContext>()();
-
-// Login route (public)
 const loginRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/login',
@@ -49,36 +35,36 @@ const loginRoute = createRoute({
     },
 });
 
-// Auth-guarded layout route wrapper
-function ProtectedLayout() {
-    return (
+const appRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    id: 'app',
+    component: () => (
         <MainLayout>
             <Outlet />
         </MainLayout>
-    );
-}
-
-const protectedLayoutRoute = createRoute({
-    getParentRoute: () => rootRoute,
-    id: 'protected',
-    component: ProtectedLayout,
-    beforeLoad: ({ context, location }) => {
+    ),
+    beforeLoad: ({ context }) => {
         if (!context.auth.isAuthenticated) {
-            throw redirect({ to: '/login', search: { redirect: location.href } });
+            throw redirect({ to: '/login' });
         }
     },
 });
 
-// Dashboard
-const dashboardRoute = createRoute({
-    getParentRoute: () => protectedLayoutRoute,
+export const dashboardRoute = createRoute({
+    getParentRoute: () => appRoute,
     path: '/',
     component: DashboardPage,
 });
 
-// Vehicles Registry
+const PlaceholderPage = ({ title }: { title: string }) => (
+    <div className="bg-white rounded-xl shadow-sm border border-slate-200 min-h-[500px] p-8 flex flex-col justify-center items-center text-center">
+        <h1 className="text-2xl font-bold text-slate-800 mb-2">{title}</h1>
+        <p className="text-slate-500 max-w-sm">This module is scheduled for a future sprint. Stay tuned!</p>
+    </div>
+);
+
 const vehiclesRoute = createRoute({
-    getParentRoute: () => protectedLayoutRoute,
+    getParentRoute: () => appRoute,
     path: '/vehicles',
     component: VehiclesPage,
 });
@@ -92,40 +78,48 @@ const tripsRoute = createRoute({
 
 // Drivers
 const driversRoute = createRoute({
-    getParentRoute: () => protectedLayoutRoute,
+    getParentRoute: () => appRoute,
     path: '/drivers',
     component: DriversPage,
 });
 
-// Financials (placeholder)
+const tripsRoute = createRoute({
+    getParentRoute: () => appRoute,
+    path: '/trips',
+    component: TripsPage,
+});
+
 const financialsRoute = createRoute({
-    getParentRoute: () => protectedLayoutRoute,
+    getParentRoute: () => appRoute,
     path: '/financials',
     component: () => <PlaceholderPage title="Financial Operations" />,
 });
 
-// -----------------------------------------------------------
-// Route tree & router
-// -----------------------------------------------------------
+const maintenanceRoute = createRoute({
+    getParentRoute: () => appRoute,
+    path: '/maintenance',
+    component: MaintenancePage,
+});
+
 const routeTree = rootRoute.addChildren([
     loginRoute,
-    protectedLayoutRoute.addChildren([
+    appRoute.addChildren([
         dashboardRoute,
         vehiclesRoute,
-        tripsRoute,
         driversRoute,
+        tripsRoute,
         financialsRoute,
+        maintenanceRoute,
     ]),
 ]);
 
 export const router = createRouter({
     routeTree,
     context: {
-        auth: undefined!,
+        auth: undefined!, // This will be provided at the highest level
     },
 });
 
-// Register router types globally
 declare module '@tanstack/react-router' {
     interface Register {
         router: typeof router;
