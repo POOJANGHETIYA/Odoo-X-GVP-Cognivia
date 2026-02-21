@@ -5,18 +5,19 @@ import {
   ArrowRightLeft,
   ClipboardList,
   Wrench,
-  
+  Receipt,
 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 const MENU_ITEMS = [
   { name: "Command Center", icon: Command, href: "/" },
-  
+
   { name: "Cars", icon: Car, href: "/vehicles" },
   { name: "Trips", icon: ClipboardList, href: "/trips" },
   { name: "Service", icon: Wrench, href: "/maintenance" },
   { name: "Drivers", icon: Users, href: "/drivers" },
   { name: "Transactions", icon: ArrowRightLeft, href: "/financials" },
+  { name: "Expenses", icon: Receipt, href: "/financials/expenses" },
 ];
 
 export function Sidebar({ className = "" }: { className?: string }) {

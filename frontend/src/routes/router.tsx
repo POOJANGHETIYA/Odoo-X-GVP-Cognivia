@@ -12,12 +12,14 @@ import { MaintenancePage } from '../features/maintenance/MaintenancePage';
 import { VehiclesPage } from '@/features/vehicles/VehiclesPage';
 import { TripsPage } from '../features/trips/TripsPage';
 import { DriversPage } from '../features/drivers/DriversPage';
+import { FinancialsPage } from '../features/financials/FinancialsPage';
+import { ExpensesPage } from '../features/financials/ExpensesPage';
 
 interface RouterContext {
     auth: {
         isAuthenticated: boolean;
     };
-    
+
 }
 
 const rootRoute = createRootRouteWithContext<RouterContext>()({
@@ -60,12 +62,6 @@ export const dashboardRoute = createRoute({
     component: DashboardPage,
 });
 
-const PlaceholderPage = ({ title }: { title: string }) => (
-    <div className="bg-white rounded-xl shadow-sm border border-slate-200 min-h-[500px] p-8 flex flex-col justify-center items-center text-center">
-        <h1 className="text-2xl font-bold text-slate-800 mb-2">{title}</h1>
-        <p className="text-slate-500 max-w-sm">This module is scheduled for a future sprint. Stay tuned!</p>
-    </div>
-);
 
 
 const vehiclesRoute = createRoute({
@@ -93,7 +89,19 @@ const tripsRoute = createRoute({
 const financialsRoute = createRoute({
     getParentRoute: () => appRoute,
     path: '/financials',
-    component: () => <PlaceholderPage title="Financial Operations" />,
+    component: () => <Outlet />,
+});
+
+const financialsIndexRoute = createRoute({
+    getParentRoute: () => financialsRoute,
+    path: '/',
+    component: FinancialsPage,
+});
+
+const expensesRoute = createRoute({
+    getParentRoute: () => financialsRoute,
+    path: '/expenses',
+    component: ExpensesPage,
 });
 
 const maintenanceRoute = createRoute({
@@ -109,7 +117,10 @@ const routeTree = rootRoute.addChildren([
         vehiclesRoute,
         driversRoute,
         tripsRoute,
-        financialsRoute,
+        financialsRoute.addChildren([
+            financialsIndexRoute,
+            expensesRoute,
+        ]),
         maintenanceRoute,
     ]),
 ]);
