@@ -5,27 +5,24 @@ import {
   ArrowRightLeft,
   ClipboardList,
   Wrench,
-<<<<<<< HEAD
+
   Receipt,
-=======
   Map,
->>>>>>> 6ec89111d451919889d5322a9f0d1bc4f9f9b791
 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 const MENU_ITEMS = [
   { name: "Command Center", icon: Command, href: "/" },
-<<<<<<< HEAD
 
-=======
+
   { name: "Map", icon: Map, href: "/map" },
->>>>>>> 6ec89111d451919889d5322a9f0d1bc4f9f9b791
   { name: "Cars", icon: Car, href: "/vehicles" },
   { name: "Trips", icon: ClipboardList, href: "/trips" },
   { name: "Service", icon: Wrench, href: "/maintenance" },
   { name: "Drivers", icon: Users, href: "/drivers" },
   { name: "Transactions", icon: ArrowRightLeft, href: "/financials" },
   { name: "Expenses", icon: Receipt, href: "/financials/expenses" },
+  { name: "Analytics", icon: ArrowRightLeft, href: "/reports" },
 ];
 
 export function Sidebar({ className = "" }: { className?: string }) {

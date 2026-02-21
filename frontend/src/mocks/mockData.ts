@@ -8582,66 +8582,61 @@ export const mockMaintenanceLogs = [
   {
     "id": "maint-001",
     "vehicle_id": "3e926f1c-6765-44e5-a922-6e7dbb92b9e6",
-    "type": "Scheduled",
+    "service_type": "Oil_Change",
     "description": "Regular oil change and filter replacement",
     "cost": 4500,
     "odometer_at_service": 23000,
-    "service_date": "2026-01-15",
-    "next_service_date": "2026-04-15",
+    "scheduled_date": "2026-01-15T09:00:00Z",
+    "next_service_due": "2026-04-15T09:00:00Z",
     "status": "Completed",
-    "technician": "Ravi Kumar",
-    "parts_replaced": ["Engine Oil", "Oil Filter", "Air Filter"]
+    "technician_name": "Ravi Kumar"
   },
   {
     "id": "maint-002",
     "vehicle_id": "3e926f1c-6765-44e5-a922-6e7dbb92b9e6",
-    "type": "Unscheduled",
+    "service_type": "Brake_Service",
     "description": "Brake pad replacement due to wear",
     "cost": 8500,
     "odometer_at_service": 22500,
-    "service_date": "2026-01-10",
-    "next_service_date": null,
+    "scheduled_date": "2026-01-10T09:00:00Z",
+    "next_service_due": null,
     "status": "Completed",
-    "technician": "Suresh Reddy",
-    "parts_replaced": ["Front Brake Pads", "Rear Brake Pads"]
+    "technician_name": "Suresh Reddy"
   },
   {
     "id": "maint-003",
     "vehicle_id": "ea48d219-fac5-4b64-bd91-c8108793a3f5",
-    "type": "Scheduled",
+    "service_type": "General_Inspection",
     "description": "50,000 km major service",
     "cost": 15000,
     "odometer_at_service": 50000,
-    "service_date": "2026-02-01",
-    "next_service_date": "2026-05-01",
+    "scheduled_date": "2026-02-01T09:00:00Z",
+    "next_service_due": "2026-05-01T09:00:00Z",
     "status": "Completed",
-    "technician": "Ravi Kumar",
-    "parts_replaced": ["Engine Oil", "Transmission Fluid", "Spark Plugs", "All Filters"]
+    "technician_name": "Ravi Kumar"
   },
   {
     "id": "maint-004",
     "vehicle_id": "cf64f5fd-5e6f-4e83-bdba-d8b5444bb221",
-    "type": "Inspection",
+    "service_type": "General_Inspection",
     "description": "Annual fitness certificate inspection",
     "cost": 2000,
     "odometer_at_service": 35000,
-    "service_date": "2026-02-10",
-    "next_service_date": "2027-02-10",
+    "scheduled_date": "2026-02-10T09:00:00Z",
+    "next_service_due": "2027-02-10T09:00:00Z",
     "status": "Completed",
-    "technician": "Inspector - RTO",
-    "parts_replaced": []
+    "technician_name": "Inspector - RTO"
   },
   {
     "id": "maint-005",
     "vehicle_id": "3e926f1c-6765-44e5-a922-6e7dbb92b9e6",
-    "type": "Scheduled",
+    "service_type": "Tire_Replacement",
     "description": "Tire rotation and alignment",
     "cost": 3500,
     "odometer_at_service": 23400,
-    "service_date": "2026-02-18",
-    "next_service_date": "2026-05-18",
-    "status": "In Progress",
-    "technician": "Anil Sharma",
-    "parts_replaced": []
+    "scheduled_date": "2026-02-18T09:00:00Z",
+    "next_service_due": "2026-05-18T09:00:00Z",
+    "status": "In_Progress",
+    "technician_name": "Anil Sharma"
   }
 ];
