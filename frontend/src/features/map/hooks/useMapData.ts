@@ -14,6 +14,7 @@ export interface VehicleLocation {
   };
   status: string;
   driver_name?: string;
+  heading?: number;
 }
 
 // Predefined locations around Hyderabad, India for consistent vehicle positions
@@ -25,19 +26,19 @@ const getVehicleLocation = (vehicleId: string, index: number) => {
   if (vehicleLocations[vehicleId]) {
     return vehicleLocations[vehicleId];
   }
-  
+
   // Hyderabad area coordinates (center around HITEC City / Gachibowli area)
   const hyderabadCenter = { lat: 17.4435, lng: 78.3772 };
-  
+
   // Generate a deterministic but spread out position based on index
   const angle = (index * 137.5) * (Math.PI / 180); // Golden angle for even distribution
   const radius = 0.02 + (index % 10) * 0.008; // Varying radius
-  
+
   const location = {
     lat: hyderabadCenter.lat + radius * Math.cos(angle),
     lng: hyderabadCenter.lng + radius * Math.sin(angle),
   };
-  
+
   // Store for consistency
   vehicleLocations[vehicleId] = location;
   return location;
@@ -69,7 +70,7 @@ const generateLocationsFromVehicles = (vehicles: Vehicle[]): VehicleLocation[] =
       // Some available vehicles might be moving slowly (returning)
       speed = Math.random() > 0.7 ? Math.floor(Math.random() * 30) : 0;
     }
-    
+
     return {
       id: vehicle.id,
       license_plate: vehicle.license_plate,
@@ -78,6 +79,7 @@ const generateLocationsFromVehicles = (vehicles: Vehicle[]): VehicleLocation[] =
       speed_kmh: speed,
       location: getVehicleLocation(vehicle.id, index),
       status: vehicle.status,
+      heading: (index * 73) % 360, // Deterministic random heading
     };
   });
 };
@@ -96,13 +98,13 @@ export function useVehicleLocations() {
 
 export function useMapStats() {
   const { data: locations } = useVehicleLocations();
-  
+
   const stats = {
     totalVehicles: locations?.length || 0,
     moving: locations?.filter(v => v.speed_kmh > 0).length || 0,
     parked: locations?.filter(v => v.speed_kmh === 0).length || 0,
     gpsEnabled: locations?.length || 0,
   };
-  
+
   return stats;
 }

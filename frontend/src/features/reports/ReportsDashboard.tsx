@@ -8,10 +8,10 @@ export const ReportsDashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'analytics' | 'financials' | 'detailed'>('analytics');
 
   return (
-    <div className="bg-white min-h-screen">
-      <div className="max-w-[1600px] mx-auto px-8 py-6">
-        {/* Sub-navigation */}
-        <div className="flex gap-8 mb-8 border-b border-[#F3F4F6]">
+    <div className="min-h-screen pb-12">
+      <div className="max-w-[1600px] mx-auto px-1 group-data-[sidebar=collapsed]:px-4 transition-all">
+        {/* Module Segment Picker */}
+        <div className="flex items-center gap-1 bg-zinc-100/80 p-1.5 rounded-xl border border-zinc-200 w-fit mb-10 shadow-sm">
           <TabButton
             active={activeTab === 'analytics'}
             onClick={() => setActiveTab('analytics')}
@@ -22,18 +22,18 @@ export const ReportsDashboard: React.FC = () => {
             active={activeTab === 'financials'}
             onClick={() => setActiveTab('financials')}
             icon={PieChart}
-            label="Financial Reports"
+            label="Capital Reports"
           />
           <TabButton
             active={activeTab === 'detailed'}
             onClick={() => setActiveTab('detailed')}
             icon={ClipboardList}
-            label="Detailed Logs"
+            label="Detailed Audit"
           />
         </div>
 
         {/* Content Area with smooth transitions */}
-        <div className="transition-all duration-300 animate-in fade-in slide-in-from-bottom-2">
+        <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
           {activeTab === 'analytics' && <OperationalAnalytics />}
           {activeTab === 'financials' && <FinancialReports />}
           {activeTab === 'detailed' && <DetailedReportView />}
@@ -53,10 +53,12 @@ interface TabButtonProps {
 const TabButton: React.FC<TabButtonProps> = ({ active, onClick, icon: Icon, label }) => (
   <button
     onClick={onClick}
-    className={`flex items-center gap-2 pb-4 pt-2 text-[13px] font-bold transition-all border-b-2 relative ${active ? 'border-[#2CC197] text-[#111827]' : 'border-transparent text-gray-400 hover:text-gray-600'
+    className={`flex items-center gap-2.5 px-4 py-2 rounded-lg text-[11px] font-bold uppercase tracking-wider transition-all border ${active
+        ? 'bg-white text-indigo-600 border-zinc-200 shadow-sm'
+        : 'border-transparent text-zinc-500 hover:text-zinc-900'
       }`}
   >
-    <Icon className={`w-4 h-4 ${active ? 'text-[#2CC197]' : 'text-gray-400'}`} />
+    <Icon className={`w-3.5 h-3.5 ${active ? 'text-indigo-600' : 'text-zinc-400'}`} />
     {label}
   </button>
 );

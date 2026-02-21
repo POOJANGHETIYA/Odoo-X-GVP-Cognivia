@@ -5,7 +5,10 @@ import {
   ChevronLeft,
   ChevronRight,
   TrendingUp,
-  Gauge
+  Gauge,
+  History,
+  Download,
+  Activity
 } from 'lucide-react';
 import {
   BarChart,
@@ -15,6 +18,7 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+  Cell
 } from 'recharts';
 import {
   mockVehicles,
@@ -22,7 +26,7 @@ import {
   mockExpenses,
 } from '../../mocks/mockData';
 
-const PRIMARY_MINT = '#2CC197';
+const PRIMARY_INDIGO = '#4f46e5';
 const ITEMS_PER_PAGE = 25;
 
 export const OperationalAnalytics: React.FC = () => {
@@ -78,7 +82,7 @@ export const OperationalAnalytics: React.FC = () => {
         return acc;
       }, {} as Record<string, { dist: number, fuel: number }>)
     ).map(([name, data]) => ({
-      name: name.replace('_', ' '),
+      name: name.replace(/_/g, ' '),
       efficiency: data.fuel > 0 ? Number((data.dist / data.fuel).toFixed(2)) : 0
     }));
 
@@ -108,98 +112,176 @@ export const OperationalAnalytics: React.FC = () => {
     else { setSortField(field); setSortDirection('desc'); }
   };
 
+  const handleExport = () => {
+    const headers = ["Vehicle", "Category", "Brand", "Distance (km)", "Efficiency (km/L)", "Revenue", "ROI %"];
+    const csvRows = [
+      headers.join(","),
+      ...filtered.map(v => [
+        v.license_plate,
+        v.category,
+        v.brand,
+        v.distance,
+        v.fuelEfficiency.toFixed(2),
+        v.revenue,
+        v.roi
+      ].join(","))
+    ];
+
+    const csvContent = csvRows.join("\n");
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `operational_analytics_${new Date().toISOString().split('T')[0]}.csv`;
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <div className="space-y-8">
-      <div className="flex justify-between items-center">
-        <h1 className="text-[32px] font-bold text-[#111827]">Operational Analytics</h1>
-        <div className="flex gap-3">
+    <div className="flex flex-col gap-8">
+      {/* Header Section */}
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <div className="flex items-center gap-2 text-indigo-600 mb-1">
+            <Activity className="w-4 h-4" />
+            <span className="text-[11px] font-bold uppercase tracking-wider">Fleet Performance</span>
+          </div>
+          <h1 className="text-3xl font-bold tracking-tight text-zinc-900">Operational Insights</h1>
+          <p className="text-zinc-500 text-sm mt-1 flex items-center gap-2">
+            <History className="w-3.5 h-3.5" />
+            Live efficiency tracking across the fleet
+          </p>
+        </div>
+
+        <div className="flex items-center gap-3">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
             <input
               type="text"
               placeholder="Search plate..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-4 py-2 border border-[#E5E7EB] rounded-lg text-sm focus:ring-1 focus:ring-[#2CC197] focus:border-[#2CC197] outline-none w-64 text-gray-900"
+              className="pl-9 pr-4 py-2 border border-zinc-200 rounded-md text-xs font-medium focus:ring-2 focus:ring-indigo-500/10 focus:border-indigo-500 outline-none w-48 transition-all"
             />
           </div>
-          <button className="flex items-center gap-2 px-4 py-2 bg-white border border-[#E5E7EB] text-gray-700 font-bold text-xs rounded-lg hover:bg-gray-50 transition-all shadow-sm">
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-            Export (CSV/PDF)
+          <button
+            onClick={handleExport}
+            className="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-4 py-2 rounded-md text-xs shadow-sm transition-all active:scale-[0.98] h-9"
+          >
+            <Download className="w-3.5 h-3.5" />
+            Export Data
           </button>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <MetricCard label="Avg Efficiency" value={`${analyticsData.overallEfficiency.toFixed(2)} km/L`} subLabel="Fleet Average" icon={Gauge} />
-        <MetricCard label="Total Distance" value={`${analyticsData.totalDistance.toLocaleString()} km`} subLabel="Completed Trips" icon={TrendingUp} />
-        <MetricCard label="Fuel Consumed" value={`${analyticsData.totalFuelLiters.toLocaleString()} L`} subLabel="Operational Fuel" icon={Droplet} />
+      {/* KPI Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <MetricCard label="Avg Efficiency" value={`${analyticsData.overallEfficiency.toFixed(2)} km/L`} subLabel="Fleet Average Efficiency" icon={Gauge} />
+        <MetricCard label="Total Distance" value={`${analyticsData.totalDistance.toLocaleString()} km`} subLabel="Cumulative completed trips" icon={TrendingUp} />
+        <MetricCard label="Fuel Consumed" value={`${analyticsData.totalFuelLiters.toLocaleString()} L`} subLabel="Fleet-wide fuel consumption" icon={Droplet} />
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-100 p-6">
-        <h3 className="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-6">Efficiency Trends by Category</h3>
-        <div className="h-[260px] w-full">
+      {/* Charts Section */}
+      <div className="bg-white rounded-lg border border-zinc-200 shadow-sm overflow-hidden">
+        <div className="px-6 py-4 border-b border-zinc-100 flex items-center justify-between">
+          <div>
+            <h3 className="text-sm font-bold text-zinc-900">Efficiency Trends</h3>
+            <p className="text-[11px] text-zinc-500">Resource efficiency across vehicle categories</p>
+          </div>
+          <div className="flex items-center gap-2 bg-zinc-50 p-1 rounded-md border border-zinc-200">
+            <span className="w-2.5 h-2.5 rounded-full bg-indigo-500" />
+            <span className="text-[10px] font-bold text-zinc-600 uppercase tracking-tighter">Efficiency KM/L</span>
+          </div>
+        </div>
+        <div className="p-6 h-[300px]">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={analyticsData.categoryData}>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#FAFAFA" />
-              <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fill: '#9CA3AF', fontSize: 10 }} dy={10} />
-              <YAxis axisLine={false} tickLine={false} tick={{ fill: '#9CA3AF', fontSize: 10 }} />
-              <Tooltip cursor={{ fill: '#F9FAFB' }} contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
-              <Bar dataKey="efficiency" radius={[4, 4, 0, 0]} fill={PRIMARY_MINT} />
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E5E7EB" />
+              <XAxis
+                dataKey="name"
+                axisLine={false}
+                tickLine={false}
+                tick={{ fill: '#71717a', fontSize: 10, fontWeight: 600 }}
+                dy={10}
+              />
+              <YAxis
+                axisLine={false}
+                tickLine={false}
+                tick={{ fill: '#71717a', fontSize: 10, fontWeight: 600 }}
+              />
+              <Tooltip
+                cursor={{ fill: '#F4F4F5' }}
+                contentStyle={{ borderRadius: '8px', border: '1px solid #E4E4E7', boxShadow: 'none', fontSize: '11px', fontWeight: 'bold' }}
+              />
+              <Bar dataKey="efficiency" radius={[4, 4, 0, 0]} fill={PRIMARY_INDIGO}>
+                {analyticsData.categoryData.map((_, index) => (
+                  <Cell key={`cell-${index}`} fillOpacity={0.9} />
+                ))}
+              </Bar>
             </BarChart>
           </ResponsiveContainer>
         </div>
       </div>
 
-      <div className="space-y-4">
-        <div className="flex items-center justify-between text-sm text-[#6B7280]">
-          <div className="flex items-center gap-4">
-            <span>Shown: 1-{paginated.length} of {filtered.length}</span>
-            <select
-              value={categoryFilter}
-              onChange={(e) => { setCategoryFilter(e.target.value); setCurrentPage(1); }}
-              className="bg-white border border-[#E5E7EB] rounded-lg px-3 py-1.5 focus:outline-none text-[11px] font-bold text-gray-700"
+      {/* Search & Filter Bar */}
+      <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 bg-white border border-zinc-200 p-1 rounded-md shadow-sm">
+          <button
+            onClick={() => setCategoryFilter('All')}
+            className={`px-3 py-1.5 rounded text-[10px] font-bold uppercase transition-all ${categoryFilter === 'All' ? 'bg-indigo-600 text-white' : 'text-zinc-500 hover:text-zinc-900'}`}
+          >
+            All Categories
+          </button>
+          {['Bike', '3_Wheeler', 'Mini_Truck', 'Medium_Truck', 'Heavy_Truck'].map(cat => (
+            <button
+              key={cat}
+              onClick={() => setCategoryFilter(cat)}
+              className={`px-3 py-1.5 rounded text-[10px] font-bold uppercase transition-all ${categoryFilter === cat ? 'bg-indigo-600 text-white' : 'text-zinc-500 hover:text-zinc-900'}`}
             >
-              <option value="All">All Categories</option>
-              <option value="Bike">Bike</option>
-              <option value="3_Wheeler">3 Wheeler</option>
-              <option value="Mini_Truck">Mini Truck</option>
-              <option value="Medium_Truck">Medium Truck</option>
-              <option value="Heavy_Truck">Heavy Truck</option>
-            </select>
-          </div>
+              {cat.replace(/_/g, ' ')}
+            </button>
+          ))}
         </div>
+      </div>
 
-        <div className="border border-[#F3F4F6] rounded-xl overflow-hidden shadow-sm">
-          <table className="w-full text-left">
-            <thead className="bg-[#F9FAFB] border-b border-[#F3F4F6] text-[#9CA3AF] text-[11px] font-bold uppercase tracking-wider">
-              <tr>
-                <th className="px-6 py-4">Brand</th>
-                <th className="px-6 py-4 cursor-pointer text-[#3b82f6]" onClick={() => handleSort('license_plate')}>Plate number</th>
-                <th className="px-6 py-4 text-right cursor-pointer" onClick={() => handleSort('fuelEfficiency')}>Efficiency</th>
-                <th className="px-6 py-4 text-right cursor-pointer" onClick={() => handleSort('revenue')}>Total Rev. (₹)</th>
-                <th className="px-6 py-4 text-right cursor-pointer" onClick={() => handleSort('roi')}>ROI (%)</th>
+      {/* Main Table */}
+      <div className="bg-white border border-zinc-200 rounded-lg shadow-sm overflow-hidden">
+        <div className="overflow-x-auto">
+          <table className="w-full text-left border-separate border-spacing-0">
+            <thead>
+              <tr className="bg-zinc-50/50">
+                <th className="px-6 py-4 text-[10px] font-bold text-zinc-500 uppercase tracking-widest border-b border-zinc-100">Brand / Registry</th>
+                <th className="px-6 py-4 text-[10px] font-bold text-zinc-500 uppercase tracking-widest border-b border-zinc-100 cursor-pointer" onClick={() => handleSort('license_plate')}>
+                  Plate Identifier
+                </th>
+                <th className="px-6 py-4 text-right text-[10px] font-bold text-zinc-500 uppercase tracking-widest border-b border-zinc-100 cursor-pointer" onClick={() => handleSort('fuelEfficiency')}>
+                  Efficiency
+                </th>
+                <th className="px-6 py-4 text-right text-[10px] font-bold text-zinc-500 uppercase tracking-widest border-b border-zinc-100 cursor-pointer" onClick={() => handleSort('revenue')}>
+                  Total Gross (₹)
+                </th>
+                <th className="px-6 py-4 text-right text-[10px] font-bold text-zinc-500 uppercase tracking-widest border-b border-zinc-100 cursor-pointer" onClick={() => handleSort('roi')}>
+                  ROI Yield
+                </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-[#F3F4F6]">
+            <tbody className="divide-y divide-zinc-100">
               {paginated.map((v) => (
-                <tr key={v.id} className="hover:bg-[#F9FAFB] transition-colors">
-                  <td className="px-6 py-4 font-bold text-[#111827]">{v.brand}</td>
+                <tr key={v.id} className="hover:bg-zinc-50/50 transition-colors cursor-pointer group">
+                  <td className="px-6 py-4 font-bold text-zinc-900 text-xs">{v.brand}</td>
                   <td className="px-6 py-4">
-                    <span className="text-[#3B82F6] font-bold cursor-pointer hover:underline">{v.license_plate}</span>
+                    <span className="text-xs font-bold text-indigo-600 tabular-nums">{v.license_plate}</span>
                   </td>
                   <td className="px-6 py-4 text-right">
-                    <div className="flex justify-end items-center gap-2">
-                      <span className="text-gray-900 font-bold text-xs">{v.fuelEfficiency.toFixed(1)} <span className="text-[10px] text-gray-400 font-normal">km/L</span></span>
-                    </div>
+                    <span className="text-xs font-bold text-zinc-900 tabular-nums">{v.fuelEfficiency.toFixed(1)}</span>
+                    <span className="text-[9px] text-zinc-400 ml-1 font-bold uppercase tracking-tighter">km/L</span>
                   </td>
-                  <td className="px-6 py-4 text-right text-[#10b981] font-bold">
-                    ₹{v.revenue.toLocaleString()}
+                  <td className="px-6 py-4 text-right text-emerald-600 text-xs font-black tabular-nums">
+                    ₹{v.revenue.toLocaleString('en-IN')}
                   </td>
                   <td className="px-6 py-4 text-right">
-                    <span className={`px-2 py-1 rounded-lg text-xs font-bold ${Number(v.roi) > 5 ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'}`}>
+                    <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-black tabular-nums ring-1 ring-inset ${Number(v.roi) > 5 ? 'bg-emerald-50 text-emerald-700 ring-emerald-600/10' : 'bg-amber-50 text-amber-700 ring-amber-600/10'
+                      }`}>
                       {v.roi}%
                     </span>
                   </td>
@@ -210,26 +292,51 @@ export const OperationalAnalytics: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-1.5 pb-4">
-        <button disabled={currentPage === 1} onClick={() => setCurrentPage(p => p - 1)} className="p-2 border border-[#E5E7EB] rounded-lg disabled:opacity-30 hover:bg-gray-50"><ChevronLeft className="w-4 h-4 text-gray-600" /></button>
+      {/* Pagination */}
+      <div className="flex items-center justify-center gap-1 pb-10">
+        <button
+          disabled={currentPage === 1}
+          onClick={() => setCurrentPage(p => p - 1)}
+          className="p-2 border border-zinc-200 rounded-md disabled:opacity-30 hover:bg-zinc-50 transition-colors"
+        >
+          <ChevronLeft className="w-4 h-4 text-zinc-600" />
+        </button>
         {[...Array(totalPages)].map((_, i) => (
-          <button key={i} onClick={() => setCurrentPage(i + 1)} className={`w-9 h-9 rounded-lg text-[13px] font-bold transition-all border ${currentPage === i + 1 ? 'bg-[#2CC197] text-white border-[#2CC197]' : 'bg-white text-gray-600 border-[#E5E7EB] hover:bg-gray-50'}`}>{i + 1}</button>
+          <button
+            key={i}
+            onClick={() => setCurrentPage(i + 1)}
+            className={`w-9 h-9 rounded-md text-[11px] font-bold transition-all border ${currentPage === i + 1 ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm shadow-indigo-200' : 'bg-white text-zinc-600 border-zinc-200 hover:bg-zinc-50'
+              }`}
+          >
+            {i + 1}
+          </button>
         ))}
-        <button disabled={currentPage === totalPages} onClick={() => setCurrentPage(p => p + 1)} className="p-2 border border-[#E5E7EB] rounded-lg disabled:opacity-30 hover:bg-gray-50"><ChevronRight className="w-4 h-4 text-gray-600" /></button>
+        <button
+          disabled={currentPage === totalPages}
+          onClick={() => setCurrentPage(p => p + 1)}
+          className="p-2 border border-zinc-200 rounded-md disabled:opacity-30 hover:bg-zinc-50 transition-colors"
+        >
+          <ChevronRight className="w-4 h-4 text-zinc-600" />
+        </button>
       </div>
     </div>
   );
 };
 
 const MetricCard = ({ label, value, subLabel, icon: Icon }: any) => (
-  <div className="bg-white border border-[#E5E7EB] rounded-xl p-5 hover:border-[#2CC197] transition-all group">
-    <div className="flex justify-between items-start mb-2">
-      <p className="text-gray-400 text-[10px] font-bold uppercase tracking-widest">{label}</p>
-      <Icon className="w-4 h-4 text-gray-300 group-hover:text-[#2CC197]" />
+  <div className="bg-white border border-zinc-200 rounded-lg p-5 hover:border-indigo-500 shadow-sm transition-all group relative overflow-hidden">
+    <div className="absolute right-0 top-0 p-4 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
+      <Icon className="w-16 h-16" />
+    </div>
+    <div className="flex justify-between items-start mb-3">
+      <p className="text-zinc-400 text-[10px] font-bold uppercase tracking-widest">{label}</p>
+      <div className="p-1.5 bg-zinc-50 rounded-md border border-zinc-100 group-hover:bg-indigo-50 group-hover:border-indigo-100 transition-colors">
+        <Icon className="w-3.5 h-3.5 text-zinc-400 group-hover:text-indigo-600" />
+      </div>
     </div>
     <div className="flex items-baseline gap-2">
-      <p className="text-2xl font-bold text-[#111827] tracking-tight">{value}</p>
+      <p className="text-2xl font-black text-zinc-900 tracking-tight tabular-nums">{value}</p>
     </div>
-    <p className="text-[10px] text-gray-400 mt-1 font-medium">{subLabel}</p>
+    <p className="text-[10px] text-zinc-500 mt-1 font-bold">{subLabel}</p>
   </div>
 );
