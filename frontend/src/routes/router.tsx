@@ -8,6 +8,7 @@ import {
 import { MainLayout } from '../components/layout/MainLayout';
 import { LoginPage } from '../features/auth/LoginPage';
 import { DashboardPage } from '../features/dashboard/DashboardPage';
+import { TripsPage } from '../features/trips/TripsPage';
 
 interface RouterContext {
   auth: {
@@ -73,7 +74,7 @@ const driversRoute = createRoute({
 const tripsRoute = createRoute({
   getParentRoute: () => appRoute,
   path: '/trips',
-  component: () => <PlaceholderPage title="Trip Dispatcher" />,
+  component: TripsPage,
 });
 
 const financialsRoute = createRoute({

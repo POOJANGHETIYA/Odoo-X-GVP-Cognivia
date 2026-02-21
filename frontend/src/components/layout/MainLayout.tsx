@@ -14,8 +14,8 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
         <Sidebar className="flex-none hidden md:block" />
 
         {/* Dynamic Page Content */}
-        <main className="flex-1 w-full overflow-y-auto overflow-x-hidden p-6 lg:p-10 relative">
-          <div className="mx-auto max-w-[1400px]">{children}</div>
+        <main className="flex-1 w-full overflow-y-auto overflow-x-hidden p-4 lg:p-6 relative">
+          <div className="w-full">{children}</div>
         </main>
       </div>
     </div>

@@ -3,15 +3,15 @@ import {
   Car,
   Network,
   ArrowRightLeft,
-  ClipboardList,
+  Truck,
 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 const MENU_ITEMS = [
   { name: "Command Center", icon: Command, href: "/" },
+  { name: "Office trips", icon: Truck, href: "/trips" },
   { name: "Cars", icon: Car, href: "/vehicles" },
   { name: "Directory", icon: Network, href: "/drivers" },
-  { name: "Requests", icon: ClipboardList, href: "/trips" },
   { name: "Transactions", icon: ArrowRightLeft, href: "/financials" },
 ];
 
