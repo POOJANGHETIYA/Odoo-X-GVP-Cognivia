@@ -1,6 +1,9 @@
-import { ChevronDown, User, HelpCircle } from "lucide-react";
+import { ChevronDown, User, HelpCircle, LogOut } from "lucide-react";
+import { useAuth } from "../../features/auth/AuthContext";
 
 export function Header() {
+  const { user, logout } = useAuth();
+
   return (
     <header className="h-[72px] bg-[#1a1d2e] border-b border-slate-700/50 flex items-center justify-between px-6 shrink-0 transition-all duration-300 shadow-sm z-10 sticky top-0">
       <div className="flex items-center space-x-8">
@@ -32,8 +35,16 @@ export function Header() {
             <User className="w-4 h-4 text-white" />
           </div>
           <span className="hidden sm:inline-block text-sm text-slate-200 font-medium mr-1">
-            ZPlus Limo
+            {user?.name || 'Dispatcher Admin'}
           </span>
+        </button>
+
+        <button
+          onClick={() => logout()}
+          className="text-slate-400 hover:text-red-400 transition-colors ml-4 flex items-center"
+          title="Logout"
+        >
+          <LogOut className="w-5 h-5" />
         </button>
       </div>
     </header>

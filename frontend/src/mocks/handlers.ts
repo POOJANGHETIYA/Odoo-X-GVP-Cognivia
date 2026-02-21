@@ -1,6 +1,7 @@
 import { http, HttpResponse } from 'msw';
 import { mockVehicles, mockDrivers, mockTrips, mockExpenses } from './data';
 import { Vehicle, Driver, Trip, Expense } from '../types';
+import { format, subDays } from 'date-fns';
 
 const vehicles = [...mockVehicles];
 const drivers = [...mockDrivers];
@@ -8,6 +9,25 @@ const trips = [...mockTrips];
 const expenses = [...mockExpenses];
 
 export const handlers = [
+  // --- Dashboard Aggregations ---
+  http.get('/api/dashboard/revenue-expenses', () => {
+    // Generate a quick 7-day mock series
+    const data = Array.from({ length: 7 }).map((_, i) => {
+      const date = subDays(new Date(), 6 - i);
+      // Fuzz some numbers for realism
+      const revenue = Math.floor(Math.random() * 50000) + 10000;
+      const expense = Math.floor(revenue * (Math.random() * 0.4 + 0.3));
+
+      return {
+        date: format(date, 'MMM dd'),
+        revenue,
+        expenses: expense,
+      };
+    });
+
+    return HttpResponse.json({ success: true, data });
+  }),
+
   // --- Vehicles ---
   http.get('/api/vehicles', () => {
     return HttpResponse.json({ success: true, data: vehicles });
