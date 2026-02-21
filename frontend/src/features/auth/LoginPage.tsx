@@ -26,8 +26,8 @@ export function LoginPage() {
   } = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: '',
-      password: '',
+      email: 'admin@fleetflow.in',
+      password: 'fleet1234',
     },
   });
 

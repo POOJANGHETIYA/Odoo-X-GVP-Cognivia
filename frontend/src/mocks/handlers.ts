@@ -3,10 +3,10 @@ import { mockVehicles, mockDrivers, mockTrips, mockExpenses } from './data';
 import { Vehicle, Driver, Trip, Expense } from '../types';
 import { format, subDays } from 'date-fns';
 
-const vehicles = [...mockVehicles];
-const drivers = [...mockDrivers];
-const trips = [...mockTrips];
-const expenses = [...mockExpenses];
+const vehicles: Vehicle[] = [...mockVehicles] as Vehicle[];
+const drivers: Driver[] = [...mockDrivers] as Driver[];
+const trips: Trip[] = [...mockTrips] as Trip[];
+const expenses: Expense[] = [...mockExpenses] as Expense[];
 
 export const handlers = [
   // --- Dashboard Aggregations ---
