@@ -1,7 +1,7 @@
 import {
   Command,
   Car,
-  Network,
+  Users,
   ArrowRightLeft,
   Truck,
 } from "lucide-react";
@@ -11,7 +11,7 @@ const MENU_ITEMS = [
   { name: "Command Center", icon: Command, href: "/" },
   { name: "Office trips", icon: Truck, href: "/trips" },
   { name: "Cars", icon: Car, href: "/vehicles" },
-  { name: "Directory", icon: Network, href: "/drivers" },
+  { name: "Drivers", icon: Users, href: "/drivers" },
   { name: "Transactions", icon: ArrowRightLeft, href: "/financials" },
 ];
 

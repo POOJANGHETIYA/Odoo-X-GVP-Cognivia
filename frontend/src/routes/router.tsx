@@ -10,6 +10,7 @@ import { LoginPage } from '../features/auth/LoginPage';
 import { DashboardPage } from '../features/dashboard/DashboardPage';
 import { VehiclesPage } from '../features/vehicles/VehiclesPage';
 import { TripsPage } from '../features/trips/TripsPage';
+import { DriversPage } from '../features/drivers/DriversPage';
 import type { AuthContextType } from '../features/auth/AuthContext';
 
 // -----------------------------------------------------------
@@ -89,11 +90,11 @@ const tripsRoute = createRoute({
     component: TripsPage,
 });
 
-// Drivers (placeholder)
+// Drivers
 const driversRoute = createRoute({
     getParentRoute: () => protectedLayoutRoute,
     path: '/drivers',
-    component: () => <PlaceholderPage title="Driver Management" />,
+    component: DriversPage,
 });
 
 // Financials (placeholder)
