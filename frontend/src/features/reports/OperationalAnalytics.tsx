@@ -36,11 +36,21 @@ export const OperationalAnalytics: React.FC = () => {
     const stats = mockVehicles.map(vehicle => {
       const trips = mockTrips.filter(t => t.vehicle_id === vehicle.id && t.status === 'Completed');
       const distance = trips.reduce((acc, t) => acc + (t.estimated_distance_km || 0), 0);
+      const revenue = trips.reduce((acc, t) => acc + (t.expected_revenue || 0), 0);
 
-      const fuelExpenses = mockExpenses.filter(e => e.vehicle_id === vehicle.id && e.category === 'Fuel');
+      const expenses = mockExpenses.filter(e => e.vehicle_id === vehicle.id);
+      const fuelExpenses = expenses.filter(e => e.category === 'Fuel');
+      const maintenanceExpenses = expenses.filter(e => e.category === 'Maintenance');
+
       const fuelLiters = fuelExpenses.reduce((acc, e) => acc + (e.volume_liters || 0), 0);
+      const fuelCost = fuelExpenses.reduce((acc, e) => acc + e.cost, 0);
+      const maintenanceCost = maintenanceExpenses.reduce((acc, e) => acc + e.cost, 0);
 
       const fuelEfficiency = fuelLiters > 0 ? (distance / fuelLiters) : 0;
+
+      const operationalCost = fuelCost + maintenanceCost;
+      const netProfit = revenue - operationalCost;
+      const roi = vehicle.acquisition_cost > 0 ? (netProfit / vehicle.acquisition_cost) : 0;
 
       return {
         id: vehicle.id,
@@ -50,6 +60,9 @@ export const OperationalAnalytics: React.FC = () => {
         distance,
         fuelLiters,
         fuelEfficiency,
+        revenue,
+        operationalCost,
+        roi: (roi * 100).toFixed(2), // Percentage
       };
     });
 
@@ -110,6 +123,12 @@ export const OperationalAnalytics: React.FC = () => {
               className="pl-10 pr-4 py-2 border border-[#E5E7EB] rounded-lg text-sm focus:ring-1 focus:ring-[#2CC197] focus:border-[#2CC197] outline-none w-64 text-gray-900"
             />
           </div>
+          <button className="flex items-center gap-2 px-4 py-2 bg-white border border-[#E5E7EB] text-gray-700 font-bold text-xs rounded-lg hover:bg-gray-50 transition-all shadow-sm">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Export (CSV/PDF)
+          </button>
         </div>
       </div>
 
@@ -159,9 +178,9 @@ export const OperationalAnalytics: React.FC = () => {
               <tr>
                 <th className="px-6 py-4">Brand</th>
                 <th className="px-6 py-4 cursor-pointer text-[#3b82f6]" onClick={() => handleSort('license_plate')}>Plate number</th>
-                <th className="px-6 py-4 text-right cursor-pointer" onClick={() => handleSort('distance')}>Distance (km)</th>
-                <th className="px-6 py-4 text-right cursor-pointer" onClick={() => handleSort('fuelLiters')}>Fuel (L)</th>
                 <th className="px-6 py-4 text-right cursor-pointer" onClick={() => handleSort('fuelEfficiency')}>Efficiency</th>
+                <th className="px-6 py-4 text-right cursor-pointer" onClick={() => handleSort('revenue')}>Total Rev. (₹)</th>
+                <th className="px-6 py-4 text-right cursor-pointer" onClick={() => handleSort('roi')}>ROI (%)</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-[#F3F4F6]">
@@ -171,13 +190,18 @@ export const OperationalAnalytics: React.FC = () => {
                   <td className="px-6 py-4">
                     <span className="text-[#3B82F6] font-bold cursor-pointer hover:underline">{v.license_plate}</span>
                   </td>
-                  <td className="px-6 py-4 text-right text-[#6B7280] font-medium">{v.distance.toFixed(1)}</td>
-                  <td className="px-6 py-4 text-right text-[#6B7280] font-medium">{v.fuelLiters.toFixed(1)}</td>
                   <td className="px-6 py-4 text-right">
                     <div className="flex justify-end items-center gap-2">
                       <span className="text-gray-900 font-bold text-xs">{v.fuelEfficiency.toFixed(1)} <span className="text-[10px] text-gray-400 font-normal">km/L</span></span>
-                      {v.fuelEfficiency > 6}
                     </div>
+                  </td>
+                  <td className="px-6 py-4 text-right text-[#10b981] font-bold">
+                    ₹{v.revenue.toLocaleString()}
+                  </td>
+                  <td className="px-6 py-4 text-right">
+                    <span className={`px-2 py-1 rounded-lg text-xs font-bold ${Number(v.roi) > 5 ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'}`}>
+                      {v.roi}%
+                    </span>
                   </td>
                 </tr>
               ))}

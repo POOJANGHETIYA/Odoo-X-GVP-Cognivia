@@ -26,7 +26,7 @@ export function useDrivers() {
 export function useAvailableVehicles() {
   return useQuery<Vehicle[]>({
     queryKey: ['vehicles', 'available'],
-    queryFn: () => api.get('/vehicles').then((res: any) => 
+    queryFn: () => api.get('/vehicles').then((res: any) =>
       res.data.filter((v: Vehicle) => v.status === 'Available')
     ),
   });
@@ -35,17 +35,20 @@ export function useAvailableVehicles() {
 export function useAvailableDrivers() {
   return useQuery<Driver[]>({
     queryKey: ['drivers', 'available'],
-    queryFn: () => api.get('/drivers').then((res: any) => 
-      res.data.filter((d: Driver) => d.status === 'Available')
+    queryFn: () => api.get('/drivers').then((res: any) =>
+      res.data.filter((d: Driver) =>
+        d.status === 'Available' &&
+        new Date(d.license_expiry) > new Date()
+      )
     ),
   });
 }
 
 export function useCreateTrip() {
   const queryClient = useQueryClient();
-  
+
   return useMutation({
-    mutationFn: (newTrip: Partial<Trip>) => 
+    mutationFn: (newTrip: Partial<Trip>) =>
       api.post('/trips', newTrip).then((res: any) => res.data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['trips'] });
@@ -55,7 +58,7 @@ export function useCreateTrip() {
 
 export function useUpdateTrip() {
   const queryClient = useQueryClient();
-  
+
   return useMutation({
     mutationFn: ({ id, ...updates }: Partial<Trip> & { id: string }) =>
       api.put(`/trips/${id}`, updates).then((res: any) => res.data),

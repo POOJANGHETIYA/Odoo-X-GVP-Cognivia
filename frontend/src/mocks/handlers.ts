@@ -230,7 +230,7 @@ export const handlers = [
 
         maintenanceLogs.push(newLog);
 
-        if (newLog.status === 'In_Progress') {
+        if (newLog.status !== 'Completed' && newLog.status !== 'Cancelled') {
             const vehicle = vehicles.find((v) => v.id === newLog.vehicle_id);
             if (vehicle) (vehicle as any).status = 'In_Shop';
         }

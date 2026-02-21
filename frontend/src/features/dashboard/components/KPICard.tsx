@@ -2,8 +2,9 @@ import { LucideIcon } from 'lucide-react';
 
 interface KPICardProps {
   title: string;
-  value: number;
+  value: number | string;
   icon: LucideIcon;
+  description?: string;
   trend?: string;
   trendIcon?: LucideIcon;
   trendDirection?: 'up' | 'down' | 'neutral';
@@ -14,6 +15,7 @@ export function KPICard({
   title,
   value,
   icon: Icon,
+  description,
   trend,
   trendIcon: TrendIcon,
   trendDirection = 'neutral',
@@ -45,8 +47,11 @@ export function KPICard({
         <div>
           <h3 className="text-slate-500 text-sm font-semibold mb-1 uppercase tracking-wider">{title}</h3>
           <p className="text-4xl font-black text-slate-800 tracking-tight group-hover:text-indigo-900 transition-colors">
-            {value.toLocaleString()}
+            {typeof value === 'number' ? value.toLocaleString() : value}
           </p>
+          {description && (
+            <p className="mt-2 text-slate-400 text-xs font-medium">{description}</p>
+          )}
         </div>
       </div>
     </div>

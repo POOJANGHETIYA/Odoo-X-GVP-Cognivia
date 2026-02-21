@@ -13,6 +13,7 @@ export const VehicleSchema = z.object({
     current_odometer: z.number().nonnegative(),
     acquisition_cost: z.number().positive(),
     status: VehicleStatusSchema,
+    region: z.string().optional(),
     // Optional extended fields
     brand: z.string().optional(),
     year: z.number().int().optional(),

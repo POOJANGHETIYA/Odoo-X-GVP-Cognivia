@@ -33,16 +33,22 @@ export function useDashboardKPIs() {
   const { data: vehicles } = useVehicles();
   const { data: trips } = useTrips();
 
+  const totalVehicles = vehicles?.filter(v => v.status !== 'Retired').length || 0;
   const activeFleet = vehicles?.filter(v => v.status === 'On_Trip').length || 0;
   const maintenanceAlerts = vehicles?.filter(v => v.status === 'In_Shop').length || 0;
   const idleFleet = vehicles?.filter(v => v.status === 'Available').length || 0;
-  const pendingTrips = trips?.filter(t => t.status === 'Unassigned').length || 0;
+  const pendingCargo = trips?.filter(t => t.status === 'Unassigned').length || 0;
+
+  const utilizationRate = totalVehicles > 0
+    ? Math.round((activeFleet / totalVehicles) * 100)
+    : 0;
 
   return {
     activeFleet,
     maintenanceAlerts,
     idleFleet,
-    pendingTrips,
+    pendingCargo,
+    utilizationRate,
     isLoading: !vehicles || !trips
   };
 }

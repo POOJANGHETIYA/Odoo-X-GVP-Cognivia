@@ -59,14 +59,14 @@ export function VehiclesPage() {
         <div className="flex flex-col h-full pb-6">
             {/* Top Bar */}
             <div className="flex items-center justify-between mb-4">
-                <h1 className="text-xl font-bold text-slate-900 tracking-tight">Cars</h1>
+                <h1 className="text-xl font-bold text-slate-900 tracking-tight text-[24px]">Vehicle Registry</h1>
                 <div className="flex items-center gap-2">
                     <button
                         onClick={() => setShowAddModal(true)}
                         className="inline-flex items-center gap-1.5 bg-[#3bb273] hover:bg-[#2da061] text-white font-semibold px-4 py-2 rounded-lg text-sm shadow-sm transition-colors"
                     >
                         <Plus className="w-3.5 h-3.5" />
-                        Add auto
+                        Add Vehicle
                     </button>
                     <FiltersPanel filters={filters} onChange={handleFiltersChange} />
                 </div>
@@ -133,8 +133,8 @@ export function VehiclesPage() {
                                                 key={p}
                                                 onClick={() => setPage(p)}
                                                 className={`px-2.5 py-1 text-xs rounded border transition-colors ${p === currentPage
-                                                        ? 'bg-[#3bb273] border-[#3bb273] text-white font-semibold'
-                                                        : 'border-slate-200 text-slate-600 hover:bg-slate-100'
+                                                    ? 'bg-[#3bb273] border-[#3bb273] text-white font-semibold'
+                                                    : 'border-slate-200 text-slate-600 hover:bg-slate-100'
                                                     }`}
                                             >{p}</button>
                                         );

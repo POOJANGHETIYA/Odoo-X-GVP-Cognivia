@@ -2,27 +2,24 @@ import {
   Command,
   Car,
   Users,
-  ArrowRightLeft,
   ClipboardList,
   Wrench,
 
   Receipt,
   Map,
+  BarChart2,
 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 const MENU_ITEMS = [
   { name: "Command Center", icon: Command, href: "/" },
-
-
-  { name: "Map", icon: Map, href: "/map" },
-  { name: "Cars", icon: Car, href: "/vehicles" },
-  { name: "Trips", icon: ClipboardList, href: "/trips" },
-  { name: "Service", icon: Wrench, href: "/maintenance" },
+  { name: "Vehicle Registry", icon: Car, href: "/vehicles" },
+  { name: "Trip Dispatcher", icon: ClipboardList, href: "/trips" },
+  { name: "Maintenance", icon: Wrench, href: "/maintenance" },
   { name: "Drivers", icon: Users, href: "/drivers" },
-  { name: "Transactions", icon: ArrowRightLeft, href: "/financials" },
-  { name: "Expenses", icon: Receipt, href: "/financials/expenses" },
-  { name: "Analytics", icon: ArrowRightLeft, href: "/reports" },
+  { name: "Financial Tracking", icon: Receipt, href: "/financials/expenses" },
+  { name: "Operational Analytics", icon: BarChart2, href: "/reports" },
+  { name: "Map View", icon: Map, href: "/map" },
 ];
 
 export function Sidebar({ className = "" }: { className?: string }) {
@@ -42,7 +39,7 @@ export function Sidebar({ className = "" }: { className?: string }) {
               activeProps={{
                 className: "bg-[#23273e] text-white",
               }}
-              activeOptions={{ exact: item.href === '/' }}
+              activeOptions={{ exact: true }}
             >
               {({ isActive }: { isActive: boolean }) => (
                 <>

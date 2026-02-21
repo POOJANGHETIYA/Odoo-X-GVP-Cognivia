@@ -1,5 +1,5 @@
 import { Vehicle } from '@/types';
-import { CheckCircle2, MoreHorizontal, ChevronUp, ChevronDown as ChevronDownIcon } from 'lucide-react';
+import { MoreHorizontal, ChevronUp, ChevronDown as ChevronDownIcon } from 'lucide-react';
 import { useState } from 'react';
 
 interface VehiclesTableProps {
@@ -13,13 +13,7 @@ const STATUS_STYLES: Record<string, string> = {
     Retired: 'bg-slate-100 text-slate-500',
 };
 
-const GPS_BADGE: Record<string, { dot: string; label: string }> = {
-    Active: { dot: 'bg-green-500', label: 'Active' },
-    Inactive: { dot: 'bg-red-500', label: 'Inactive' },
-    No_GPS: { dot: 'bg-slate-300', label: 'No GPS' },
-};
-
-type SortKey = 'brand' | 'year' | 'manufacturing_year' | 'license_plate' | 'current_odometer' | 'registration_date';
+type SortKey = 'brand' | 'license_plate' | 'capacity_kg' | 'current_odometer' | 'status';
 type SortDir = 'asc' | 'desc';
 
 function SortIcon({ active, dir }: { active: boolean; dir: SortDir }) {
@@ -47,8 +41,9 @@ function RowMenu() {
                     className="absolute right-0 top-7 z-20 w-40 bg-white rounded-lg shadow-lg border border-slate-100 py-1 text-sm"
                     onMouseLeave={() => setOpen(false)}
                 >
-                    <button className="w-full text-left px-4 py-2 hover:bg-slate-50 text-slate-700">Edit Status</button>
-                    <button className="w-full text-left px-4 py-2 hover:bg-slate-50 text-slate-700">View Details</button>
+                    <button className="w-full text-left px-4 py-2 hover:bg-slate-50 text-slate-700">Edit Details</button>
+                    <button className="w-full text-left px-4 py-2 hover:bg-slate-50 text-slate-700">Service Log</button>
+                    <button className="w-full text-left px-4 py-2 hover:bg-slate-50 text-slate-700 text-rose-600">Retire Vehicle</button>
                 </div>
             )}
         </div>
@@ -56,11 +51,11 @@ function RowMenu() {
 }
 
 const COLUMNS: { key: SortKey | null; label: string; sortable: boolean }[] = [
-    { key: 'manufacturing_year', label: 'Year', sortable: true },
-    { key: 'license_plate', label: 'Plate number', sortable: true },
-    { key: null, label: 'GPS Status', sortable: false },
-    { key: null, label: 'Service', sortable: false },
-    { key: 'registration_date', label: 'Registration date', sortable: true },
+    { key: 'brand', label: 'Name/Model', sortable: true },
+    { key: 'license_plate', label: 'License Plate', sortable: true },
+    { key: 'capacity_kg', label: 'Max Load (kg)', sortable: true },
+    { key: 'current_odometer', label: 'Odometer (km)', sortable: true },
+    { key: 'status', label: 'Status', sortable: true },
     { key: null, label: '', sortable: false },
 ];
 
@@ -118,58 +113,45 @@ export function VehiclesTable({ vehicles }: VehiclesTableProps) {
                 </thead>
                 <tbody className="divide-y divide-slate-100">
                     {sorted.map((v) => {
-                        const gps = GPS_BADGE[v.gps_status ?? 'No_GPS'];
                         return (
                             <tr
                                 key={v.id}
                                 className="bg-white hover:bg-slate-50/70 transition-colors group"
                             >
-                                {/* Brand */}
-                                <td className="px-4 py-2.5 font-medium text-slate-800 whitespace-nowrap">
-                                    {v.brand ?? <span className="text-slate-300">—</span>}
-                                </td>
-
-                                {/* Year */}
-                                <td className="px-4 py-2.5 text-slate-600 whitespace-nowrap tabular-nums">
-                                    {(v as any).manufacturing_year ?? v.year ?? <span className="text-slate-300">—</span>}
+                                {/* Name/Model */}
+                                <td className="px-4 py-3.5 font-medium text-slate-800 whitespace-nowrap">
+                                    <div className="flex flex-col">
+                                        <span className="font-bold">{v.brand ?? 'Generic'}</span>
+                                        <span className="text-[11px] text-slate-400 lowercase">{v.category.replace('_', ' ')}</span>
+                                    </div>
                                 </td>
 
                                 {/* Plate number */}
-                                <td className="px-4 py-2.5 whitespace-nowrap">
-                                    <div className="inline-flex items-center gap-1.5">
-                                        <CheckCircle2 className="w-3.5 h-3.5 text-green-500 shrink-0" />
-                                        <span className="text-[#0ea5e9] font-semibold text-[13px] tracking-wide font-mono">
-                                            {v.license_plate}
-                                        </span>
+                                <td className="px-4 py-3.5 whitespace-nowrap">
+                                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-slate-100 rounded text-slate-700 font-mono text-xs font-bold border border-slate-200">
+                                        {v.license_plate}
                                     </div>
                                 </td>
 
-
-                                {/* GPS Status */}
-                                <td className="px-4 py-2.5 whitespace-nowrap">
-                                    <div className="flex items-center gap-1.5">
-                                        <span className={`w-2 h-2 rounded-full shrink-0 ${gps.dot}`} />
-                                        <span className="text-slate-600 text-xs">{gps.label}</span>
-                                    </div>
+                                {/* Capacity */}
+                                <td className="px-4 py-3.5 text-slate-600 whitespace-nowrap tabular-nums">
+                                    {v.capacity_kg.toLocaleString()} <span className="text-[10px] text-slate-400 font-medium">KG</span>
                                 </td>
 
-                                {/* Service (status badge) */}
-                                <td className="px-4 py-2.5 whitespace-nowrap">
-                                    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold ${STATUS_STYLES[v.status]}`}>
+                                {/* Odometer */}
+                                <td className="px-4 py-3.5 text-slate-600 whitespace-nowrap tabular-nums font-mono">
+                                    {v.current_odometer.toLocaleString()} <span className="text-[10px] text-slate-400">km</span>
+                                </td>
+
+                                {/* Status badge */}
+                                <td className="px-4 py-3.5 whitespace-nowrap">
+                                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${STATUS_STYLES[v.status]}`}>
                                         {v.status.replace('_', ' ')}
                                     </span>
                                 </td>
 
-
-                                {/* Registration Date */}
-                                <td className="px-4 py-2.5 text-slate-600 whitespace-nowrap tabular-nums text-[13px]">
-                                    {v.registration_date ?? <span className="text-slate-300">—</span>}
-                                </td>
-
-
-
                                 {/* Row actions */}
-                                <td className="px-3 py-2.5 whitespace-nowrap">
+                                <td className="px-3 py-3.5 whitespace-nowrap text-right">
                                     <RowMenu />
                                 </td>
                             </tr>

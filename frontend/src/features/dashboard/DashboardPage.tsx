@@ -1,12 +1,12 @@
 import { format } from 'date-fns';
-import { Truck, Navigation2, Wrench, Clock, TrendingUp, Activity } from 'lucide-react';
+import { Navigation2, Wrench, Clock, TrendingUp, Activity } from 'lucide-react';
 import { KPICard } from './components/KPICard';
 import { RevenueExpenseChart } from './components/RevenueExpenseChart';
 import { SLAWarningsTable } from './components/SLAWarningsTable';
 import { useDashboardKPIs } from './hooks/useDashboardData';
 
 export function DashboardPage() {
-  const { activeFleet, idleFleet, maintenanceAlerts, pendingTrips, isLoading } = useDashboardKPIs();
+  const { activeFleet, utilizationRate, maintenanceAlerts, pendingCargo, isLoading } = useDashboardKPIs();
   const today = format(new Date(), 'EEEE, MMMM do, yyyy');
 
   return (
@@ -28,10 +28,35 @@ export function DashboardPage() {
               <p className="text-indigo-200 text-sm mt-1 font-medium">{today}</p>
             </div>
           </div>
-          <div className="flex bg-slate-800/50 backdrop-blur-md border border-slate-700 rounded-lg p-1 shadow-inner">
-            <button className="px-5 py-2 text-sm font-semibold bg-indigo-500 text-white rounded-md shadow-sm">Today</button>
-            <button className="px-5 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-md transition-colors">7 Days</button>
-            <button className="px-5 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-md transition-colors">30 Days</button>
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="flex bg-slate-800/50 backdrop-blur-md border border-slate-700 rounded-lg p-1 shadow-inner">
+              <button className="px-5 py-2 text-sm font-semibold bg-indigo-500 text-white rounded-md shadow-sm">Today</button>
+              <button className="px-5 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-md transition-colors">7 Days</button>
+              <button className="px-5 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-md transition-colors">30 Days</button>
+            </div>
+
+            {/* Rapid Filters */}
+            <div className="flex gap-2">
+              <select className="bg-slate-800/50 border border-slate-700 text-indigo-100 text-[11px] font-bold uppercase tracking-wider rounded-lg px-3 py-2 outline-none focus:ring-1 focus:ring-indigo-400">
+                <option>All Types</option>
+                <option>Truck</option>
+                <option>Van</option>
+                <option>Bike</option>
+              </select>
+              <select className="bg-slate-800/50 border border-slate-700 text-indigo-100 text-[11px] font-bold uppercase tracking-wider rounded-lg px-3 py-2 outline-none focus:ring-1 focus:ring-indigo-400">
+                <option>All Status</option>
+                <option>On Trip</option>
+                <option>Available</option>
+                <option>In Shop</option>
+              </select>
+              <select className="bg-slate-800/50 border border-slate-700 text-indigo-100 text-[11px] font-bold uppercase tracking-wider rounded-lg px-3 py-2 outline-none focus:ring-1 focus:ring-indigo-400">
+                <option>All Regions</option>
+                <option>North</option>
+                <option>South</option>
+                <option>East</option>
+                <option>West</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
@@ -42,30 +67,34 @@ export function DashboardPage() {
           title="Active Fleet"
           value={isLoading ? 0 : activeFleet}
           icon={Navigation2}
+          description="Vehicles On Trip"
           colorClass="bg-indigo-50 text-indigo-600 ring-1 ring-indigo-100"
           trend="+12%"
           trendDirection="up"
           trendIcon={TrendingUp}
         />
         <KPICard
-          title="Pending Trips"
-          value={isLoading ? 0 : pendingTrips}
-          icon={Clock}
-          colorClass="bg-emerald-50 text-emerald-600 ring-1 ring-emerald-100"
-        />
-        <KPICard
-          title="Idle Fleet"
-          value={isLoading ? 0 : idleFleet}
-          icon={Truck}
-          colorClass="bg-amber-50 text-amber-600 ring-1 ring-amber-100"
-        />
-        <KPICard
           title="Maintenance Alerts"
           value={isLoading ? 0 : maintenanceAlerts}
           icon={Wrench}
+          description="Vehicles In Shop"
           colorClass={maintenanceAlerts > 0 ? "bg-rose-50 text-rose-600 ring-1 ring-rose-100" : "bg-slate-50 text-slate-600 ring-1 ring-slate-100"}
           trend={maintenanceAlerts > 0 ? "Needs Action" : "Healthy"}
           trendDirection={maintenanceAlerts > 0 ? "down" : "neutral"}
+        />
+        <KPICard
+          title="Utilization Rate"
+          value={isLoading ? '0%' : `${utilizationRate}%`}
+          icon={Activity}
+          description="Assigned vs Idle"
+          colorClass="bg-amber-50 text-amber-600 ring-1 ring-amber-100"
+        />
+        <KPICard
+          title="Pending Cargo"
+          value={isLoading ? 0 : pendingCargo}
+          icon={Clock}
+          description="Waiting for Assignment"
+          colorClass="bg-emerald-50 text-emerald-600 ring-1 ring-emerald-100"
         />
       </div>
 
