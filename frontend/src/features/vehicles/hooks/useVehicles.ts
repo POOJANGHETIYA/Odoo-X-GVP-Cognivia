@@ -1,11 +1,12 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { api } from '@/lib/api';
 import { Vehicle } from '@/types';
+import { mockVehicles } from '@/mocks/mockData';
 
 export function useVehicles() {
     return useQuery<Vehicle[]>({
         queryKey: ['vehicles'],
-        queryFn: () => api.get('/vehicles').then((res: any) => res.data),
+        queryFn: () => Promise.resolve(mockVehicles as any as Vehicle[]),
     });
 }
 

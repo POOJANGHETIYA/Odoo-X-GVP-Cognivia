@@ -19,7 +19,7 @@ const GPS_BADGE: Record<string, { dot: string; label: string }> = {
     No_GPS: { dot: 'bg-slate-300', label: 'No GPS' },
 };
 
-type SortKey = 'brand' | 'year' | 'license_plate' | 'current_odometer' | 'registration_date';
+type SortKey = 'brand' | 'year' | 'manufacturing_year' | 'license_plate' | 'current_odometer' | 'registration_date';
 type SortDir = 'asc' | 'desc';
 
 function SortIcon({ active, dir }: { active: boolean; dir: SortDir }) {
@@ -31,16 +31,6 @@ function SortIcon({ active, dir }: { active: boolean; dir: SortDir }) {
     );
 }
 
-function StatusDot({ active }: { active?: boolean }) {
-    return (
-        <span
-            className={`inline-block w-3.5 h-3.5 rounded-full border-2 ${active
-                ? 'bg-green-500 border-green-400'
-                : 'bg-red-500 border-red-400'
-                }`}
-        />
-    );
-}
 
 function RowMenu() {
     const [open, setOpen] = useState(false);
@@ -66,16 +56,11 @@ function RowMenu() {
 }
 
 const COLUMNS: { key: SortKey | null; label: string; sortable: boolean }[] = [
-    { key: 'brand', label: 'Brand', sortable: true },
-    { key: 'year', label: 'Year', sortable: false },
+    { key: 'manufacturing_year', label: 'Year', sortable: true },
     { key: 'license_plate', label: 'Plate number', sortable: true },
-    { key: null, label: 'Fleet', sortable: false },
     { key: null, label: 'GPS Status', sortable: false },
     { key: null, label: 'Service', sortable: false },
-    { key: null, label: 'Timetable events', sortable: true },
     { key: 'registration_date', label: 'Registration date', sortable: true },
-    { key: null, label: 'Car photo', sortable: false },
-    { key: null, label: 'Documents', sortable: false },
     { key: null, label: '', sortable: false },
 ];
 
@@ -90,8 +75,8 @@ export function VehiclesTable({ vehicles }: VehiclesTableProps) {
     };
 
     const sorted = [...vehicles].sort((a, b) => {
-        let av: any = a[sortKey] ?? '';
-        let bv: any = b[sortKey] ?? '';
+        let av: any = (a as any)[sortKey] ?? '';
+        let bv: any = (b as any)[sortKey] ?? '';
         if (typeof av === 'string') av = av.toLowerCase();
         if (typeof bv === 'string') bv = bv.toLowerCase();
         if (av < bv) return sortDir === 'asc' ? -1 : 1;
@@ -146,7 +131,7 @@ export function VehiclesTable({ vehicles }: VehiclesTableProps) {
 
                                 {/* Year */}
                                 <td className="px-4 py-2.5 text-slate-600 whitespace-nowrap tabular-nums">
-                                    {v.year ?? <span className="text-slate-300">—</span>}
+                                    {(v as any).manufacturing_year ?? v.year ?? <span className="text-slate-300">—</span>}
                                 </td>
 
                                 {/* Plate number */}
@@ -159,12 +144,6 @@ export function VehiclesTable({ vehicles }: VehiclesTableProps) {
                                     </div>
                                 </td>
 
-                                {/* Fleet */}
-                                <td className="px-4 py-2.5 whitespace-nowrap">
-                                    {v.fleet
-                                        ? <span className="text-[#3bb273] font-medium text-[13px]">{v.fleet}</span>
-                                        : <span className="text-slate-300">—</span>}
-                                </td>
 
                                 {/* GPS Status */}
                                 <td className="px-4 py-2.5 whitespace-nowrap">
@@ -181,23 +160,13 @@ export function VehiclesTable({ vehicles }: VehiclesTableProps) {
                                     </span>
                                 </td>
 
-                                {/* Timetable Events */}
-                                <td className="px-4 py-2.5 text-slate-300 whitespace-nowrap">—</td>
 
                                 {/* Registration Date */}
                                 <td className="px-4 py-2.5 text-slate-600 whitespace-nowrap tabular-nums text-[13px]">
                                     {v.registration_date ?? <span className="text-slate-300">—</span>}
                                 </td>
 
-                                {/* Car Photo */}
-                                <td className="px-4 py-2.5 whitespace-nowrap">
-                                    <StatusDot active={v.has_photo} />
-                                </td>
 
-                                {/* Documents */}
-                                <td className="px-4 py-2.5 whitespace-nowrap">
-                                    <StatusDot active={v.has_documents} />
-                                </td>
 
                                 {/* Row actions */}
                                 <td className="px-3 py-2.5 whitespace-nowrap">
