@@ -41,7 +41,9 @@ export function Header() {
         <div className="flex items-center space-x-3 pl-2">
           <div className="flex flex-col items-end hidden sm:flex">
             <span className="text-sm font-medium text-zinc-900">{user?.name || 'Dispatcher Admin'}</span>
-            <span className="text-[10px] text-zinc-500 font-medium">Operations Chief</span>
+            <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">
+              {user?.role ? user.role.charAt(0).toUpperCase() + user.role.slice(1) : 'Operations Chief'}
+            </span>
           </div>
 
           <button className="h-8 w-8 bg-zinc-100 border border-zinc-200 rounded-full flex items-center justify-center shrink-0 hover:border-indigo-200 hover:bg-indigo-50 transition-all group">

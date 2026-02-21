@@ -35,24 +35,41 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const login = async (email: string, password: string) => {
-    // In a real app, this would be an API call
-    // For now, we use a mocked hard-coded check
     return new Promise<void>((resolve, reject) => {
       setTimeout(() => {
-        if (email === 'admin@fleetflow.in' && password === 'fleet1234') {
-          const loggedInUser: User = {
-            id: 'admin-123',
-            name: 'Dispatcher Admin',
+        const users = [
+          {
             email: 'admin@fleetflow.in',
-            role: 'Dispatcher',
-          };
-          setUser(loggedInUser);
-          sessionStorage.setItem('fleetflow_user', JSON.stringify(loggedInUser));
+            password: 'fleet1234',
+            user: { id: 'usr-001', name: 'System Admin', email: 'admin@fleetflow.in', role: 'admin' }
+          },
+          {
+            email: 'ops@fleetflow.in',
+            password: 'fleet1234',
+            user: { id: 'usr-002', name: 'Operations Chief', email: 'ops@fleetflow.in', role: 'dispatcher' }
+          },
+          {
+            email: 'finance@fleetflow.in',
+            password: 'fleet1234',
+            user: { id: 'usr-003', name: 'Finance Controller', email: 'finance@fleetflow.in', role: 'finance' }
+          },
+          {
+            email: 'service@fleetflow.in',
+            password: 'fleet1234',
+            user: { id: 'usr-004', name: 'Maintenance Lead', email: 'service@fleetflow.in', role: 'maintenance' }
+          }
+        ];
+
+        const match = users.find(u => u.email === email && u.password === password);
+
+        if (match) {
+          setUser(match.user);
+          sessionStorage.setItem('fleetflow_user', JSON.stringify(match.user));
           resolve();
         } else {
-          reject(new Error('Invalid email or password'));
+          reject(new Error('Invalid email or security key. Access denied.'));
         }
-      }, 500); // 500ms fake delay
+      }, 800);
     });
   };
 
