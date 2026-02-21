@@ -9,20 +9,22 @@ import { MainLayout } from '../components/layout/MainLayout';
 import { LoginPage } from '../features/auth/LoginPage';
 import { DashboardPage } from '../features/dashboard/DashboardPage';
 import { MaintenancePage } from '../features/maintenance/MaintenancePage';
-import { VehiclesPage } from '../features/vehicles/VehiclesPage';
+import { VehiclesPage } from '@/features/vehicles/VehiclesPage';
 import { TripsPage } from '../features/trips/TripsPage';
 import { DriversPage } from '../features/drivers/DriversPage';
-import type { AuthContextType } from '../features/auth/AuthContext';
 
 interface RouterContext {
     auth: {
         isAuthenticated: boolean;
     };
+    
 }
 
 const rootRoute = createRootRouteWithContext<RouterContext>()({
     component: () => <Outlet />,
 });
+
+
 
 const loginRoute = createRoute({
     getParentRoute: () => rootRoute,
@@ -50,6 +52,8 @@ const appRoute = createRoute({
     },
 });
 
+
+
 export const dashboardRoute = createRoute({
     getParentRoute: () => appRoute,
     path: '/',
@@ -63,18 +67,14 @@ const PlaceholderPage = ({ title }: { title: string }) => (
     </div>
 );
 
+
 const vehiclesRoute = createRoute({
     getParentRoute: () => appRoute,
     path: '/vehicles',
     component: VehiclesPage,
 });
 
-// Trips
-const tripsRoute = createRoute({
-    getParentRoute: () => protectedLayoutRoute,
-    path: '/trips',
-    component: TripsPage,
-});
+
 
 // Drivers
 const driversRoute = createRoute({
@@ -88,6 +88,7 @@ const tripsRoute = createRoute({
     path: '/trips',
     component: TripsPage,
 });
+
 
 const financialsRoute = createRoute({
     getParentRoute: () => appRoute,
@@ -119,9 +120,3 @@ export const router = createRouter({
         auth: undefined!, // This will be provided at the highest level
     },
 });
-
-declare module '@tanstack/react-router' {
-    interface Register {
-        router: typeof router;
-    }
-}
